@@ -54,5 +54,5 @@ Vi är öppna för samarbete med företag, universitet och högskolor. Om du är
 
 ## Ladda ner CMAS
 
-Ladda ner filen `CMAS_2.7.zip`, som innehåller `cmas.exe`. Du kan också köra `simulation.exe` som är en simulerad Plug & Produce-miljö, perfekt för testning och utvärdering. Exempelprojekt `crane-example.cmas` för simuleringen kan du hitta i zipfilen `crane-example.zip`.
+Ladda ner filen `CMAS zip-filen`, som innehåller `cmas.exe`. Du kan också köra `simulation.exe` som är en simulerad Plug & Produce-miljö, perfekt för testning och utvärdering. Exempelprojekt `crane-example.cmas` för simuleringen kan du hitta i zipfilen `crane-example.zip`.
 
