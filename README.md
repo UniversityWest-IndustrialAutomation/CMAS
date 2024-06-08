@@ -9,7 +9,7 @@
 
 
 
-[Download CMAS 2.6](https://github.com/UniversityWest-IndustrialAutomation/CMAS/raw/main/CMAS-2.6.zip)
+[Download CMAS 2.7](https://github.com/UniversityWest-IndustrialAutomation/CMAS/raw/main/CMAS-2.7.zip)
  
 [Download Crane Example](https://github.com/UniversityWest-IndustrialAutomation/CMAS/raw/main/crane-example.zip)
 
@@ -29,7 +29,7 @@ CMAS changes the way automation systems are built and operated. At its core, CMA
 We are open to collaborating with companies, universities, and colleges. If you're interested in exploring collaboration opportunities in the form of a research project, don't hesitate to reach out.
 
 ## Download CMAS
-Download the `CMAS_2.6.zip`, containing `cmas.exe`. Additionally, `simulation.exe` is a simulated Plug & Produce environment, perfect for testing and evaluation. Example project `crane-example.cmas` for the simulation can be found in the zip file `crane-example.zip`.
+Download the `CMAS zip file`, containing `cmas.exe`. Additionally, `simulation.exe` is a simulated Plug & Produce environment, perfect for testing and evaluation. Example project `crane-example.cmas` for the simulation can be found in the zip file `crane-example.zip`.
 
 
 
