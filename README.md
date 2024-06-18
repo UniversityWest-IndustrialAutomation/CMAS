@@ -29,7 +29,7 @@ CMAS changes the way automation systems are built and operated. At its core, CMA
 We are open to collaborating with companies, universities, and colleges. If you're interested in exploring collaboration opportunities in the form of a research project, don't hesitate to reach out.
 
 ## Download CMAS
-Download `CMAS`, that is a zip file containing `cmas.exe`. Additionally, `simulation.exe` is a simulated Plug & Produce environment, perfect for testing and evaluation. Example project `crane-example.cmas` for the simulation can be found in the zip file `crane-example.zip`.
+Download `CMAS`, that is a zip file containing `cmas.exe`. Additionally, `simulation.exe` is a simulated Plug & Produce environment, perfect for testing and evaluation. Example project `crane-example.cmas` for the simulation can be found in the zip file `crane-example.zip`. Read `How to use CMAS.pdf` to install and run CMAS.
 
 
 
@@ -54,5 +54,5 @@ Vi är öppna för samarbete med företag, universitet och högskolor. Om du är
 
 ## Ladda ner CMAS
 
-Ladda ner `CMAS`, som är en zip fil som innehåller `cmas.exe`. Du kan också köra `simulation.exe` som är en simulerad Plug & Produce-miljö, perfekt för testning och utvärdering. Exempelprojekt `crane-example.cmas` för simuleringen kan du hitta i zipfilen `crane-example.zip`.
+Ladda ner `CMAS`, som är en zip fil som innehåller `cmas.exe`. Du kan också köra `simulation.exe` som är en simulerad Plug & Produce-miljö, perfekt för testning och utvärdering. Exempelprojekt `crane-example.cmas` för simuleringen kan du hitta i zipfilen `crane-example.zip`. Läs `How to use CMAS.pdf` för att installera och köra CMAS.
 
