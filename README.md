@@ -13,7 +13,7 @@
  
 [Download Crane Example](https://github.com/UniversityWest-IndustrialAutomation/CMAS/raw/main/crane-example.zip)
 
-[Getting started guide](https://github.com/UniversityWest-IndustrialAutomation/CMAS/raw/main/How%20to%20use%20CMAS.pdf)
+[Download Getting started guide](https://github.com/UniversityWest-IndustrialAutomation/CMAS/raw/main/How%20to%20use%20CMAS.pdf)
 #
 CMAS changes the way automation systems are built and operated. At its core, CMAS empowers every resource, component, and product to operate as an autonomous agent, equipped with local knowledge and logic. It reduces the need for traditional PLC and robot programming. Instead, with CMAS you design a Plug & Produce system that makes it easy to adapt fast to changes in production demands. This approach enables mobility and reusability across stations, ensuring your production system remains agile and responsive to evolving demands.
 
