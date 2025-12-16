@@ -11,7 +11,7 @@
 
 [Download CMAS](https://github.com/UniversityWest-IndustrialAutomation/CMAS/raw/main/CMAS_2.14.zip)
  
-[Download Crane Example](https://github.com/UniversityWest-IndustrialAutomation/CMAS/raw/main/crane-example.zip)
+[Download Examples](https://github.com/UniversityWest-IndustrialAutomation/CMAS/raw/main/Examples.zip)
 
 [Download Getting started guide](https://github.com/UniversityWest-IndustrialAutomation/CMAS/raw/main/How%20to%20use%20CMAS.pdf)
 #
