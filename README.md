@@ -9,7 +9,7 @@
 
 
 
-[Download CMAS](https://github.com/UniversityWest-IndustrialAutomation/CMAS/raw/main/CMAS-2.13.zip)
+[Download CMAS](https://github.com/UniversityWest-IndustrialAutomation/CMAS/raw/main/CMAS-2.14.zip)
  
 [Download Crane Example](https://github.com/UniversityWest-IndustrialAutomation/CMAS/raw/main/crane-example.zip)
 
