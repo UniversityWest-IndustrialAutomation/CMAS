@@ -1,0 +1,9 @@
+<map id="cmas.ontology.Container" name="cmas.ontology.Container">
+<area shape="rect" id="Node000001" title=" " alt="" coords="87,93,253,119"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,60,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="65,37,152,91,150,95,63,41"/>
+<area shape="rect" id="Node000003" href="$classcmas_1_1ontology_1_1_properties.html" title=" " alt="" coords="85,5,255,31"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="173,45,173,93,167,93,167,45"/>
+<area shape="rect" id="Node000004" href="$classcmas_1_1ontology_1_1_relations.html" title=" " alt="" coords="279,5,445,31"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="323,39,198,95,195,90,321,35"/>
+</map>

@@ -1,0 +1,11 @@
+<map id="cmas.ontology.adapter.AdapterBase" name="cmas.ontology.adapter.AdapterBase">
+<area shape="rect" id="Node000001" title=" " alt="" coords="892,50,1125,75"/>
+<area shape="rect" id="Node000002" href="$classcmas_1_1ontology_1_1adapter_1_1_o_p_c_u_a_1_1_o_p_c_u_a_client.html" title=" " alt="" coords="526,5,734,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="749,34,892,49,891,54,749,40"/>
+<area shape="rect" id="Node000003" href="$classcmas_1_1ontology_1_1adapter_1_1_o_p_c_u_a_1_1_o_p_c_u_a_client_base.html" title=" " alt="" coords="257,5,465,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="480,23,526,23,526,28,480,28"/>
+<area shape="rect" id="Node000004" href="$interfacecmas_1_1ontology_1_1adapter_1_1_adapter.html" title=" " alt="" coords="5,13,208,38"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="223,23,257,23,257,28,223,28"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="515,80,745,120"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="760,101,868,95,918,85,964,73,966,78,919,91,868,100,760,107"/>
+</map>

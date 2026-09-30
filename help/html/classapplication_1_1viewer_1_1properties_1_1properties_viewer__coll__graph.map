@@ -1,0 +1,13 @@
+<map id="application.viewer.properties.propertiesViewer" name="application.viewer.properties.propertiesViewer">
+<area shape="rect" id="Node000001" title=" " alt="" coords="153,168,399,208"/>
+<area shape="rect" id="Node000002" href="$classapplication_1_1viewer_1_1dock_viewer.html" title=" " alt="" coords="73,93,268,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="199,126,252,165,249,170,196,130"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,5,88,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="57,43,74,67,93,81,116,90,113,95,91,85,70,71,53,46"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="129,5,212,31"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="173,45,173,93,168,93,168,45"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="243,5,317,31"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="272,46,253,71,233,85,212,95,209,90,230,80,249,67,267,42"/>
+<area shape="rect" id="Node000006" href="$interfaceevents_1_1_event_1_1_event_listener.html" title=" " alt="" coords="293,93,470,119"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="356,130,303,170,300,165,353,126"/>
+</map>

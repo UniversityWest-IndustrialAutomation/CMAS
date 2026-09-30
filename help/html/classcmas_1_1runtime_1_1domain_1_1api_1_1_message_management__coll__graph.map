@@ -1,0 +1,7 @@
+<map id="cmas.runtime.domain.api.MessageManagement" name="cmas.runtime.domain.api.MessageManagement">
+<area shape="rect" id="Node000001" title=" " alt="" coords="39,183,211,223"/>
+<area shape="rect" id="Node000002" href="$classcmas_1_1runtime_1_1domain_1_1api_1_1_message_management_1_1_event_message.html" title=" " alt="" coords="5,80,244,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="127,135,127,182,122,182,122,135"/>
+<area shape="rect" id="Node000003" href="$classevents_1_1_event.html" title=" " alt="" coords="77,5,172,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="127,46,127,80,122,80,122,46"/>
+</map>

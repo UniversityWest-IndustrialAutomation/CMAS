@@ -1,0 +1,11 @@
+<map id="application.viewer.schema.modellingView" name="application.viewer.schema.modellingView">
+<area shape="rect" id="Node000001" title=" " alt="" coords="168,93,428,119"/>
+<area shape="rect" id="Node000002" href="$interfaceevents_1_1_event_1_1_event_listener.html" title=" " alt="" coords="5,5,183,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="137,34,271,90,269,95,135,39"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="207,5,293,31"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="249,45,254,68,263,81,276,91,273,95,259,84,249,70,244,46"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="320,5,375,31"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="336,45,307,94,302,92,331,42"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="423,5,475,31"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="433,44,402,72,376,85,349,95,347,90,374,80,399,67,429,40"/>
+</map>

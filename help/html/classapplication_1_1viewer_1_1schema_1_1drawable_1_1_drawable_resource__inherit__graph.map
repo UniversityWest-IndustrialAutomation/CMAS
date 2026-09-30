@@ -1,0 +1,5 @@
+<map id="application.viewer.schema.drawable.DrawableResource" name="application.viewer.schema.drawable.DrawableResource">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,93,237,133"/>
+<area shape="rect" id="Node000002" href="$classapplication_1_1viewer_1_1schema_1_1drawable_1_1_drawable_object.html" title=" " alt="" coords="5,5,237,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="124,60,124,93,119,93,119,60"/>
+</map>

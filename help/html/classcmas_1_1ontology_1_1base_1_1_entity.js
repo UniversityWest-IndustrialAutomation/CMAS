@@ -1,0 +1,27 @@
+var classcmas_1_1ontology_1_1base_1_1_entity =
+[
+    [ "EntityType", "enumcmas_1_1ontology_1_1base_1_1_entity_1_1_entity_type.html", null ],
+    [ "UID", "classcmas_1_1ontology_1_1base_1_1_entity_1_1_u_i_d.html", null ],
+    [ "Entity", "classcmas_1_1ontology_1_1base_1_1_entity_a82e6b720d3b7c84d668c3a8cf93ec04e.html#a82e6b720d3b7c84d668c3a8cf93ec04e", null ],
+    [ "Entity", "classcmas_1_1ontology_1_1base_1_1_entity_a2acfefa80ea65d68597ad3f1e4d241c4.html#a2acfefa80ea65d68597ad3f1e4d241c4", null ],
+    [ "copy", "classcmas_1_1ontology_1_1base_1_1_entity_ad5a2970666b22e6aee2628bf6a0c2d45.html#ad5a2970666b22e6aee2628bf6a0c2d45", null ],
+    [ "Factory", "classcmas_1_1ontology_1_1base_1_1_entity_a0ffc627a0290f18fb272ff9dc026c7d9.html#a0ffc627a0290f18fb272ff9dc026c7d9", null ],
+    [ "findRelationByName", "classcmas_1_1ontology_1_1base_1_1_entity_a03ca0ee81469bb6737ee994cbeb4c7ea.html#a03ca0ee81469bb6737ee994cbeb4c7ea", null ],
+    [ "findRelationByNameIgnoreCase", "classcmas_1_1ontology_1_1base_1_1_entity_a391a02591c5372b37b60b9be7e03abfe.html#a391a02591c5372b37b60b9be7e03abfe", null ],
+    [ "generateUniqueIDs", "classcmas_1_1ontology_1_1base_1_1_entity_a2ad920aef8a7d337e80aecd04f3be296.html#a2ad920aef8a7d337e80aecd04f3be296", null ],
+    [ "getAllRelations", "classcmas_1_1ontology_1_1base_1_1_entity_a9471a1791b665ee25c90876036b83bb6.html#a9471a1791b665ee25c90876036b83bb6", null ],
+    [ "getDescription", "classcmas_1_1ontology_1_1base_1_1_entity_a9ef4d39c8820216c7aaef42af5402533.html#a9ef4d39c8820216c7aaef42af5402533", null ],
+    [ "getID", "classcmas_1_1ontology_1_1base_1_1_entity_ad7e06f54d1e82791708970254cc43eb9.html#ad7e06f54d1e82791708970254cc43eb9", null ],
+    [ "getInstanceID", "classcmas_1_1ontology_1_1base_1_1_entity_a90242d3ffbac8e8f62ef3a22d24f6c2c.html#a90242d3ffbac8e8f62ef3a22d24f6c2c", null ],
+    [ "getLinkedInstanceID", "classcmas_1_1ontology_1_1base_1_1_entity.html#a883ab187281f486e3c72561e18557b06", null ],
+    [ "getName", "classcmas_1_1ontology_1_1base_1_1_entity_a48bebe488b0e715e7cd7bc08da1600c4.html#a48bebe488b0e715e7cd7bc08da1600c4", null ],
+    [ "getRelationName", "classcmas_1_1ontology_1_1base_1_1_entity_aae8e0808b483192a325658c54ad76b33.html#aae8e0808b483192a325658c54ad76b33", null ],
+    [ "getRelations", "classcmas_1_1ontology_1_1base_1_1_entity_a9d90b5393c4a9378ec91cec10b6b2ea9.html#a9d90b5393c4a9378ec91cec10b6b2ea9", null ],
+    [ "getSpecificRelations", "classcmas_1_1ontology_1_1base_1_1_entity_ab5aa8c4217c5c8313d48951049bbaaae.html#ab5aa8c4217c5c8313d48951049bbaaae", null ],
+    [ "getType", "classcmas_1_1ontology_1_1base_1_1_entity_aab892979ae6e10c889bdce11b73e3b34.html#aab892979ae6e10c889bdce11b73e3b34", null ],
+    [ "hasRelation", "classcmas_1_1ontology_1_1base_1_1_entity_a6477bbc0616fa8b9a9eec23815707d7f.html#a6477bbc0616fa8b9a9eec23815707d7f", null ],
+    [ "setDescription", "classcmas_1_1ontology_1_1base_1_1_entity_aa8c936de9e879d7f6c9fc0e2e8ce9f2e.html#aa8c936de9e879d7f6c9fc0e2e8ce9f2e", null ],
+    [ "setID", "classcmas_1_1ontology_1_1base_1_1_entity_a9c79b35aea04eed75042263665a22265.html#a9c79b35aea04eed75042263665a22265", null ],
+    [ "setID", "classcmas_1_1ontology_1_1base_1_1_entity_a74f9622e0ffc3d80ed942ab78aba9edb.html#a74f9622e0ffc3d80ed942ab78aba9edb", null ],
+    [ "setName", "classcmas_1_1ontology_1_1base_1_1_entity_ac62432fa6b4db3b65d4898afe2606e05.html#ac62432fa6b4db3b65d4898afe2606e05", null ]
+];

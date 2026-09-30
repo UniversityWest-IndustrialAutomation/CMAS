@@ -1,0 +1,17 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$classcmas_1_1ontology_1_1agentcommunication_1_1jsoncontent_1_1_content.html" title=" " alt="" coords="5,197,312,237"/>
+<area shape="rect" id="Node000001" href="$classcmas_1_1ontology_1_1agentcommunication_1_1jsoncontent_1_1template_1_1_content_busy.html" title=" " alt="" coords="360,5,720,45"/>
+<area shape="poly" id="edge105_Node000000_Node000001" title=" " alt="" coords="187,185,260,118,308,83,359,55,389,43,391,48,361,60,310,88,264,122,190,189"/>
+<area shape="rect" id="Node000002" href="$classcmas_1_1ontology_1_1agentcommunication_1_1jsoncontent_1_1template_1_1_content_done.html" title=" " alt="" coords="360,69,720,109"/>
+<area shape="poly" id="edge106_Node000000_Node000002" title=" " alt="" coords="207,187,277,152,359,119,401,107,402,113,361,124,280,156,209,192"/>
+<area shape="rect" id="Node000003" href="$classcmas_1_1ontology_1_1agentcommunication_1_1jsoncontent_1_1template_1_1_content_error.html" title=" " alt="" coords="360,133,720,173"/>
+<area shape="poly" id="edge107_Node000000_Node000003" title=" " alt="" coords="296,192,417,171,417,177,297,197"/>
+<area shape="rect" id="Node000004" href="$classcmas_1_1ontology_1_1agentcommunication_1_1jsoncontent_1_1template_1_1_content_information.html" title=" " alt="" coords="360,197,720,237"/>
+<area shape="poly" id="edge108_Node000000_Node000004" title=" " alt="" coords="327,215,360,215,360,220,327,220"/>
+<area shape="rect" id="Node000005" href="$classcmas_1_1ontology_1_1agentcommunication_1_1jsoncontent_1_1template_1_1_content_negotiate.html" title=" " alt="" coords="360,261,720,301"/>
+<area shape="poly" id="edge109_Node000000_Node000005" title=" " alt="" coords="297,238,417,258,417,263,296,243"/>
+<area shape="rect" id="Node000006" href="$classcmas_1_1ontology_1_1agentcommunication_1_1jsoncontent_1_1template_1_1_content_progress.html" title=" " alt="" coords="360,325,720,365"/>
+<area shape="poly" id="edge110_Node000000_Node000006" title=" " alt="" coords="209,243,280,278,361,311,402,322,401,327,359,316,277,283,207,247"/>
+<area shape="rect" id="Node000007" href="$classcmas_1_1ontology_1_1agentcommunication_1_1jsoncontent_1_1template_1_1_content_result.html" title=" " alt="" coords="360,389,720,429"/>
+<area shape="poly" id="edge111_Node000000_Node000007" title=" " alt="" coords="190,246,264,313,310,347,361,375,391,386,389,391,359,380,308,351,260,317,187,250"/>
+</map>

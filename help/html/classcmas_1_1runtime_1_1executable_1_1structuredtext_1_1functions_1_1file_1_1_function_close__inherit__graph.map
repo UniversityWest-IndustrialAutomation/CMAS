@@ -1,0 +1,9 @@
+<map id="cmas.runtime.executable.structuredtext.functions.file.FunctionClose" name="cmas.runtime.executable.structuredtext.functions.file.FunctionClose">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,269,337,309"/>
+<area shape="rect" id="Node000002" href="$classcmas_1_1runtime_1_1executable_1_1structuredtext_1_1statement_1_1_procedure.html" title=" " alt="" coords="12,181,331,221"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="174,236,174,269,169,269,169,236"/>
+<area shape="rect" id="Node000003" href="$classcmas_1_1runtime_1_1executable_1_1structuredtext_1_1statement_1_1_statement.html" title=" " alt="" coords="12,93,331,133"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="174,148,174,181,169,181,169,148"/>
+<area shape="rect" id="Node000004" href="$classcmas_1_1runtime_1_1executable_1_1_statement_base.html" title=" " alt="" coords="85,5,257,45"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="174,60,174,93,169,93,169,60"/>
+</map>

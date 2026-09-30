@@ -1,0 +1,609 @@
+@startuml inline_umlgraph_1.png
+    start
+    : InterfaceList = 0;
+    : RemoteInterfaceList = 0;
+    
+    if (defined) then (yes) 
+        partition "**defined**" {
+            :Add defined interface to InterfaceList;
+        }
+    elseif (static) then (yes)
+            partition "**static**" {    
+                :Add static interface to InterfaceList;
+            }   
+    else
+        partition "**abstract**" {
+            note
+                A pure abstract interface
+            end note
+            
+            if (target is Goal) then (yes)
+                    :Add target to InterafceList;
+            endif
+
+            :Add all local interfaces to InterfaceList;
+        }
+    endif
+    
+    if (local) then (yes)
+        :Get all local interfaces that match InterfaceList and store in RemoteInterfaceList;
+        else
+        :Get all interfaces on other agents that match InterfaceList and store in RemoteInterfaceList;
+    endif
+            : Compile ACL message with all required skills, variables, operational space;
+                if (Book) then (yes)
+                    :add book=true to ACL message;
+             endif
+            : Send ACL message to all in the RemoteInterfaceList;
+            : Wait for answers;
+            
+            if (answers is empty) then (yes)
+                    :set thread error message;
+                    :return FAILED;
+                    end
+            endif
+            
+            :Store the result in RemoteInterfaceList;           
+            : Remove the interface with lowest cost from the RemoteInterfaceList and store as bestInterface;
+            if (Book) then (yes)
+                    :unbook all interfaces in the RemoteInterfaceList list;
+                endif
+            
+                :return bestInterface;
+                end
+@enduml
+@startuml inline_umlgraph_3.png
+caption Figure 1. CMAS ontology overview.
+package cmas.ontology {
+    legend top left
+      __Legend__
+      | C | Classes |
+      | A | Abstract classes |
+      | E | Enumeration class |
+    
+    end legend
+    
+    enum EntityType { 
+    ENTITY
+    VARIABLE
+    GOAL
+    AGENT
+    SKILL
+    INTERFACE
+    PROCESSPLAN
+    REFERENCE
+    WORKFLOW
+    DATA_ROOT 
+    }
+    
+    abstract class Entity {
+        -- Properties --
+        +Entity : EntityParent
+        +String : Name
+        +String : ID
+        +String : InstanceID
+        +String : Description
+        +EntityType : Type
+    }
+    
+    note top of Entity
+        In the CMAS ontology,
+        every class extends Entity.
+    end note
+
+
+  abstract Agent
+  abstract InterfaceBase
+  abstract Variable
+  abstract ProcessPlan
+
+  Agent --|> Entity
+  InterfaceBase --|> Entity
+  Variable --|> Entity
+  ProcessPlan --|> Entity
+}
+@enduml
+@startuml inline_umlgraph_4.png
+caption Figure 2. CMAS ontology.
+
+
+package cmas.ontology {
+
+
+package agents {
+
+enum AgentBaseTypes { 
+    PART
+    MATERIAL
+    RESOURCE
+    }
+    
+enum AgentState {
+    DEPOT
+    DEPLOY
+    RUNNING
+    UNDEPLOY
+    FINISHED
+    FAILED
+    STOPPED
+}
+
+abstract class Agent extends cmas.ontology.Entity {
+    -- Properties --
+    +String : PhysicalID
+    +AgentBaseTypes : AgentBaseType
+    +String : AgentSpecificType
+    +WorkFlowLog : History [0..*]   
+    +AutoDeploy : Boolean
+}
+
+abstract class AgentAction extends Agent {
+    -- Properties --
+    +processplans.ProcessPlanStructuredText : Actions
+    +AgentState : AgentState
+    -- Relations --
+    +variables.Variable : Variables
+    -- Methods --
+    Constructor()
+    onDepot()
+    onDeploy()
+    Running()
+    onRun()
+    onFailed()
+    onUnDeploy()
+    onFinished()
+    Activate()
+    Deactivate()
+    Failed()
+}
+
+class Resource extends AgentAction {
+-- Relations --
+    +interfaces.InterfaceBase : Interfaces[1..*]
+}
+
+abstract class Component extends AgentAction{
+}
+
+class Material extends Component {
+-- Relations --
+    +interfaces.InterfaceBase : Interfaces[1..*]
+}
+
+class Part extends Component {
+-- Relations --
+    +interfaces.InterfaceBase : Interfaces[0..*]
+    +interfaces.Goal : Goals[1..*]
+}
+
+class DeploymentAgent extends AgentAction {
+    -- Properties --
+    +DeploymentCriteria : DeployAt
+    +String : DeploymentTime
+    +Integer : NumberOfTimes
+    +String : VariableTrigger
+    +String : RetryDelay;
+    -- Relations --
+    +Batch : Batches[0..*]      
+}
+
+enum DeploymentCriteria { 
+    TIME
+    INTERVAL
+}
+
+}
+
+package interfaces {
+
+enum VariableMatchingType {
+    REQUIRED
+    OPTIONAL
+    IGNORE 
+}
+
+abstract class InterfaceBase extends cmas.ontology.Entity {
+    -- Properties --
+    +VariableMatchingType : VariableMatching
+    +processplans.ProcessPlanStructuredText : Actions
+    +Boolean : Booked
+    +String : BookedBy
+    +Boolean : Busy
+    +String : AttachedTo
+    -- Relations --
+    +Variable : Items[0..*] 
+    -- Methods --
+    onAttach()
+    onDetach()
+    onNegotiate()
+    onOverlap()
+    onBook()
+    onUnbook()
+}
+
+class Interface extends InterfaceBase {
+    -- Properties --
+    +Integer : ParallelCapacity
+    +Boolean : QueuRequests
+    -- Relations --
+    +processplans.ProcessPlan : Skills[0..*]
+    -- Methods --
+    onQueue()
+}
+
+class Goal extends InterfaceBase {
+    -- Properties --
+    +String : Interface
+    +processplans.ProcessPlanStructuredText : PreCondition
+    +Integer : Priority
+    +String : ProcessPlanName
+    +Boolean : Assigned
+    +Boolean : Fulfilled
+    +Boolean : Failed
+    +String : FailedMessage
+    -- Relations --
+    +Variable OperationalSpace[0..*]    
+}
+
+class InterfaceSpecialisation extends Interface {
+    -- Properties --
+    +String : SpecialisationName
+    -- Relations --
+    +variables.Variable : Specialisation[0..*]
+}
+
+class InterfaceTransport extends InterfaceSpecialisation {
+}
+
+class InterfaceLocation extends InterfaceSpecialisation {
+}
+
+class InterfaceAssembly extends InterfaceSpecialisation {
+}
+
+}
+
+package action {
+    class Action {
+        -- Properties --
+        +String : Program
+        +Boolean : Compiled
+    }
+}
+
+}
+@enduml
+@startuml inline_umlgraph_5.png
+caption Figure 3. CMAS ontology.
+
+package cmas {
+package ontology {
+
+package processplans {
+
+abstract class ProcessPlan extends cmas.ontology.Entity {
+    -- Properties --
+    +ProcessPlanType : ProcessPlanType
+    +Integer : Cost
+    +WorkFlowTypes PostAction 
+    +String : TargetType
+    +Space : ProcessPlanSpace
+    -- Relations --
+    +Hazard Hazards[0..*]
+    +workflow.Requirement Requirements[0..*]
+    -- Methods --
+    Constructor()
+    onNegotiate()
+    onRun()
+    onFinished()
+    onOverlap() 
+}
+
+class ProcessPlanJava extends ProcessPlan {
+    -- Properties --
+    +FileName : String
+    +Dependencies : String
+}
+
+
+class ProcessPlanStructuredText extends ProcessPlan {
+    -- Properties --
+    +Actions : String
+}
+
+class ProcessPlanGoals extends ProcessPlan {
+    -- Properties --
+    +Block : SFC
+    -- Relations --
+    +interfaces.Goal : Goals[1..*]
+}
+
+class Hazard extends cmas.ontology.Entity {
+    -- Properties --
+        +Risk Risk
+        +String Target
+}
+
+enum Risk {
+    LOW
+    HIGH
+}
+}
+
+package variables {
+abstract class Variable extends cmas.ontology.Entity {
+    -- Properties --
+    +TypeOfVariable : VariableType
+    +Boolean : ReadOnly
+    +Boolean : StoreLongTerm
+    +String : Source
+    +String : Address
+    +Boolean : Error
+}
+
+abstract class Value extends Variable {
+    -- Properties --
+    +Integer | Boolean | String | Real : Value
+    +ValueTypes : ValueType
+    +String : UpperBound
+    +String : LowerBound
+    +String : Unit
+}
+
+class VariableArray extends Variable {
+    -- Properties --
+    +Integer : LowerRange
+    +Integer : UpperRange
+    +ValueTypes : TypeOfValue
+    +VariableArray : Value
+}
+
+class VariableObject extends Variable {
+    -- Properties --
+    +Integer : Size
+    -- Relations --
+    +Variable : Items[1..*]
+}
+
+class VariableBoolean extends Value
+class VariableString extends Value
+class VariableInteger extends Value
+class VariableReal extends Value
+class VariableProperty extends Value
+}
+}
+}
+@enduml
+@startuml inline_umlgraph_6.png
+caption Figure 4. CMAS ontology.
+
+package cmas {
+    package ontology {
+        class Note extends cmas.ontology.Entity {
+            -- Properties --
+            Boolean : ShowInModel
+            Boolean : ShowOnLoad
+            Boolean : ShowBeforeRun
+        }
+        
+        class Settings extends cmas.ontology.Entity {
+            -- Properties --
+            Property : PropertySet[0..*]
+        }   
+    }
+
+    package ontology.batch {
+        class Batch extends cmas.ontology.Entity {
+            -- Properties --
+            +BatchItem: Batch set
+        }
+
+        class BatchItem {
+            -- Properties --
+            String : AgentID    
+            String : AttachToID
+            Integer : NumberOfItems
+            String : Description
+        }   
+    }
+
+    package ontology.workflow {
+        enum WorkFlowTypes { 
+            NONE
+            SKILL
+            CALL
+            GOAL
+            ATTACHED
+            DETACHED
+            ASSEMBLED
+            TRANSFERRED
+            CREATED
+            DEPLOYED
+            FINISHED
+            FAILED
+            UNDEPLOYED
+            INDEPOT
+        }
+        
+        enum SpecificTypes { 
+        REQUIREMENTS 
+        WORKFLOWLOG 
+        
+        }
+        
+        abstract class WorkFlow extends cmas.ontology.Entity {
+            -- Properties --
+            +WorkFlowTypes : WorkFlowType
+        }
+        
+        class WorkFlowLog extends WorkFlow {
+            -- Properties --
+            +String : Target
+            +String : Time 
+        }
+        
+        class Requirement extends WorkFlow {
+            -- Properties --
+            +String : Target
+        }
+    }
+}
+@enduml
+@startuml inline_umlgraph_7.png
+caption Figure 5. CMAS ontology
+
+package cmas {
+
+    package runtime {
+    package executable.domain {
+        class AgentManagement {}
+        class EntityManagement {}
+        class MessageManagement {}
+        class ProcessPlanManagement {}
+        class SystemManagement {}
+        class Verification {}
+    }
+    
+    package executable.sfc.statement {
+        class Statement {
+        }
+        
+        class Block extends Statement {
+        }
+        
+        class BlockSequential extends Block {
+        }
+        
+        class BlockParallel extends Block {
+        }
+            
+        class BlockAlternative extends Block {
+        }
+            
+        class StatementGoal extends Statement {
+        }
+    
+        class StatementRequirement extends Statement {
+        }
+    
+        class StatementAction extends Statement {
+        }
+    }
+    
+    package executable.structuredtext.statement {
+        class Statement {
+            -- Properties --
+            Integer : LineNumber
+        }
+        
+        class Block  extends Statement {
+            
+        }
+    }
+        
+    }
+}
+@enduml
+@startuml inline_umlgraph_13.png
+Caption Four agents
+    json "<b>Product:Part" as JPart{
+    }   
+    json "<b>Buffer:Resource" as JBuffer{
+    }   
+    json "<b>Machine:Resource" as JMachine {
+    }
+    json "<b>Robot:Resource" as JRobot {    
+    }
+@enduml
+@startuml inline_umlgraph_15.png
+json "<b>Buffer:Resource" as JBuffer {
+   "Name":"Buffer",
+   "Interfaces": [{"1":{ "Name":"BufferInterface",
+                        "SpecialisationName":"Location",
+                    "Skills": [
+                        {"1":{"Name":"pickBuffer", "PostAction":"DETACHED"}}, 
+                        {"2":{"Name":"placeBuffer", "PostAction":"ATTACHED"}}
+                        ],
+                    "Specialisation":[
+                            {"Location":[{"Name":"Position"}, {"ValueType":"Integer"}, {"Value":"1"}, {"ReadOnly":"true"}]}
+                                    ]
+                 }}]
+
+}
+
+json "<b>Machine:Resource" as JMachine {
+   "Name":"Machine",
+   "Interfaces": {"1":[{ "Name":"ProcessInterface", 
+                    "SpecialisationName":"Location",
+                    "Skills": [
+                    {"1":{"Name":"placeProcess", "PostAction":"ATTACHED"}}, 
+                    {"2":{"Name":"runProcess",
+                      "Requirements":[{"1":{"Name":"MustBeAttached", "WorkFlowType":"ATTACHED"}}]
+                      }}],
+                    "Specialisation":[
+                       {"Location":[{"Name":"Position"}, {"ValueType":"Integer"}, {"Value":"2"}, {"ReadOnly":"true"}]}
+                                    ]
+                 }]}
+}
+
+
+json "<b>Robot:Resource" as JRobot {
+   "Name":"Robot",
+   "Interfaces": [{"1":{ "Name":"GripperInterface", 
+                    "SpecialisationName":"Transport",
+                    "Skills": {"1":{"Name":"Transport", "PostAction":"TRANSFERED"}},
+                    "Specialisation":[
+                                        {"1":{"FromLocation":[{"Name":"Position"}, {"ValueType":"Integer"}], "ValueType":"Object"}},                                            
+                                        {"2":{"ToLocation":[{"Name":"Position"}, {"ValueType":"Integer"}], "ValueType":"Object"}},
+                                        {"3":{"Step":[{"Name":"Position"}, {"ValueType":"Integer"}]}}
+                                        ]
+                 }}]
+
+}
+
+json "<b>ProductA:Part" as JProductA {
+   "Name":"ProductA",
+   "Goals": [
+        {"1":{"Name":"GoalGetProcessed", "ProcessPlan":"runProcess", "Interface":"ProcessInterface"}}],
+   "Interfaces": [
+        {"1":{"Name":"BufferInterface"}}, 
+        {"2":{"Name":"GripperInterface"}}
+   ]
+}
+@enduml
+@startuml inline_umlgraph_17.png
+caption Figure CMAS variable ontology.
+
+abstract class Variable {
+    -- Properties --
+    +String : Source
+    +String : Address
+}
+
+abstract class Value extends Variable {
+    -- Properties --
+    +Integer | Boolean | String | Real : Value
+    +String : UpperBound
+    +String : LowerBound
+}
+
+class VariableArray extends Variable {
+    -- Properties --
+    +Integer : LowerRange
+    +Integer : UpperRange
+    +VariableArray : Value
+}
+
+class VariableObject extends Variable {
+    -- Properties --
+    +Integer : Size
+    -- Relations --
+    +Variable : Items[1..*]
+}
+
+class VariableBoolean extends Value
+class VariableString extends Value
+class VariableInteger extends Value
+class VariableReal extends Value
+class VariableProperty extends Value
+@enduml

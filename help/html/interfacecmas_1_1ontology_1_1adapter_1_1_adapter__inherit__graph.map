@@ -1,0 +1,23 @@
+<map id="cmas.ontology.adapter.Adapter" name="cmas.ontology.adapter.Adapter">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,280,207,307"/>
+<area shape="rect" id="Node000002" href="$classcmas_1_1ontology_1_1adapter_1_1_f_i_l_e_1_1_file_client.html" title=" " alt="" coords="272,5,460,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="115,264,134,219,164,164,203,107,227,81,253,58,272,46,275,51,256,62,231,85,207,110,168,166,139,222,120,266"/>
+<area shape="rect" id="Node000003" href="$classcmas_1_1ontology_1_1adapter_1_1_modbus_1_1_modbus_client.html" title=" " alt="" coords="263,72,470,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="122,265,175,195,211,157,253,124,275,113,278,118,256,129,215,161,179,199,126,268"/>
+<area shape="rect" id="Node000004" href="$classcmas_1_1ontology_1_1adapter_1_1_o_p_c_u_a_1_1_o_p_c_u_a_client_base.html" title=" " alt="" coords="262,139,470,181"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="134,268,188,229,253,191,282,179,284,184,256,196,191,234,137,272"/>
+<area shape="rect" id="Node000006" href="$classcmas_1_1ontology_1_1adapter_1_1_r_e_s_t_1_1_r_e_s_t_client.html" title=" " alt="" coords="269,205,464,248"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="175,273,279,246,281,251,177,278"/>
+<area shape="rect" id="Node000007" href="$classcmas_1_1ontology_1_1adapter_1_1_s_q_l_1_1_s_q_l_client.html" title=" " alt="" coords="273,272,460,315"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="223,291,273,291,273,296,223,296"/>
+<area shape="rect" id="Node000008" href="$classcmas_1_1ontology_1_1adapter_1_1_zero_m_q_1_1_z_m_q_client.html" title=" " alt="" coords="275,339,458,381"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="177,309,281,335,279,341,175,314"/>
+<area shape="rect" id="Node000009" href="$classcmas_1_1ontology_1_1adapter_1_1socket_1_1_socket_t_c_p_client.html" title=" " alt="" coords="267,405,466,448"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="137,314,191,353,256,391,284,402,282,407,253,396,188,358,134,319"/>
+<area shape="rect" id="Node000010" href="$classcmas_1_1ontology_1_1adapter_1_1socket_1_1_socket_u_d_p_client.html" title=" " alt="" coords="267,472,466,515"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="126,318,179,388,215,426,256,458,278,469,275,474,253,462,211,430,175,392,122,321"/>
+<area shape="rect" id="Node000011" href="$classcmas_1_1ontology_1_1adapter_1_1websocket_1_1_web_socket_client.html" title=" " alt="" coords="255,539,478,581"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="120,320,139,365,168,420,207,477,231,502,256,525,275,536,272,540,253,529,227,506,203,480,164,423,134,367,115,322"/>
+<area shape="rect" id="Node000005" href="$classcmas_1_1ontology_1_1adapter_1_1_o_p_c_u_a_1_1_o_p_c_u_a_client.html" title=" " alt="" coords="526,139,734,181"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="486,157,526,157,526,163,486,163"/>
+</map>

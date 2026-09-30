@@ -1,0 +1,5 @@
+<map id="application.viewer.helpViewer" name="application.viewer.helpViewer">
+<area shape="rect" id="Node000001" title=" " alt="" coords="7,79,198,104"/>
+<area shape="rect" id="Node000002" href="$classapplication_1_1viewer_1_1dock_viewer.html" title=" " alt="" coords="5,5,200,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="105,45,105,78,100,78,100,45"/>
+</map>

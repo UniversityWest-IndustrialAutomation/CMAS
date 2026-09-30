@@ -1,0 +1,21 @@
+<map id="cmas.ontology.Goal" name="cmas.ontology.Goal">
+<area shape="rect" id="Node000001" title=" " alt="" coords="266,392,405,417"/>
+<area shape="rect" id="Node000002" href="$classcmas_1_1ontology_1_1_interface_base.html" title=" " alt="" coords="240,317,431,343"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="338,358,338,392,333,392,333,358"/>
+<area shape="rect" id="Node000003" href="$classcmas_1_1ontology_1_1_entity.html" title=" " alt="" coords="97,243,243,268"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="211,272,309,314,307,319,209,277"/>
+<area shape="rect" id="Node000004" href="$classcmas_1_1ontology_1_1_visualisation.html" title=" " alt="" coords="77,168,263,193"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="173,208,173,242,167,242,167,208"/>
+<area shape="rect" id="Node000005" href="$classcmas_1_1ontology_1_1_container.html" title=" " alt="" coords="87,93,253,119"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="173,134,173,168,167,168,167,134"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="5,5,60,31"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="65,37,152,91,150,95,63,41"/>
+<area shape="rect" id="Node000007" href="$classcmas_1_1ontology_1_1_properties.html" title=" " alt="" coords="85,5,255,31"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="173,45,173,93,167,93,167,45"/>
+<area shape="rect" id="Node000008" href="$classcmas_1_1ontology_1_1_relations.html" title=" " alt="" coords="279,5,445,31"/>
+<area shape="poly" id="edge7_Node000005_Node000008" title=" " alt="" coords="323,39,198,95,195,90,321,35"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="267,243,404,268"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="338,283,338,317,333,317,333,283"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="428,243,539,268"/>
+<area shape="poly" id="edge9_Node000002_Node000010" title=" " alt="" coords="447,277,361,319,359,314,445,272"/>
+</map>

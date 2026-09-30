@@ -1,0 +1,15 @@
+<map id="cmas.ontology.model.ModelAspect" name="cmas.ontology.model.ModelAspect">
+<area shape="rect" id="Node000001" title=" " alt="" coords="109,304,293,347"/>
+<area shape="rect" id="Node000006" href="$classcmas_1_1ontology_1_1model_1_1_model_settings.html" title=" " alt="" coords="5,395,189,437"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="167,359,123,396,120,392,164,355"/>
+<area shape="rect" id="Node000007" href="$classcmas_1_1ontology_1_1model_1_1_model_state.html" title=" " alt="" coords="213,395,397,437"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="238,355,282,392,279,396,235,359"/>
+<area shape="rect" id="Node000002" href="$classcmas_1_1ontology_1_1base_1_1_entity.html" title=" " alt="" coords="113,229,289,256"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="204,272,204,304,198,304,198,272"/>
+<area shape="rect" id="Node000003" href="$classcmas_1_1ontology_1_1base_1_1_visualisation.html" title=" " alt="" coords="93,155,309,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="204,197,204,229,198,229,198,197"/>
+<area shape="rect" id="Node000004" href="$classcmas_1_1ontology_1_1base_1_1_container.html" title=" " alt="" coords="102,80,300,107"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="204,122,204,154,198,154,198,122"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="173,5,229,32"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="204,48,204,80,198,80,198,48"/>
+</map>

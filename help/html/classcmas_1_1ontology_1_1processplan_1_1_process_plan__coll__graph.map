@@ -1,0 +1,17 @@
+<map id="cmas.ontology.processplan.ProcessPlan" name="cmas.ontology.processplan.ProcessPlan">
+<area shape="rect" id="Node000001" title=" " alt="" coords="183,340,366,383"/>
+<area shape="rect" id="Node000002" href="$classcmas_1_1ontology_1_1_entity.html" title=" " alt="" coords="97,256,241,283"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="197,291,252,337,248,341,193,295"/>
+<area shape="rect" id="Node000003" href="$classcmas_1_1ontology_1_1_visualisation.html" title=" " alt="" coords="77,172,261,199"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="172,214,172,256,166,256,166,214"/>
+<area shape="rect" id="Node000004" href="$classcmas_1_1ontology_1_1_container.html" title=" " alt="" coords="86,96,252,123"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="172,138,172,172,166,172,166,138"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="5,5,61,32"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="67,39,151,93,148,98,64,43"/>
+<area shape="rect" id="Node000006" href="$classcmas_1_1ontology_1_1_properties.html" title=" " alt="" coords="85,5,253,32"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="172,48,172,95,166,95,166,48"/>
+<area shape="rect" id="Node000007" href="$classcmas_1_1ontology_1_1_relations.html" title=" " alt="" coords="278,5,442,32"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="320,41,197,98,195,93,317,37"/>
+<area shape="rect" id="Node000008" href="$interfacecmas_1_1ontology_1_1agentcommunication_1_1_communicative_acts.html" title=" " alt="" coords="264,248,498,291"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="347,303,301,342,297,337,343,299"/>
+</map>

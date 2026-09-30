@@ -1,0 +1,23 @@
+<map id="application.viewer.dockViewer" name="application.viewer.dockViewer">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,287,200,313"/>
+<area shape="rect" id="Node000002" href="$classapplication_1_1viewer_1_1_preferences_viewer.html" title=" " alt="" coords="273,5,469,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="110,273,127,226,156,167,195,106,219,79,246,55,271,41,273,46,250,60,223,83,199,110,160,169,132,228,115,274"/>
+<area shape="rect" id="Node000003" href="$classapplication_1_1viewer_1_1comunication_viewer.html" title=" " alt="" coords="269,69,473,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="115,273,137,238,166,196,203,154,247,119,268,108,271,112,249,124,207,158,170,200,141,241,120,275"/>
+<area shape="rect" id="Node000004" href="$classapplication_1_1viewer_1_1console_viewer.html" title=" " alt="" coords="285,133,457,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="125,275,178,228,211,204,247,183,283,168,285,173,249,188,214,208,181,232,129,279"/>
+<area shape="rect" id="Node000005" href="$classapplication_1_1viewer_1_1help_viewer.html" title=" " alt="" coords="275,198,466,223"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="141,278,191,255,247,233,293,221,294,226,249,239,193,260,143,283"/>
+<area shape="rect" id="Node000006" href="$classapplication_1_1viewer_1_1project_tree_viewer.html" title=" " alt="" coords="287,248,454,288"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="215,284,287,275,287,281,215,289"/>
+<area shape="rect" id="Node000007" href="$classapplication_1_1viewer_1_1properties_1_1properties_viewer.html" title=" " alt="" coords="248,312,493,352"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="215,311,248,315,247,320,215,316"/>
+<area shape="rect" id="Node000008" href="$classapplication_1_1viewer_1_1runtime_tree_viewer.html" title=" " alt="" coords="285,376,456,416"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="144,317,249,361,286,373,284,378,247,367,142,322"/>
+<area shape="rect" id="Node000009" href="$classapplication_1_1viewer_1_1schema_1_1schema_viewer.html" title=" " alt="" coords="259,440,482,480"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="126,322,179,375,213,402,249,426,275,437,273,442,247,430,209,407,175,379,122,326"/>
+<area shape="rect" id="Node000010" href="$classapplication_1_1viewer_1_1thread_viewer_agent.html" title=" " alt="" coords="289,504,452,544"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="119,325,139,362,168,407,205,452,249,490,290,509,288,513,247,494,201,456,164,410,134,365,114,327"/>
+<area shape="rect" id="Node000011" href="$classapplication_1_1viewer_1_1thread_viewer_c_p_u.html" title=" " alt="" coords="289,568,452,608"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="114,326,131,375,159,437,198,500,222,529,250,554,269,566,290,574,288,579,266,570,246,558,218,533,194,504,154,440,126,377,109,328"/>
+</map>

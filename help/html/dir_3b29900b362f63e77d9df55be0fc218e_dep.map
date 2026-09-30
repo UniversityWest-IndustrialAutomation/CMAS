@@ -1,0 +1,12 @@
+<map id="adapter" name="adapter">
+<area shape="rect" id="node2" href="dir_7f8aae0019be83372fe662ef30ddaa46.html" title="FILE" alt="" coords="126,64,175,91"/>
+<area shape="rect" id="node3" href="dir_30a5856f7e59c93f16a78e0ab5e341bb.html" title="Modbus" alt="" coords="200,64,267,91"/>
+<area shape="rect" id="node4" href="dir_b7ad59692be6ba33a799344a1500da54.html" title="OPCUA" alt="" coords="291,64,360,91"/>
+<area shape="rect" id="node5" href="dir_adbe1fe8ec6232a430c19c766c726ae0.html" title="REST" alt="" coords="385,64,442,91"/>
+<area shape="rect" id="node6" href="dir_985675a1c7bee520ece8f8cd9bfcec85.html" title="socket" alt="" coords="466,64,526,91"/>
+<area shape="rect" id="node7" href="dir_0eed96a18c5ab41c609b5f8e13ea7858.html" title="SQL" alt="" coords="550,64,597,91"/>
+<area shape="rect" id="node8" href="dir_d5947eb8058b9e2687ca33307fda6c63.html" title="websocket" alt="" coords="620,64,705,91"/>
+<area shape="rect" id="node9" href="dir_288e3439f8d64a1f60db389fc0103fb1.html" title="ZeroMQ" alt="" coords="728,64,797,91"/>
+<area shape="rect" id="clust2" href="dir_3b29900b362f63e77d9df55be0fc218e.html" alt="" coords="27,53,808,101"/>
+<area shape="rect" id="clust1" href="dir_decf50fb0064c0fa05eb0b183bb50257.html" title="ontology" alt="" coords="16,16,819,112"/>
+</map>

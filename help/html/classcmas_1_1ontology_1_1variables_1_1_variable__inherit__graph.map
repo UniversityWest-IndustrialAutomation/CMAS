@@ -1,0 +1,29 @@
+<map id="cmas.ontology.variables.Variable" name="cmas.ontology.variables.Variable">
+<area shape="rect" id="Node000001" title=" " alt="" coords="841,255,1006,297"/>
+<area shape="rect" id="Node000006" href="$classcmas_1_1ontology_1_1variables_1_1_value.html" title=" " alt="" coords="1054,172,1219,215"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="994,246,1079,213,1081,218,996,251"/>
+<area shape="rect" id="Node000012" href="$classcmas_1_1ontology_1_1variables_1_1_variable_array.html" title=" " alt="" coords="1054,255,1219,297"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="1021,273,1053,273,1053,279,1021,279"/>
+<area shape="rect" id="Node000013" href="$classcmas_1_1ontology_1_1variables_1_1_variable_object.html" title=" " alt="" coords="1054,339,1219,381"/>
+<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="994,301,1081,336,1079,341,992,306"/>
+<area shape="rect" id="Node000002" href="$classcmas_1_1ontology_1_1base_1_1_entity.html" title=" " alt="" coords="617,263,793,289"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="808,273,840,273,840,279,808,279"/>
+<area shape="rect" id="Node000003" href="$classcmas_1_1ontology_1_1base_1_1_visualisation.html" title=" " alt="" coords="354,263,569,289"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="585,273,617,273,617,279,585,279"/>
+<area shape="rect" id="Node000004" href="$classcmas_1_1ontology_1_1base_1_1_container.html" title=" " alt="" coords="109,263,306,289"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="321,273,354,273,354,279,321,279"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="5,263,61,289"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="76,273,108,273,108,279,76,279"/>
+<area shape="rect" id="Node000007" href="$classcmas_1_1ontology_1_1variables_1_1_variable_boolean.html" title=" " alt="" coords="1267,5,1433,48"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="1162,158,1207,107,1235,81,1266,58,1286,46,1289,51,1269,62,1239,85,1211,111,1166,162"/>
+<area shape="rect" id="Node000008" href="$classcmas_1_1ontology_1_1variables_1_1_variable_integer.html" title=" " alt="" coords="1267,72,1433,115"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="1190,162,1266,124,1292,113,1294,118,1268,129,1193,167"/>
+<area shape="rect" id="Node000009" href="$classcmas_1_1ontology_1_1variables_1_1_variable_property.html" title=" " alt="" coords="1267,139,1433,181"/>
+<area shape="poly" id="edge8_Node000006_Node000009" title=" " alt="" coords="1234,175,1266,170,1267,176,1235,181"/>
+<area shape="rect" id="Node000010" href="$classcmas_1_1ontology_1_1variables_1_1_variable_real.html" title=" " alt="" coords="1267,205,1433,248"/>
+<area shape="poly" id="edge9_Node000006_Node000010" title=" " alt="" coords="1235,206,1267,211,1266,216,1234,211"/>
+<area shape="rect" id="Node000011" href="$classcmas_1_1ontology_1_1variables_1_1_variable_string.html" title=" " alt="" coords="1267,272,1433,315"/>
+<area shape="poly" id="edge10_Node000006_Node000011" title=" " alt="" coords="1193,220,1268,258,1294,269,1292,274,1266,262,1190,225"/>
+<area shape="rect" id="Node000014" href="$classcmas_1_1ontology_1_1variables_1_1_variable_reference.html" title=" " alt="" coords="1267,339,1433,381"/>
+<area shape="poly" id="edge13_Node000013_Node000014" title=" " alt="" coords="1235,357,1267,357,1267,363,1235,363"/>
+</map>

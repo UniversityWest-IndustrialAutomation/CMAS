@@ -1,0 +1,9 @@
+<map id="application.viewer.properties.property.NumericalField.DoubleValidator" name="application.viewer.properties.property.NumericalField.DoubleValidator">
+<area shape="rect" id="Node000001" title=" " alt="" coords="472,30,711,70"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="229,5,380,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="395,25,472,34,471,39,395,31"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="185,55,424,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="438,64,471,61,472,66,439,70"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,69,137,95"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="152,79,185,79,185,85,152,85"/>
+</map>

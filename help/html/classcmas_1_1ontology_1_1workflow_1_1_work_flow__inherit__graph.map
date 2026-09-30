@@ -1,0 +1,15 @@
+<map id="cmas.ontology.workflow.WorkFlow" name="cmas.ontology.workflow.WorkFlow">
+<area shape="rect" id="Node000001" title=" " alt="" coords="133,304,356,331"/>
+<area shape="rect" id="Node000006" href="$classcmas_1_1ontology_1_1workflow_1_1_requirement.html" title=" " alt="" coords="5,387,244,413"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="215,342,145,388,142,384,212,337"/>
+<area shape="rect" id="Node000007" href="$classcmas_1_1ontology_1_1workflow_1_1_work_flow_log.html" title=" " alt="" coords="267,379,462,421"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="277,337,335,376,332,380,274,342"/>
+<area shape="rect" id="Node000002" href="$classcmas_1_1ontology_1_1base_1_1_entity.html" title=" " alt="" coords="157,229,332,256"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="247,272,247,304,242,304,242,272"/>
+<area shape="rect" id="Node000003" href="$classcmas_1_1ontology_1_1base_1_1_visualisation.html" title=" " alt="" coords="137,155,352,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="247,197,247,229,242,229,242,197"/>
+<area shape="rect" id="Node000004" href="$classcmas_1_1ontology_1_1base_1_1_container.html" title=" " alt="" coords="146,80,343,107"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="247,122,247,154,242,154,242,122"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="217,5,272,32"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="247,48,247,80,242,80,242,48"/>
+</map>

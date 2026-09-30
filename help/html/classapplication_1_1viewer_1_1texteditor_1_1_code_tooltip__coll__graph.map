@@ -1,0 +1,11 @@
+<map id="application.viewer.texteditor.CodeTooltip" name="application.viewer.texteditor.CodeTooltip">
+<area shape="rect" id="Node000001" title=" " alt="" coords="200,137,385,177"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,13,65,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="73,43,256,134,253,139,70,47"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="89,5,339,45"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="235,57,283,135,279,138,231,59"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="363,13,417,38"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="380,53,363,83,341,115,318,139,314,135,337,112,359,81,376,50"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="451,13,497,38"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="471,53,459,85,437,115,413,132,387,143,385,138,411,127,433,111,454,83,466,52"/>
+</map>

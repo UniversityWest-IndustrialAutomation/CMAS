@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['generateuniqueids_0',['generateUniqueIDs',['../classcmas_1_1ontology_1_1base_1_1_entity_a2ad920aef8a7d337e80aecd04f3be296.html#a2ad920aef8a7d337e80aecd04f3be296',1,'cmas::ontology::base::Entity']]],
+  ['getallrelations_1',['getAllRelations',['../classcmas_1_1ontology_1_1base_1_1_entity_a9471a1791b665ee25c90876036b83bb6.html#a9471a1791b665ee25c90876036b83bb6',1,'cmas::ontology::base::Entity']]],
+  ['getdescription_2',['getDescription',['../classcmas_1_1ontology_1_1base_1_1_entity_a9ef4d39c8820216c7aaef42af5402533.html#a9ef4d39c8820216c7aaef42af5402533',1,'cmas::ontology::base::Entity']]],
+  ['getid_3',['getID',['../classcmas_1_1ontology_1_1base_1_1_entity_ad7e06f54d1e82791708970254cc43eb9.html#ad7e06f54d1e82791708970254cc43eb9',1,'cmas::ontology::base::Entity']]],
+  ['getinstance_4',['getInstance',['../classcmas_1_1ontology_1_1action_1_1_independent_class_loader_a2b0e3cb1d8c6edfd726b287123bc05bb.html#a2b0e3cb1d8c6edfd726b287123bc05bb',1,'cmas::ontology::action::IndependentClassLoader']]],
+  ['getinstanceid_5',['getInstanceID',['../classcmas_1_1ontology_1_1base_1_1_entity_a90242d3ffbac8e8f62ef3a22d24f6c2c.html#a90242d3ffbac8e8f62ef3a22d24f6c2c',1,'cmas::ontology::base::Entity']]],
+  ['getlinkedinstanceid_6',['getLinkedInstanceID',['../classcmas_1_1ontology_1_1base_1_1_container_a883ab187281f486e3c72561e18557b06.html#a883ab187281f486e3c72561e18557b06',1,'cmas::ontology::base::Container']]],
+  ['getname_7',['getName',['../classcmas_1_1ontology_1_1base_1_1_entity_a48bebe488b0e715e7cd7bc08da1600c4.html#a48bebe488b0e715e7cd7bc08da1600c4',1,'cmas.ontology.base.Entity.getName()'],['../classcmas_1_1ontology_1_1base_1_1_reference_aa7a340c32d753f5b0dcc73073abd1f82.html#aa7a340c32d753f5b0dcc73073abd1f82',1,'cmas.ontology.base.Reference.getName()']]],
+  ['getpropertieslist_8',['getPropertiesList',['../classcmas_1_1ontology_1_1base_1_1_properties_a986c081e1cfb309fac6fa787965f9e2b.html#a986c081e1cfb309fac6fa787965f9e2b',1,'cmas::ontology::base::Properties']]],
+  ['getrelationname_9',['getRelationName',['../classcmas_1_1ontology_1_1base_1_1_entity_aae8e0808b483192a325658c54ad76b33.html#aae8e0808b483192a325658c54ad76b33',1,'cmas::ontology::base::Entity']]],
+  ['getrelations_10',['getRelations',['../classcmas_1_1ontology_1_1base_1_1_entity_a9d90b5393c4a9378ec91cec10b6b2ea9.html#a9d90b5393c4a9378ec91cec10b6b2ea9',1,'cmas::ontology::base::Entity']]],
+  ['getserverhost_11',['getServerHost',['../classcmas_1_1ontology_1_1adapter_1_1_o_p_c_u_a_1_1_o_p_c_u_a_client_base_a6f6696613fdce58747a017a4c6f2a0e4.html#a6f6696613fdce58747a017a4c6f2a0e4',1,'cmas::ontology::adapter::OPCUA::OPCUAClientBase']]],
+  ['getservername_12',['getServerName',['../classcmas_1_1ontology_1_1adapter_1_1_o_p_c_u_a_1_1_o_p_c_u_a_client_base_aa98b38023b0318edbc94ac86636b4960.html#aa98b38023b0318edbc94ac86636b4960',1,'cmas::ontology::adapter::OPCUA::OPCUAClientBase']]],
+  ['getserverport_13',['getServerPort',['../classcmas_1_1ontology_1_1adapter_1_1_o_p_c_u_a_1_1_o_p_c_u_a_client_base_a9e02d183d6ee63e2f3541cca4d4a1ea3.html#a9e02d183d6ee63e2f3541cca4d4a1ea3',1,'cmas::ontology::adapter::OPCUA::OPCUAClientBase']]],
+  ['getspecificrelations_14',['getSpecificRelations',['../classcmas_1_1ontology_1_1base_1_1_entity_ab5aa8c4217c5c8313d48951049bbaaae.html#ab5aa8c4217c5c8313d48951049bbaaae',1,'cmas::ontology::base::Entity']]],
+  ['gettype_15',['getType',['../classcmas_1_1ontology_1_1base_1_1_entity_aab892979ae6e10c889bdce11b73e3b34.html#aab892979ae6e10c889bdce11b73e3b34',1,'cmas::ontology::base::Entity']]]
+];

@@ -1,0 +1,16 @@
+\_form#0:\[baseDelay(n) = minDelay \cdot 2^{\min(n, MAX_EXPONENT)}
+\]
+\_form#1:\[baseDelay = \min(baseDelay(n), maxDelay)
+\]
+\_form#2:\[baseDelay = minDelay
+\]
+\_form#3:\[jitter \in [0, baseDelay \cdot 0.5]
+\]
+\_form#4:\[jitter = 0
+\]
+\_form#5:\[finalDelay(n) = baseDelay + jitter
+\]
+\_form#6:\[finalDelay(n) =
+\min(minDelay \cdot 2^{\min(n, MAX_EXPONENT)}, maxDelay)
++ \mathrm{random}(0, 0.5 \cdot baseDelay)
+\]

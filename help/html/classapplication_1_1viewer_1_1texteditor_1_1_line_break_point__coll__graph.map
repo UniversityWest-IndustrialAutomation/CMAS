@@ -1,0 +1,7 @@
+<map id="application.viewer.texteditor.LineBreakPoint" name="application.viewer.texteditor.LineBreakPoint">
+<area shape="rect" id="Node000001" title=" " alt="" coords="72,93,257,133"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,145,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="99,40,148,91,144,95,95,43"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="170,5,341,31"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="236,43,185,95,181,91,232,40"/>
+</map>

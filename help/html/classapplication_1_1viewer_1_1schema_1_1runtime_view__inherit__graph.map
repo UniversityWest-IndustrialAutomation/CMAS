@@ -1,0 +1,7 @@
+<map id="application.viewer.schema.runtimeView" name="application.viewer.schema.runtimeView">
+<area shape="rect" id="Node000001" title=" " alt="" coords="45,79,293,104"/>
+<area shape="rect" id="Node000002" href="$interfaceevents_1_1_event_1_1_event_listener.html" title=" " alt="" coords="5,5,183,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="119,39,158,76,154,80,115,43"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="207,5,283,31"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="223,43,183,80,180,76,219,39"/>
+</map>

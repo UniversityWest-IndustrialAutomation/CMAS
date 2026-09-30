@@ -1,0 +1,9 @@
+<map id="application.viewer.texteditor.TextEditor" name="application.viewer.texteditor.TextEditor">
+<area shape="rect" id="Node000001" title=" " alt="" coords="91,137,277,177"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,13,59,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="51,48,76,80,108,111,144,135,141,139,105,115,72,84,46,52"/>
+<area shape="rect" id="Node000003" href="$classapplication_1_1viewer_1_1components_1_1_debug.html" title=" " alt="" coords="83,5,285,45"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="187,60,187,137,181,137,181,60"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="309,13,408,38"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="333,49,211,139,208,135,329,45"/>
+</map>

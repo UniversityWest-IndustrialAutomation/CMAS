@@ -1,0 +1,7 @@
+<map id="application.viewer.sfc.drawable.DrawableObject" name="application.viewer.sfc.drawable.DrawableObject">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,108,208,148"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="26,5,78,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="50,45,51,65,56,83,76,106,72,109,51,85,45,65,45,46"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="134,5,191,31"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="155,45,136,85,122,109,117,106,131,83,150,43"/>
+</map>

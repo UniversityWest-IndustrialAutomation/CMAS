@@ -1,0 +1,13 @@
+<map id="application.viewer.sfc.drawable.DrawableConnector" name="application.viewer.sfc.drawable.DrawableConnector">
+<area shape="rect" id="Node000001" title=" " alt="" coords="30,225,233,265"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,115,73,141"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="50,154,60,177,75,200,101,223,97,227,71,203,56,180,45,156"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="97,115,165,141"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="134,155,134,225,129,225,129,155"/>
+<area shape="rect" id="Node000004" href="$classapplication_1_1viewer_1_1sfc_1_1drawable_1_1_drawable_object.html" title=" " alt="" coords="190,108,393,148"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="254,159,160,227,157,223,251,155"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="211,5,263,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="235,45,235,65,240,83,261,106,257,109,236,85,230,65,230,46"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="319,5,376,31"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="339,45,320,85,306,109,302,106,316,83,335,43"/>
+</map>

@@ -1,0 +1,11 @@
+<map id="datastorage.DataRoot" name="datastorage.DataRoot">
+<area shape="rect" id="Node000001" title=" " alt="" coords="15,225,163,251"/>
+<area shape="rect" id="Node000005" href="$classdatastorage_1_1_folder.html" title=" " alt="" coords="23,299,154,324"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="91,265,91,298,86,298,86,265"/>
+<area shape="rect" id="Node000002" href="$classcmas_1_1ontology_1_1_entity.html" title=" " alt="" coords="16,152,161,177"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="91,192,91,225,86,225,86,192"/>
+<area shape="rect" id="Node000003" href="$classcmas_1_1ontology_1_1_container.html" title=" " alt="" coords="5,79,172,104"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="91,119,91,151,86,151,86,119"/>
+<area shape="rect" id="Node000004" href="$classevents_1_1_event.html" title=" " alt="" coords="41,5,136,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="91,45,91,78,86,78,86,45"/>
+</map>

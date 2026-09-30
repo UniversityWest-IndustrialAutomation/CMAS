@@ -1,0 +1,25 @@
+<map id="cmas.ontology.Component" name="cmas.ontology.Component">
+<area shape="rect" id="Node000001" title=" " alt="" coords="300,467,477,492"/>
+<area shape="rect" id="Node000002" href="$classcmas_1_1ontology_1_1_agent_action.html" title=" " alt="" coords="297,392,480,417"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="391,432,391,466,386,466,386,432"/>
+<area shape="rect" id="Node000003" href="$classcmas_1_1ontology_1_1_agent.html" title=" " alt="" coords="97,317,243,343"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="221,345,353,389,352,394,219,350"/>
+<area shape="rect" id="Node000004" href="$classcmas_1_1ontology_1_1_entity.html" title=" " alt="" coords="97,243,243,268"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="173,283,173,317,167,317,167,283"/>
+<area shape="rect" id="Node000005" href="$classcmas_1_1ontology_1_1_visualisation.html" title=" " alt="" coords="77,168,263,193"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="173,208,173,242,167,242,167,208"/>
+<area shape="rect" id="Node000006" href="$classcmas_1_1ontology_1_1_container.html" title=" " alt="" coords="87,93,253,119"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="173,134,173,168,167,168,167,134"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="5,5,60,31"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="65,37,152,91,150,95,63,41"/>
+<area shape="rect" id="Node000008" href="$classcmas_1_1ontology_1_1_properties.html" title=" " alt="" coords="85,5,255,31"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="173,45,173,93,167,93,167,45"/>
+<area shape="rect" id="Node000009" href="$classcmas_1_1ontology_1_1_relations.html" title=" " alt="" coords="279,5,445,31"/>
+<area shape="poly" id="edge8_Node000006_Node000009" title=" " alt="" coords="323,39,198,95,195,90,321,35"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="267,317,377,343"/>
+<area shape="poly" id="edge9_Node000002_Node000010" title=" " alt="" coords="345,352,380,390,376,393,341,356"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="401,317,509,343"/>
+<area shape="poly" id="edge10_Node000002_Node000011" title=" " alt="" coords="436,356,401,393,398,390,433,352"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="533,317,671,343"/>
+<area shape="poly" id="edge11_Node000002_Node000012" title=" " alt="" coords="554,350,425,394,423,389,552,345"/>
+</map>

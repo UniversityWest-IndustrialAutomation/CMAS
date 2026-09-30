@@ -1,0 +1,23 @@
+<map id="application.viewer.sfc.drawable.BreakPoint" name="application.viewer.sfc.drawable.BreakPoint">
+<area shape="rect" id="Node000001" title=" " alt="" coords="1293,79,1496,119"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="1060,63,1129,88"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1144,77,1293,89,1293,94,1144,82"/>
+<area shape="rect" id="Node000003" href="$classcmas_1_1ontology_1_1_goal.html" title=" " alt="" coords="1025,112,1164,137"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="1179,115,1269,107,1293,105,1293,111,1270,113,1179,120"/>
+<area shape="rect" id="Node000004" href="$classcmas_1_1ontology_1_1_interface_base.html" title=" " alt="" coords="785,112,976,137"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="991,122,1025,122,1025,127,991,127"/>
+<area shape="rect" id="Node000005" href="$classcmas_1_1ontology_1_1_entity.html" title=" " alt="" coords="546,55,691,80"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="695,81,737,90,821,109,819,114,735,95,694,86"/>
+<area shape="rect" id="Node000006" href="$classcmas_1_1ontology_1_1_container.html" title=" " alt="" coords="285,55,452,80"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="467,65,546,65,546,70,467,70"/>
+<area shape="rect" id="Node000007" href="$classevents_1_1_event.html" title=" " alt="" coords="43,5,138,31"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="153,26,262,45,298,51,297,57,261,50,152,31"/>
+<area shape="rect" id="Node000008" href="$classcmas_1_1ontology_1_1_properties.html" title=" " alt="" coords="5,55,176,80"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="191,65,285,65,285,70,191,70"/>
+<area shape="rect" id="Node000009" href="$classcmas_1_1ontology_1_1_relations.html" title=" " alt="" coords="8,104,173,129"/>
+<area shape="poly" id="edge8_Node000006_Node000009" title=" " alt="" coords="184,98,261,85,297,78,298,83,262,90,185,104"/>
+<area shape="rect" id="Node000010" href="$interfacecmas_1_1ontology_1_1agentcommunication_1_1_communicative_acts.html" title=" " alt="" coords="501,105,736,145"/>
+<area shape="poly" id="edge9_Node000004_Node000010" title=" " alt="" coords="751,122,785,122,785,127,751,127"/>
+<area shape="rect" id="Node000011" href="$interfacecmas_1_1runtime_1_1threads_1_1_agent_runnable.html" title=" " alt="" coords="525,169,712,209"/>
+<area shape="poly" id="edge10_Node000004_Node000011" title=" " alt="" coords="717,162,825,135,826,141,718,167"/>
+</map>

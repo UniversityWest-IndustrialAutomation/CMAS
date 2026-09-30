@@ -1,0 +1,17 @@
+<map id="application.viewer.consoleViewer" name="application.viewer.consoleViewer">
+<area shape="rect" id="Node000001" title=" " alt="" coords="573,122,745,162"/>
+<area shape="rect" id="Node000002" href="$classapplication_1_1viewer_1_1dock_viewer.html" title=" " alt="" coords="229,55,424,80"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="417,81,550,109,589,119,587,124,549,114,416,86"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,5,88,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="103,25,251,51,250,57,102,30"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,55,88,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="103,65,229,65,229,70,103,70"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="9,104,84,129"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="98,105,250,78,251,83,99,110"/>
+<area shape="rect" id="Node000006" href="$interfaceevents_1_1_event_1_1_event_listener.html" title=" " alt="" coords="238,104,415,129"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="430,122,573,133,573,138,430,127"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="289,153,364,179"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="379,166,459,167,549,162,572,159,573,164,550,167,459,172,379,171"/>
+<area shape="rect" id="Node000008" href="$classapplication_1_1_console_input.html" title=" " alt="" coords="245,203,408,228"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="422,207,485,199,549,186,617,160,619,165,550,191,486,205,423,213"/>
+</map>

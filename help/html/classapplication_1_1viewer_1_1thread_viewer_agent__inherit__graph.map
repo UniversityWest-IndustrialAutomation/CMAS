@@ -1,0 +1,9 @@
+<map id="application.viewer.threadViewerAgent" name="application.viewer.threadViewerAgent">
+<area shape="rect" id="Node000001" title=" " alt="" coords="181,79,344,119"/>
+<area shape="rect" id="Node000002" href="$classapplication_1_1viewer_1_1dock_viewer.html" title=" " alt="" coords="5,5,200,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="141,35,224,76,222,80,139,40"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="225,5,301,31"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="265,45,265,79,260,79,260,45"/>
+<area shape="rect" id="Node000004" href="$interfaceevents_1_1_event_1_1_event_listener.html" title=" " alt="" coords="325,5,502,31"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="379,40,301,80,299,76,376,35"/>
+</map>
