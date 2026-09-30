@@ -9,7 +9,7 @@
 
 
 
-[Download CMAS](https://github.com/UniversityWest-IndustrialAutomation/CMAS/raw/main/CMAS_2.14.zip)
+[Download CMAS](https://github.com/UniversityWest-IndustrialAutomation/CMAS/raw/main/CMAS_2.15.zip)
  
 [Download Examples](https://github.com/UniversityWest-IndustrialAutomation/CMAS/raw/main/Examples.zip)
 
