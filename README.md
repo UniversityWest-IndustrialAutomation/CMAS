@@ -49,6 +49,7 @@ If this project, its methods, or its underlying concepts contribute to work that
     M. Bennulf, F. Danielsson, B. Svensson, B. Lennartson, “Goal-oriented process plans in a multiagent system for plug & produce,” IEEE Transactions on Industrial Informatics, 2020. https://doi.org/10.1109/TII.2020.2994032
 
 [https://doi.org/10.1016/j.rcim.2022.102450](https://doi.org/10.1016/j.rcim.2022.102450)
+
 [https://doi.org/10.1109/TII.2020.2994032](https://doi.org/10.1109/TII.2020.2994032)
 
 We believe that open access to research and software encourages innovation and collaboration. We simply ask that the original research and the contributions of its authors are acknowledged when building upon this work.
