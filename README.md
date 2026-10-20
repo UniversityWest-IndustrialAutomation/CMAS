@@ -30,9 +30,12 @@ CMAS changes the way automation systems are built and operated. At its core, CMA
 
 We are open to collaborating with companies, universities, and colleges. If you're interested in exploring collaboration opportunities in the form of a research project, don't hesitate to reach out.
 
-## Download CMAS
+## Download and install CMAS
+
 Download `CMAS`, that is a zip file containing `cmas.exe`. Additionally, `simulation.exe` is a simulated Plug & Produce environment, perfect for testing and evaluation. Example project `crane-example.cmas` for the simulation can be found in the zip file `crane-example.zip`. Read `How to use CMAS.pdf` to install and run CMAS.
 
+
+[See installation for more details.](https://universitywest-industrialautomation.github.io/CMAS/installation_page.html)
 
 <!-- 
 
