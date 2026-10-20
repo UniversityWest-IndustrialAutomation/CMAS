@@ -69,6 +69,7 @@ var hierarchy =
       [ "cmas.ontology.agentcommunication.jsoncontent.template.ContentResult", "classcmas_1_1ontology_1_1agentcommunication_1_1jsoncontent_1_1template_1_1_content_result.html", null ]
     ] ],
     [ "cmas.ontology.agentcommunication.jsoncontent.ContentParameter", "classcmas_1_1ontology_1_1agentcommunication_1_1jsoncontent_1_1_content_parameter.html", null ],
+    [ "cmas.ontology.agents.Part.ControlModeType", "enumcmas_1_1ontology_1_1agents_1_1_part_1_1_control_mode_type.html", null ],
     [ "cmas.ontology.agents.DeploymentAgent.DeploymentCriteria", "enumcmas_1_1ontology_1_1agents_1_1_deployment_agent_1_1_deployment_criteria.html", null ],
     [ "cmas.ontology.base.Entity.EntityType", "enumcmas_1_1ontology_1_1base_1_1_entity_1_1_entity_type.html", null ],
     [ "Event", null, [

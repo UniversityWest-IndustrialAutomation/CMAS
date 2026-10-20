@@ -33,7 +33,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="logo_small.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Configurable Multiagent System for Plug&amp;Produce<span id="projectnumber">&#160;2.15.0</span>
+   <div id="projectname">Configurable Multiagent System for Plug&amp;Produce
    </div>
    <div id="projectbrief">CMAS</div>
   </td>
@@ -117,7 +117,7 @@ Introduction</h1>
 <div class="line">Begin</div>
 <div class="line">  writeln(&#39;Hello World&#39;);</div>
 <div class="line">End.</div>
-</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md212"></a>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md220"></a>
 The overall structure in a program</h1>
 <p>A program consist of the following sections:</p><ul>
 <li><a class="el" href="#program">Program name</a> (optional)</li>
@@ -251,7 +251,7 @@ Interface</h2>
 <li><a class="el" href="#static">Static</a></li>
 </ul>
 <p>All abstract interfaces expose some static and some asynchronous functions. The asynchronous functions starts with an underscore _. For more details see the section <a class="el" href="negotiation_page.html">interfaces and negotiation</a>.</p>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md213"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md221"></a>
 Asynchronous functions</h3>
 <h4 class="doxsection"><a class="anchor" id="_book"></a>
 _book</h4>
@@ -265,8 +265,14 @@ _isbookedbyme</h4>
 <h4 class="doxsection"><a class="anchor" id="__isbooked"></a>
 _isbooked</h4>
 <p><em>abstractinterface</em>._isbooked() will return done if the remote interface is booked by anyone. See <a class="el" href="negotiation_page.html#async_isbooked">_isbooked()</a></p>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md214"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md222"></a>
 Static functions</h3>
+<h4 class="doxsection"><a class="anchor" id="__clearfunctions"></a>
+clearfunctions</h4>
+<p><em>abstractinterface</em>._clearfunctions() will clear all desired functions for the abstract interface.</p>
+<h4 class="doxsection"><a class="anchor" id="__clearvariables"></a>
+clearvariables</h4>
+<p><em>abstractinterface</em>._clearvariables() will clear all desired variables for the abstract interface.</p>
 <h4 class="doxsection"><a class="anchor" id="negotiate"></a>
 negotiate</h4>
 <p><em>abstractinterface</em>.negotiate() will make a single attempt to locate a compatible remote interface from the accessible resources. See <a class="el" href="negotiation_page.html#static_negotiate">negotiate()</a></p>
@@ -548,7 +554,7 @@ end. </span> <br  />
 <div class="line">  writeln(&#39;Hello World!&#39;);</div>
 <div class="line">End.</div>
 </div><!-- fragment --><hr  />
-<h1 class="doxsection"><a class="anchor" id="autotoc_md215"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md223"></a>
 Control structures</h1>
 <p>The following control structures exist:</p><ul>
 <li><a class="el" href="#while">while</a></li>
@@ -857,12 +863,12 @@ parallel</h2>
 <div class="line"> </div>
 <div class="line">end. </div>
 </div><!-- fragment --><hr  />
- <h1 class="doxsection"><a class="anchor" id="autotoc_md216"></a>
+ <h1 class="doxsection"><a class="anchor" id="autotoc_md224"></a>
 Operators</h1>
 <p>Operators define computations, comparisons, boolean logic, and state updates in expressions.</p>
 <p>The following operators exist: <br  />
  </p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md217"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md225"></a>
 Arithmetic</h2>
 <p>Arithmetic operators perform numeric computations on numeric operands and produce a numeric result. However, it is also possible to use addition (+) to merge strings.</p>
 <table class="markdownTable">
@@ -882,7 +888,7 @@ Arithmetic</h2>
 <td class="markdownTableBodyLeft">Modulus  </td><td class="markdownTableBodyLeft">mod  </td></tr>
 </table>
 <hr  />
-<h2 class="doxsection"><a class="anchor" id="autotoc_md218"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md226"></a>
 Assignment</h2>
 <p>Assign values to variables.</p>
 <table class="markdownTable">
@@ -906,7 +912,7 @@ Assignment</h2>
 <div class="line">end.</div>
 </div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>Assignment is an expression and yields the assigned value. This allows chained assignments such as a := b := c := 1.</dd></dl>
 <hr  />
-<h2 class="doxsection"><a class="anchor" id="autotoc_md219"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md227"></a>
 Relations</h2>
 <p>Compare two values and produce a Boolean result.</p>
 <table class="markdownTable">
@@ -926,7 +932,7 @@ Relations</h2>
 <td class="markdownTableBodyLeft">Not equal  </td><td class="markdownTableBodyLeft">&lt;&gt;  </td></tr>
 </table>
 <hr  />
-<h2 class="doxsection"><a class="anchor" id="autotoc_md220"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md228"></a>
 Logical</h2>
 <p>Combine or negate Boolean expressions and produce a Boolean result.</p>
 <table class="markdownTable">
@@ -964,7 +970,7 @@ Logical</h2>
 </table>
 <dl class="section note"><dt>Note</dt><dd>Will only operate on integers.</dd></dl>
 <hr  />
-<h2 class="doxsection"><a class="anchor" id="autotoc_md222"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md230"></a>
 Object</h2>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -973,7 +979,7 @@ Object</h2>
 <td class="markdownTableBodyLeft">Access member operator  </td><td class="markdownTableBodyLeft">.  </td></tr>
 </table>
 <hr  />
-<h2 class="doxsection"><a class="anchor" id="autotoc_md223"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md231"></a>
 Array</h2>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -982,7 +988,7 @@ Array</h2>
 <td class="markdownTableBodyLeft">Index operator  </td><td class="markdownTableBodyLeft">[ ]  </td></tr>
 </table>
 <hr  />
-<h1 class="doxsection"><a class="anchor" id="autotoc_md224"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md232"></a>
 Types</h1>
 <p>The following types exist:</p><ul>
 <li><a class="el" href="#real">REAL</a></li>
@@ -1099,9 +1105,9 @@ Example:</p>
 <div class="line">    writeln(&#39;Negotiate with agent &#39;, agentObject.name, &#39; on interface &#39;, interfaceObject.name);</div>
 <div class="line">end.</div>
 </div><!-- fragment --><hr  />
-<h1 class="doxsection"><a class="anchor" id="autotoc_md225"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md233"></a>
 Procedures</h1>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md226"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md234"></a>
 Input and output</h2>
 <h3 class="doxsection"><a class="anchor" id="writeln"></a>
 writeln</h3>
@@ -1157,7 +1163,7 @@ readln</h3>
 <div class="line">        writeln(&#39;wrong menu&#39;);</div>
 <div class="line">end.</div>
 </div><!-- fragment --><hr  />
- <h2 class="doxsection"><a class="anchor" id="autotoc_md227"></a>
+ <h2 class="doxsection"><a class="anchor" id="autotoc_md235"></a>
 Abstract Interface Functions</h2>
 <h3 class="doxsection"><a class="anchor" id="abstractname"></a>
 abstractname</h3>
@@ -1264,7 +1270,7 @@ ignorebusy</h3>
 <div class="line">    example.run();</div>
 <div class="line">end.</div>
 </div><!-- fragment --><hr  />
-<h2 class="doxsection"><a class="anchor" id="autotoc_md228"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md236"></a>
 Test Functions</h2>
 <h3 class="doxsection"><a class="anchor" id="isreal"></a>
 isreal</h3>
@@ -1348,7 +1354,7 @@ stringisempty</h3>
 </div><!-- fragment --><p> <br  />
 </p>
 <hr  />
-<h2 class="doxsection"><a class="anchor" id="autotoc_md229"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md237"></a>
 Converting Functions</h2>
 <p>This section documents a set of type conversion procedures available, and they all follow the same general pattern, as described below. Since Structured Text is type-sensitive, it is important to use the correct type. These procedures can be used to assist in converting values or variables to the required types.</p>
 <p><b>Procedure:</b> &lt;type_from&gt;to&lt;type_to&gt; <br  />
@@ -1492,7 +1498,7 @@ stringtostring</h3>
  <b>Return</b> <b>value:</b> The &lt;expression&gt; value converted to string. <br  />
 </p>
 <hr  />
-<h2 class="doxsection"><a class="anchor" id="autotoc_md230"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md238"></a>
 String Functions</h2>
 <h3 class="doxsection"><a class="anchor" id="len"></a>
 len</h3>
@@ -1704,7 +1710,7 @@ space</h3>
 <div class="line">    end;</div>
 <div class="line">End.</div>
 </div><!-- fragment --><hr  />
-<h2 class="doxsection"><a class="anchor" id="autotoc_md231"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md239"></a>
 JSON functions</h2>
 <h3 class="doxsection"><a class="anchor" id="getjelement"></a>
 GetJElement</h3>
@@ -1812,6 +1818,18 @@ IsJsonArray</h3>
 <div class="line">Begin</div>
 <div class="line">    writeln(isjsonarray(&#39;[{&quot;x&quot;:1}, {&quot;x&quot;:2}]&#39;));             // Will print TRUE</div>
 <div class="line">End.</div>
+</div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="jsonarraysize"></a>
+JsonArraySize</h3>
+<p><b>Function:</b> jsonarraysize <br  />
+<b>Syntax:</b> <span class="tt"> jsonarraysize(&lt;string&gt;) : integer</span> <br  />
+<b>Description:</b> Will return the size of a JSON array described by a string.<br  />
+<b>Return</b> <b>value:</b> -1 if string is not a valid array otherwise the size.<br  />
+<b>Example:</b> <br  />
+</p><div class="fragment"><div class="line">Program Example_JSON;</div>
+<div class="line"> </div>
+<div class="line">Begin</div>
+<div class="line">    writeln(jsonarraysize(&#39;[{&quot;x&quot;:1}, {&quot;x&quot;:2}]&#39;));             // Will print 2</div>
+<div class="line">End.</div>
 </div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="jsonwrite"></a>
 JsonWrite</h3>
 <p><b>Function:</b> jsonwrite <br  />
@@ -1825,7 +1843,7 @@ JsonWrite</h3>
 <div class="line">    jsonwrite((&#39;[{&quot;x&quot;:1}, {&quot;x&quot;:2}]&#39;));             </div>
 <div class="line">End.</div>
 </div><!-- fragment --><hr  />
-<h2 class="doxsection"><a class="anchor" id="autotoc_md232"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md240"></a>
 Math functions</h2>
 <p><b>Procedure:</b> &lt;math_function&gt;<br  />
 <b>Syntax:</b> <span class="tt">  &lt;math_function&gt;(&lt;expression&gt;) : integer | real </span> <br  />
@@ -2086,7 +2104,7 @@ random</h3>
 <b>Return</b> <b>value:</b> Will return a pseudo random number in the range [0, &lt;expression&gt;). <br  />
  <br  />
 </p><hr  />
-<h2 class="doxsection"><a class="anchor" id="autotoc_md233"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md241"></a>
 Array Functions</h2>
 <h3 class="doxsection"><a class="anchor" id="length"></a>
 length</h3>
@@ -2133,7 +2151,7 @@ endindex</h3>
 <b>Return</b> <b>value:</b> Last index. <br  />
 <b>Example:</b> see length.<br  />
  </p><hr  />
-<h2 class="doxsection"><a class="anchor" id="autotoc_md234"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md242"></a>
 HMI</h2>
 <h3 class="doxsection"><a class="anchor" id="messagebox"></a>
 messagebox</h3>
@@ -2251,9 +2269,9 @@ optiondialog</h3>
 <div class="line">        optiondialog(1, false); // Close the dialog</div>
 <div class="line">End.</div>
 </div><!-- fragment --><hr  />
-<h1 class="doxsection"><a class="anchor" id="autotoc_md235"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md243"></a>
 System Functions</h1>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md236"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md244"></a>
 Time</h2>
 <h3 class="doxsection"><a class="anchor" id="sleep"></a>
 sleep</h3>
@@ -2333,7 +2351,7 @@ memoryused</h3>
 <div class="line">Begin</div>
 <div class="line">    writeln(&#39;Used memory in MB = &#39;, memoryUsed());</div>
 <div class="line">End.</div>
-</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md237"></a>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md245"></a>
 Preferences</h2>
 <h3 class="doxsection"><a class="anchor" id="preferencevalue"></a>
 preferencevalue</h3>
@@ -2346,7 +2364,7 @@ preferencevalue</h3>
 <div class="line">Begin</div>
 <div class="line">    writeln(&#39;RetryOnBusy=&#39;, preferencevalue(&#39;RetryOnBusy&#39;, false));</div>
 <div class="line">End.</div>
-</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md238"></a>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md246"></a>
 Debug</h2>
 <h3 class="doxsection"><a class="anchor" id="threadmessage"></a>
 threadmessage</h3>
@@ -2361,7 +2379,7 @@ threadmessage</h3>
 <div class="line">    threadmessage(&#39;Init of agent - running constructor&#39;);</div>
 <div class="line">End.</div>
 </div><!-- fragment --> <hr  />
-<h2 class="doxsection"><a class="anchor" id="autotoc_md239"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md247"></a>
 File Functions</h2>
 <h3 class="doxsection"><a class="anchor" id="open"></a>
 open</h3>
@@ -2477,9 +2495,9 @@ freadln</h3>
 <div class="line">    readFromFile1();</div>
 <div class="line">    readFromFile2();</div>
 <div class="line">end.</div>
-</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md240"></a>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md248"></a>
 Server API Functions</h1>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md241"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md249"></a>
 Pause</h2>
 <h3 class="doxsection"><a class="anchor" id="pauseall"></a>
 pauseAll</h3>
@@ -2508,7 +2526,7 @@ pausebyname</h3>
 <div class="line">    // Will pause all agent with a ID=1</div>
 <div class="line">    pauseByID(&#39;1&#39;);</div>
 <div class="line">End.</div>
-</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md242"></a>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md250"></a>
 Console and log</h2>
 <h3 class="doxsection"><a class="anchor" id="clearconsole"></a>
 clearconsole</h3>
@@ -2529,7 +2547,7 @@ clearlog</h3>
 </p><div class="fragment"><div class="line">Begin</div>
 <div class="line">    clearlog();</div>
 <div class="line">End.</div>
-</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md243"></a>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md251"></a>
 Runtime control</h2>
 <h3 class="doxsection"><a class="anchor" id="isruntime"></a>
 isruntime</h3>
@@ -2757,7 +2775,42 @@ getmodelstates</h3>
 <div class="line">    s=getmodelstates(&#39;modelstate&#39;);</div>
 <div class="line">    writeln(s);</div>
 <div class="line">End.</div>
-</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md244"></a>
+</div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="getoperations"></a>
+getoperations</h3>
+<p><b>Procedure:</b> getoperations<br  />
+<b>Syntax</b> <b></b>: <span class="tt"> getoperations([&lt;interface&gt;]) : string</span> <br  />
+<b>Description:</b> Will get all possible operations (i.e Skills and process plans) from the runtime environment. If string_goalid is omitted all possible skills are considered. However, if a valid instance id to a goal/interface or a real interface is given only compatible skills are considered.<br  />
+<b>Return</b> <b>value:</b> All operations as a JSON array based on the Operation defenition in the ontology.inc include file. <br  />
+ <b>Example:</b> <br  />
+</p><div class="fragment"><div class="line">program Example;</div>
+<div class="line"> </div>
+<div class="line">var operationsArray: String;</div>
+<div class="line">var size : Integer;</div>
+<div class="line">begin</div>
+<div class="line">    operationsArray:=getoperations();</div>
+<div class="line">    size:=jsonarraysize(operationsArray);</div>
+<div class="line">    while size&gt;0 do begin</div>
+<div class="line">        size:=size-1;</div>
+<div class="line">        writeln(&#39;Operation&#39;, inttostring(Size + 1), &#39;&quot;: &#39;, getjarray(operationsArray, size));</div>
+<div class="line">    end;</div>
+<div class="line">end.</div>
+</div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="executeoperation"></a>
+executeoperation</h3>
+<p><b>Procedure:</b> executeoperation<br  />
+<b>Syntax</b> <b></b>: <span class="tt"> executeoperation(&lt;string_operation&gt;) : integer</span> <br  />
+<b>Description:</b> Will try to execute the the operation given by the string based on the Operation defenition in the ontology.inc include file. <br  />
+<b>Return</b> <b>value:</b> ProcessValue as an integer. <br  />
+ <b>Example:</b> <br  />
+</p><div class="fragment"><div class="line">program Example;</div>
+<div class="line"> </div>
+<div class="line">var operationsArray: String;</div>
+<div class="line">var size : Integer;</div>
+<div class="line">begin</div>
+<div class="line">    operationsArray:=getoperations();</div>
+<div class="line">    size:=jsonarraysize(operationsArray);</div>
+<div class="line">    if size &gt;0 then executeoperation(getjarray(operationsArray, 0));    </div>
+<div class="line">end.</div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md252"></a>
 Object access</h2>
 <h3 class="doxsection"><a class="anchor" id="getobject"></a>
 getobject</h3>
@@ -2854,9 +2907,9 @@ getreference</h3>
 <div class="line">    // Write object name to screen (this.name)          </div>
 <div class="line">    writeln(anObject.name); </div>
 <div class="line">end.</div>
-</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md245"></a>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md253"></a>
 Examples</h1>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md246"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md254"></a>
 Example 1 - Arrays</h2>
 <div class="fragment"><div class="line">{ An example program how to handle arrays }</div>
 <div class="line">Program Example_array;</div>
@@ -2888,7 +2941,7 @@ Example 1 - Arrays</h2>
 <div class="line">  writeln(MyArray);  </div>
 <div class="line">End.</div>
 </div><!-- fragment --><p>   </p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md247"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md255"></a>
 Example 2 - Interfaces and objects</h2>
 <div class="fragment"><div class="line">{ An example program how to handle interfaces and agent objects }</div>
 <div class="line">Program Example_skill;</div>
@@ -2906,7 +2959,7 @@ Example 2 - Interfaces and objects</h2>
 <div class="line">  Interface1.RemoteSkill(); // Call remote skill</div>
 <div class="line">  </div>
 <div class="line">End.</div>
-</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md248"></a>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md256"></a>
 Example 3 - Structures</h2>
 <div class="fragment"><div class="line">{ An example program how to use structures }</div>
 <div class="line">Program Pose_Example;</div>
@@ -2937,7 +2990,7 @@ Example 3 - Structures</h2>
 <div class="line"> </div>
 <div class="line">    WriteLn(&#39;Pos diff=&#39;, Diff(Pos1, Pos2));</div>
 <div class="line">End.</div>
-</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md249"></a>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md257"></a>
 Example 4 - MessageBox User Information</h2>
 <div class="fragment"><div class="line">{ An example program how to show HMI messages }</div>
 <div class="line">Program MessageBox_Example;</div>
@@ -2966,7 +3019,7 @@ Example 4 - MessageBox User Information</h2>
 <div class="line">      WriteLn(&#39;You closed the window&#39;);</div>
 <div class="line">    end;</div>
 <div class="line">End.</div>
-</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md250"></a>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md258"></a>
 Example 5 - InputDialog</h2>
 <div class="fragment"><div class="line">{ An example program how to get user input strings from HMI }</div>
 <div class="line">Program InputDialog_Example;</div>
@@ -2990,7 +3043,7 @@ Example 5 - InputDialog</h2>
 <div class="line">       end;</div>
 <div class="line">    end;</div>
 <div class="line">End.</div>
-</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md251"></a>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md259"></a>
 Example 6 - OptionDialog</h2>
 <div class="fragment"><div class="line">{ An example program how to create a HMI stop button for a calculation. </div>
 <div class="line">  The program will calculate PI by a known series. The series is handled by a for loop</div>
@@ -3025,7 +3078,7 @@ Example 6 - OptionDialog</h2>
 <div class="line">    End;</div>
 <div class="line">    WriteLn(&#39;PI is &#39;, PI*4.0, &#39; after &#39;, Counter , &#39; number of iterations.&#39;);</div>
 <div class="line">End.</div>
-</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md252"></a>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md260"></a>
 Example 7 - JSON Get</h2>
 <div class="fragment"><div class="line">Program Example_JSON;</div>
 <div class="line"> </div>
@@ -3070,7 +3123,7 @@ Example 7 - JSON Get</h2>
 <div class="line">    </div>
 <div class="line">    writeln(&#39;f.a=&#39;, getjelement(f, &#39;a&#39;)); // Will print b</div>
 <div class="line">End.</div>
-</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md253"></a>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md261"></a>
 Example 8 - JSON and Struct mapping</h2>
 <div class="fragment"><div class="line">Program Example_JSON_Struct;</div>
 <div class="line"> </div>
@@ -3106,7 +3159,7 @@ Example 8 - JSON and Struct mapping</h2>
 <div class="line">  JSONString:=structtoj(Data);    // Convert Struct back to JSON</div>
 <div class="line">  Writeln(JSONString); // Print the canged JSON</div>
 <div class="line">End.</div>
-</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md254"></a>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md262"></a>
 Example 9 - JSON Set</h2>
 <div class="fragment"><div class="line">Program Example_JSON;</div>
 <div class="line"> </div>
@@ -3153,7 +3206,7 @@ Example 9 - JSON Set</h2>
 <div class="line">    { Write JSON object to screen }</div>
 <div class="line">    WriteLn(JSONString);</div>
 <div class="line">End.</div>
-</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md255"></a>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md263"></a>
 Example 10 - Sort</h2>
 <div class="fragment"><div class="line">{ An example program }</div>
 <div class="line">Program Example;</div>
@@ -3231,7 +3284,7 @@ Example 10 - Sort</h2>
 <div class="line">    BubbleSort;</div>
 <div class="line">    Display(&#39;Sorted Data&#39;);</div>
 <div class="line">End.</div>
-</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md256"></a>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md264"></a>
 Example 11 - Foreach</h2>
 <div class="fragment"><div class="line">{ An example program }</div>
 <div class="line">Program Example;</div>
@@ -3331,6 +3384,17 @@ ontology.inc</h2>
 <div class="line"> </div>
 <div class="line">struct Material extends Agent;</div>
 <div class="line">begin </div>
+<div class="line">end;</div>
+<div class="line"> </div>
+<div class="line">struct Operation;</div>
+<div class="line">begin</div>
+<div class="line">    var OperationInstanceID: String;</div>
+<div class="line">    var AgentName, AgentDescription : String;</div>
+<div class="line">    var InterfaceName, InterfaceDescription : String;</div>
+<div class="line">    var OperationName, OperationDescription : String;</div>
+<div class="line">    var OperationCost : String;</div>
+<div class="line">    var OperationType : String; </div>
+<div class="line">    var TargetInstanceID : String;</div>
 <div class="line">end;</div>
 <div class="line"> </div>
 <div class="line">struct InterfaceBase extends Entity;</div>

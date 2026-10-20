@@ -33,7 +33,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="logo_small.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Configurable Multiagent System for Plug&amp;Produce<span id="projectnumber">&#160;2.15.0</span>
+   <div id="projectname">Configurable Multiagent System for Plug&amp;Produce
    </div>
    <div id="projectbrief">CMAS</div>
   </td>
@@ -108,7 +108,7 @@ $(function() {
   <div class="headertitle"><div class="title">Variables </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1 class="doxsection"><a class="anchor" id="autotoc_md258"></a>
+<div class="textblock"><h1 class="doxsection"><a class="anchor" id="autotoc_md266"></a>
 Overview</h1>
 <p>Variables are used to represent values within agents, interfaces, goals and other CMAS objects. A variable may represent a single value, an array, or a structured object. The actual data stored by a variable is handled by a value object (see <a class="el" href="#variable_types">Variable types</a>). Different variable types extend the basic variable concept to support primitive values, arrays, or structured objects. Variables are used to represent values within agents, interfaces, goals, and other CMAS objects. A variable may represent a single value, an array, or a structured object. The underlying data of a variable is represented by a <a class="el" href="ontology_page.html#value">value object</a>. <br  />
 </p>
@@ -117,7 +117,7 @@ Overview</h1>
  Variables declared in <a class="el" href="structuredtext_page.html#var"><b>Structured Text</b></a> (local or global variables within procedures) are different and not covered in this section, although they behave similarly in terms of read/write operations.</dd></dl>
 <p>The following simplified diagram illustrates the relationships between the main variable types in CMAS. For the complete ontology see <a class="el" href="ontology_page.html">Ontology</a>.</p>
 <div class="plantumlgraph">
-<img src="inline_umlgraph_17.png" />
+<img src="inline_umlgraph_9.png" />
 </div>
 <p>For additional details see:</p><ul>
 <li><a class="el" href="adapters_page.html">Variable adapters</a></li>
@@ -139,7 +139,7 @@ Variable types</h1>
 <li>object variables</li>
 </ul>
 <p>Array variables store an indexed collection of values, while object variables store a structured set of variables.</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md259"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md267"></a>
 Example: Variable Value</h2>
 <p>The Agent object has a relation called Variables that can host variables of any type. Variables can be added to an agent in the modeling tree by using the Add new button, or by selecting the Variable commands in the Modeling tab of the ribbon. The following example demonstrates how a variable called counter can be used to count time during execution.</p>
 <div class="fragment"><div class="line">procedure onRun;</div>
@@ -154,7 +154,7 @@ Example: Variable Value</h2>
 <div class="line">  sleep(1000);</div>
 <div class="line">end.</div>
 </div><!-- fragment --><p>In this example, the variable counter is stored in the agent and updated continuously while the agent is running.</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md260"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md268"></a>
 Example: Array Variable</h2>
 <p>The following example demonstrates how to use an array variable in an agent. It shows two common ways to access elements: by index and using a foreach loop. For an array variable, the <b>LowerRange</b> and <b>UpperRange</b> properties can be modified in the property editor during modeling to change the array size.</p>
 <div class="fragment"><div class="line">procedure init;</div>
@@ -183,7 +183,7 @@ Example: Array Variable</h2>
 <li><span class="tt">agent.a[i]</span> accesses an individual element by its index.</li>
 <li><span class="tt">foreach item in agent.a</span> iterates over all elements in the array, which is convenient for processing all values without explicit indexing.</li>
 </ul>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md261"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md269"></a>
 Example: Object Variable</h2>
 <p>An object variable is used to group several related variables into a structured object. <br  />
  Specifically, an <b>Object Variable</b> hosts other variables inside its <b>Items</b> relation. <br  />
@@ -199,7 +199,7 @@ Example: Object Variable</h2>
 <div class="line">    writeln(agent.object);    </div>
 <div class="line">end.</div>
 </div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>Using a <a class="el" href="adapters_page.html">variable adapter</a>, a value can be connected to external data sources. A value can also have <a class="el" href="variablebound_page.html">bounds</a> which limit the allowed value range.</dd></dl>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md262"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md270"></a>
 Functions</h1>
 <p>A value exposes optional functions that can be overridden to customize the behavior of value access.</p>
 <table class="markdownTable">

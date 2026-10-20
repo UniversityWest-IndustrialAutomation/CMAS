@@ -33,7 +33,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="logo_small.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Configurable Multiagent System for Plug&amp;Produce<span id="projectnumber">&#160;2.15.0</span>
+   <div id="projectname">Configurable Multiagent System for Plug&amp;Produce
    </div>
    <div id="projectbrief">CMAS</div>
   </td>
@@ -108,12 +108,12 @@ $(function() {
   <div class="headertitle"><div class="title">Negotiation </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1 class="doxsection"><a class="anchor" id="autotoc_md131"></a>
+<div class="textblock"><h1 class="doxsection"><a class="anchor" id="autotoc_md138"></a>
 Interfaces</h1>
 <p>A skill represents an action or task executable by a resource agent during runtime. Typically, a skill demands additional information, represented through variables. In CMAS, an agent's <a class="el" href="interfaces_page.html">interface</a> has the role of maintaining both a set of variables and a set of skills as one unit. This unit serves as a connection point and all collaborations are performed through <a class="el" href="interfaces_page.html">interfaces</a>. <br  />
  For an interface to be operational it must at least possess one skill.</p>
 <dl class="section note"><dt>Note</dt><dd>An interface serves as a means of depicting compatibility, i.e., when two interfaces match, they can be treated as compatible.</dd></dl>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md132"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md139"></a>
 Collaboration</h1>
 <p>When an agent requires assistance from another agent at runtime, a search is conducted to locate a suitable remote agent interface. To ensure the appropriateness and compatibility of the sought agent interface, a negotiation process starts between the agents. This negotiation process entails agents striving to establish an agreement on how to effectively cooperate and synchronize their respective skills. During the modelling phase, the ability to reference the utilization of compatible remote interfaces is essential, this without the need to specify any particular agent or interface. This is achieved through abstract interfaces in CMAS. Hence, an abstract interface represents a desired remote interface during the modelling process and lacks any direct connection to any specific remote interface. However, during runtime, it will be linked with the best available remote interface and transformed into a real interface during the negotiation process. A linked interface can then be used to interact with other agents, e.g., to request a skill to start and send variable values.</p>
 <p><br  />
@@ -128,7 +128,7 @@ Collaboration</h1>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone"><a class="el" href="structuredtext_page.html#static">Static</a>  </td><td class="markdownTableBodyNone">A remote interface is static mapped to any local interface. The remote interface must be known by ID at the modelling phase.  </td></tr>
 </table>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md133"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md140"></a>
 The negotiation process</h1>
 <p>A negotiation is performed the first time a variable on a declared abstract interface is accessed (this step is ignored if handle is specified for the abstract interface) or if a skill is called on an abstract interface. It is also possible to do it manually by calling the negotiate() function on an abstract interface. For more details see, <a class="el" href="structuredtext_page.html#interface">how to define and use abstract interfaces.</a></p>
 <p>The negotiation process is conducted through the following sequential steps, for all local interfaces:</p><ol type="1">
@@ -210,7 +210,7 @@ Details</h1>
 </p><dl class="section note"><dt>Note</dt><dd>If a remote skill is called on an uninitialised abstract interface an agree() is automatically triggered. If the interface is declare with the handle modifier a negotiate() call is triggered instead. This can be avoided by calling any of negotiate() or agree() functions before. It is also possible to re-negotiate an abstract interface later on by calling negotiate() or agree() again.</dd></dl>
 <p><br  />
  </p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md134"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md141"></a>
 Negotiation and Booking</h2>
 <p>It is possible to use an abstract interface directly. In the following example an abstract interface a is declared. When the skill call doSomeThing() is called it will trigger a negotiation. That negotiation process will try to map any local interface to a compatible remote interface before executing the skill.</p>
 <div class="fragment"><div class="line">Program example;</div>
@@ -255,7 +255,7 @@ For an abstract interface mapped to a remote interface all remote skills are ava
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">_book()  </td><td class="markdownTableBodyNone">false  </td><td class="markdownTableBodyNone">yes  </td><td class="markdownTableBodyNone">will return done or failed  </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">_book ()  </td><td class="markdownTableBodyNone">false  </td><td class="markdownTableBodyNone">no  </td><td class="markdownTableBodyNone">will fail and stop the execution on an error  </td></tr>
+<td class="markdownTableBodyNone">_book()  </td><td class="markdownTableBodyNone">false  </td><td class="markdownTableBodyNone">no  </td><td class="markdownTableBodyNone">will fail and stop the execution on an error  </td></tr>
 </table>
 <p><br  />
 </p><dl class="section note"><dt>Note</dt><dd>a call to _book() can fail if the negotiation process fails. To overcome this it is possible to first call negotiate() and check if it is done before calling _book().</dd></dl>

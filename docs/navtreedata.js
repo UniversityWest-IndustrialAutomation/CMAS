@@ -109,27 +109,28 @@ var NAVTREE =
     [ "Interfaces", "interfaces_page.html", "interfaces_page" ],
     [ "Ontology", "ontology_page.html", [
       [ "Introduction", "ontology_page.html#ontology_introduction", null ],
-      [ "How to Read the CMAS Ontology", "ontology_page.html#autotoc_md138", null ],
-      [ "cmas.ontology Objects", "ontology_page.html#autotoc_md139", [
+      [ "How to Read the CMAS Ontology", "ontology_page.html#autotoc_md145", null ],
+      [ "cmas.ontology Objects", "ontology_page.html#autotoc_md146", [
         [ "Entity", "ontology_page.html#entity", null ],
         [ "Note", "ontology_page.html#note", null ],
-        [ "Settings", "ontology_page.html#settings", null ],
+        [ "ModelSettings", "ontology_page.html#modelsettings", null ],
+        [ "ModelState", "ontology_page.html#modelstate", null ],
         [ "Folder", "ontology_page.html#folder", null ]
       ] ],
-      [ "cmas.ontology.processplans", "ontology_page.html#autotoc_md144", [
+      [ "cmas.ontology.processplans", "ontology_page.html#autotoc_md152", [
         [ "ProcessPlanGoals", "ontology_page.html#processplangoals", null ],
         [ "ProcessPlanStructuredText", "ontology_page.html#processplanstructuredtext", null ],
         [ "Hazard", "ontology_page.html#hazard", null ],
         [ "Risk", "ontology_page.html#risk", null ]
       ] ],
-      [ "cmas.ontology.agent", "ontology_page.html#autotoc_md150", [
+      [ "cmas.ontology.agent", "ontology_page.html#autotoc_md158", [
         [ "AgentAction", "ontology_page.html#agentaction", null ],
         [ "Resource", "ontology_page.html#resource", null ],
         [ "Material", "ontology_page.html#material", null ],
         [ "Part", "ontology_page.html#part", null ],
         [ "DeploymentAgent", "ontology_page.html#deploymentagent", null ]
       ] ],
-      [ "cmas.ontology.variables", "ontology_page.html#autotoc_md157", [
+      [ "cmas.ontology.variables", "ontology_page.html#autotoc_md165", [
         [ "Variable", "ontology_page.html#variable", null ],
         [ "Value", "ontology_page.html#value", null ],
         [ "VariableBoolean", "ontology_page.html#variableboolean", null ],
@@ -139,69 +140,69 @@ var NAVTREE =
         [ "VariableArray", "ontology_page.html#variablearray", null ],
         [ "VariableObject", "ontology_page.html#variableobject", null ]
       ] ],
-      [ "cmas.ontology.interfaces", "ontology_page.html#autotoc_md166", [
+      [ "cmas.ontology.interfaces", "ontology_page.html#autotoc_md174", [
         [ "InterfaceBase", "ontology_page.html#interfacebase", null ],
         [ "Interface", "ontology_page.html#interface", [
           [ "Goal", "ontology_page.html#goal", null ]
         ] ],
         [ "InterfaceSpecialisation", "ontology_page.html#interfacespecialisation", null ],
-        [ "InterfaceSpecialisation templates", "ontology_page.html#autotoc_md171", null ]
+        [ "InterfaceSpecialisation templates", "ontology_page.html#autotoc_md179", null ]
       ] ],
-      [ "cmas.ontology.workflow", "ontology_page.html#autotoc_md173", [
+      [ "cmas.ontology.workflow", "ontology_page.html#autotoc_md181", [
         [ "WorkFlow", "ontology_page.html#workflow", null ],
         [ "WorkFlowLog", "ontology_page.html#workflowlog", null ],
         [ "Requirement", "ontology_page.html#requirement", null ]
       ] ],
-      [ "cmas.ontology.batch", "ontology_page.html#autotoc_md177", [
+      [ "cmas.ontology.batch", "ontology_page.html#autotoc_md185", [
         [ "Batch", "ontology_page.html#batch", null ],
         [ "BatchItem", "ontology_page.html#batchitem", null ]
       ] ],
-      [ "Extended Ontology", "ontology_page.html#autotoc_md180", null ]
+      [ "Extended Ontology", "ontology_page.html#autotoc_md188", null ]
     ] ],
     [ "Planner", "planner_page.html", [
-      [ "Introduction", "planner_page.html#autotoc_md181", [
+      [ "Introduction", "planner_page.html#autotoc_md189", [
         [ "Executing the Plan", "planner_page.html#planner_steps", null ]
       ] ],
-      [ "Example 1 - one robot", "planner_page.html#autotoc_md182", [
-        [ "Machine", "planner_page.html#autotoc_md183", null ],
-        [ "Buffer", "planner_page.html#autotoc_md184", null ],
-        [ "Robot", "planner_page.html#autotoc_md185", null ],
-        [ "Part", "planner_page.html#autotoc_md186", null ]
+      [ "Example 1 - one robot", "planner_page.html#autotoc_md190", [
+        [ "Machine", "planner_page.html#autotoc_md191", null ],
+        [ "Buffer", "planner_page.html#autotoc_md192", null ],
+        [ "Robot", "planner_page.html#autotoc_md193", null ],
+        [ "Part", "planner_page.html#autotoc_md194", null ]
       ] ],
-      [ "Example 2 - adding an operator", "planner_page.html#autotoc_md187", [
-        [ "Updated robot", "planner_page.html#autotoc_md188", null ],
-        [ "Running Example 2", "planner_page.html#autotoc_md189", null ]
+      [ "Example 2 - adding an operator", "planner_page.html#autotoc_md195", [
+        [ "Updated robot", "planner_page.html#autotoc_md196", null ],
+        [ "Running Example 2", "planner_page.html#autotoc_md197", null ]
       ] ],
-      [ "Goal-Driven Planning", "planner_page.html#autotoc_md190", [
-        [ "Skill Requirements: AND / OR Semantics", "planner_page.html#autotoc_md191", null ],
-        [ "Representing Skill Requirements in Structured Text", "planner_page.html#autotoc_md192", null ]
+      [ "Goal-Driven Planning", "planner_page.html#autotoc_md198", [
+        [ "Skill Requirements: AND / OR Semantics", "planner_page.html#autotoc_md199", null ],
+        [ "Representing Skill Requirements in Structured Text", "planner_page.html#autotoc_md200", null ]
       ] ]
     ] ],
     [ "Processplans", "processplans_main_page.html", "processplans_main_page" ],
     [ "Requirements", "requirements_page.html", [
       [ "Introduction", "requirements_page.html#requirements_introduction", null ],
-      [ "Example requirement on a skill", "requirements_page.html#autotoc_md199", [
-        [ "Model", "requirements_page.html#autotoc_md200", null ],
-        [ "Step-by-step instructions:", "requirements_page.html#autotoc_md201", [
-          [ "1. Buffer", "requirements_page.html#autotoc_md202", null ],
-          [ "2. Machine", "requirements_page.html#autotoc_md203", null ],
-          [ "3. Robot", "requirements_page.html#autotoc_md204", null ],
-          [ "4. ProductA", "requirements_page.html#autotoc_md205", null ],
-          [ "Run", "requirements_page.html#autotoc_md206", null ]
+      [ "Example requirement on a skill", "requirements_page.html#autotoc_md207", [
+        [ "Model", "requirements_page.html#autotoc_md208", null ],
+        [ "Step-by-step instructions:", "requirements_page.html#autotoc_md209", [
+          [ "1. Buffer", "requirements_page.html#autotoc_md210", null ],
+          [ "2. Machine", "requirements_page.html#autotoc_md211", null ],
+          [ "3. Robot", "requirements_page.html#autotoc_md212", null ],
+          [ "4. ProductA", "requirements_page.html#autotoc_md213", null ],
+          [ "Run", "requirements_page.html#autotoc_md214", null ]
         ] ]
       ] ],
       [ "Example requirements in a process plan", "requirements_page.html#requirements_assembly", [
-        [ "Assembly", "requirements_page.html#autotoc_md207", null ]
+        [ "Assembly", "requirements_page.html#autotoc_md215", null ]
       ] ],
-      [ "InterfaceSpecialisation", "requirements_page.html#autotoc_md208", [
-        [ "InterfaceLocation", "requirements_page.html#autotoc_md209", null ],
-        [ "InterfaceTransport", "requirements_page.html#autotoc_md210", null ],
-        [ "InterfaceAssembly", "requirements_page.html#autotoc_md211", null ]
+      [ "InterfaceSpecialisation", "requirements_page.html#autotoc_md216", [
+        [ "InterfaceLocation", "requirements_page.html#autotoc_md217", null ],
+        [ "InterfaceTransport", "requirements_page.html#autotoc_md218", null ],
+        [ "InterfaceAssembly", "requirements_page.html#autotoc_md219", null ]
       ] ]
     ] ],
     [ "Structured text", "structuredtext_page.html", [
       [ "Introduction", "structuredtext_page.html#structured_text", null ],
-      [ "The overall structure in a program", "structuredtext_page.html#autotoc_md212", [
+      [ "The overall structure in a program", "structuredtext_page.html#autotoc_md220", [
         [ "Program", "structuredtext_page.html#program", null ],
         [ "Directives", "structuredtext_page.html#directives", [
           [ "Include", "structuredtext_page.html#include", null ],
@@ -209,13 +210,15 @@ var NAVTREE =
           [ "Error", "structuredtext_page.html#error2", null ]
         ] ],
         [ "Struct type", "structuredtext_page.html#struct", [
-          [ "Asynchronous functions", "structuredtext_page.html#autotoc_md213", [
+          [ "Asynchronous functions", "structuredtext_page.html#autotoc_md221", [
             [ "_book", "structuredtext_page.html#_book", null ],
             [ "_unbook", "structuredtext_page.html#_unbook", null ],
             [ "_isbookedbyme", "structuredtext_page.html#__isbookedbyme", null ],
             [ "_isbooked", "structuredtext_page.html#__isbooked", null ]
           ] ],
-          [ "Static functions", "structuredtext_page.html#autotoc_md214", [
+          [ "Static functions", "structuredtext_page.html#autotoc_md222", [
+            [ "clearfunctions", "structuredtext_page.html#__clearfunctions", null ],
+            [ "clearvariables", "structuredtext_page.html#__clearvariables", null ],
             [ "negotiateandbook", "structuredtext_page.html#negotiateandbook", null ],
             [ "agree", "structuredtext_page.html#agree", null ],
             [ "agreeandbook", "structuredtext_page.html#agreeandbook", null ]
@@ -232,7 +235,7 @@ var NAVTREE =
         [ "Overriding ontology functions and procedures", "structuredtext_page.html#override", null ],
         [ "Main program block", "structuredtext_page.html#begin", null ]
       ] ],
-      [ "Control structures", "structuredtext_page.html#autotoc_md215", [
+      [ "Control structures", "structuredtext_page.html#autotoc_md223", [
         [ "while", "structuredtext_page.html#while", null ],
         [ "repeat", "structuredtext_page.html#repeat", null ],
         [ "for", "structuredtext_page.html#for", null ],
@@ -245,15 +248,15 @@ var NAVTREE =
         [ "label", "structuredtext_page.html#label", null ],
         [ "parallel", "structuredtext_page.html#parallel", null ]
       ] ],
-      [ "Operators", "structuredtext_page.html#autotoc_md216", [
-        [ "Arithmetic", "structuredtext_page.html#autotoc_md217", null ],
-        [ "Assignment", "structuredtext_page.html#autotoc_md218", null ],
-        [ "Relations", "structuredtext_page.html#autotoc_md219", null ],
-        [ "Logical", "structuredtext_page.html#autotoc_md220", null ],
-        [ "Object", "structuredtext_page.html#autotoc_md222", null ],
-        [ "Array", "structuredtext_page.html#autotoc_md223", null ]
+      [ "Operators", "structuredtext_page.html#autotoc_md224", [
+        [ "Arithmetic", "structuredtext_page.html#autotoc_md225", null ],
+        [ "Assignment", "structuredtext_page.html#autotoc_md226", null ],
+        [ "Relations", "structuredtext_page.html#autotoc_md227", null ],
+        [ "Logical", "structuredtext_page.html#autotoc_md228", null ],
+        [ "Object", "structuredtext_page.html#autotoc_md230", null ],
+        [ "Array", "structuredtext_page.html#autotoc_md231", null ]
       ] ],
-      [ "Types", "structuredtext_page.html#autotoc_md224", [
+      [ "Types", "structuredtext_page.html#autotoc_md232", [
         [ "Real", "structuredtext_page.html#real", null ],
         [ "Integer", "structuredtext_page.html#integer", null ],
         [ "Boolean", "structuredtext_page.html#boolean", null ],
@@ -267,13 +270,13 @@ var NAVTREE =
         ] ],
         [ "Reference", "structuredtext_page.html#reference", null ]
       ] ],
-      [ "Procedures", "structuredtext_page.html#autotoc_md225", [
-        [ "Input and output", "structuredtext_page.html#autotoc_md226", [
+      [ "Procedures", "structuredtext_page.html#autotoc_md233", [
+        [ "Input and output", "structuredtext_page.html#autotoc_md234", [
           [ "writeln", "structuredtext_page.html#writeln", null ],
           [ "write", "structuredtext_page.html#write", null ],
           [ "readln", "structuredtext_page.html#readln", null ]
         ] ],
-        [ "Abstract Interface Functions", "structuredtext_page.html#autotoc_md227", [
+        [ "Abstract Interface Functions", "structuredtext_page.html#autotoc_md235", [
           [ "abstractname", "structuredtext_page.html#abstractname", null ],
           [ "abstractcost", "structuredtext_page.html#abstractcost", null ],
           [ "abstractshare", "structuredtext_page.html#abstractshare", null ],
@@ -281,7 +284,7 @@ var NAVTREE =
           [ "ignorebooked", "structuredtext_page.html#ignorebooked", null ],
           [ "ignorebusy", "structuredtext_page.html#ignorebusy", null ]
         ] ],
-        [ "Test Functions", "structuredtext_page.html#autotoc_md228", [
+        [ "Test Functions", "structuredtext_page.html#autotoc_md236", [
           [ "isreal", "structuredtext_page.html#isreal", null ],
           [ "isboolean", "structuredtext_page.html#isboolean", null ],
           [ "isinteger", "structuredtext_page.html#isinteger", null ],
@@ -291,7 +294,7 @@ var NAVTREE =
           [ "stringisboolean", "structuredtext_page.html#stringisboolean", null ],
           [ "stringisempty", "structuredtext_page.html#stringisempty", null ]
         ] ],
-        [ "Converting Functions", "structuredtext_page.html#autotoc_md229", [
+        [ "Converting Functions", "structuredtext_page.html#autotoc_md237", [
           [ "realtoint", "structuredtext_page.html#realtoint", null ],
           [ "inttoint", "structuredtext_page.html#inttoint", null ],
           [ "booleantoint", "structuredtext_page.html#booleantoint", null ],
@@ -309,7 +312,7 @@ var NAVTREE =
           [ "booleantostring", "structuredtext_page.html#booleantostring", null ],
           [ "stringtostring", "structuredtext_page.html#stringtostring", null ]
         ] ],
-        [ "String Functions", "structuredtext_page.html#autotoc_md230", [
+        [ "String Functions", "structuredtext_page.html#autotoc_md238", [
           [ "len", "structuredtext_page.html#len", null ],
           [ "left", "structuredtext_page.html#left", null ],
           [ "right", "structuredtext_page.html#right", null ],
@@ -325,7 +328,7 @@ var NAVTREE =
           [ "ord", "structuredtext_page.html#ord", null ],
           [ "space", "structuredtext_page.html#space", null ]
         ] ],
-        [ "JSON functions", "structuredtext_page.html#autotoc_md231", [
+        [ "JSON functions", "structuredtext_page.html#autotoc_md239", [
           [ "GetJElement", "structuredtext_page.html#getjelement", null ],
           [ "SetJElement", "structuredtext_page.html#setjelement", null ],
           [ "JToStruct", "structuredtext_page.html#jtostruct", null ],
@@ -333,9 +336,10 @@ var NAVTREE =
           [ "GetJArray", "structuredtext_page.html#getjarray", null ],
           [ "IsJson", "structuredtext_page.html#isjson", null ],
           [ "IsJsonArray", "structuredtext_page.html#isjsonarray", null ],
+          [ "JsonArraySize", "structuredtext_page.html#jsonarraysize", null ],
           [ "JsonWrite", "structuredtext_page.html#jsonwrite", null ]
         ] ],
-        [ "Math functions", "structuredtext_page.html#autotoc_md232", [
+        [ "Math functions", "structuredtext_page.html#autotoc_md240", [
           [ "abs", "structuredtext_page.html#abs", null ],
           [ "ceil", "structuredtext_page.html#ceil", null ],
           [ "floor", "structuredtext_page.html#floor", null ],
@@ -359,19 +363,19 @@ var NAVTREE =
           [ "toradians", "structuredtext_page.html#toradians", null ],
           [ "random", "structuredtext_page.html#random", null ]
         ] ],
-        [ "Array Functions", "structuredtext_page.html#autotoc_md233", [
+        [ "Array Functions", "structuredtext_page.html#autotoc_md241", [
           [ "length", "structuredtext_page.html#length", null ],
           [ "startindex", "structuredtext_page.html#startindex", null ],
           [ "endindex", "structuredtext_page.html#endindex", null ]
         ] ],
-        [ "HMI", "structuredtext_page.html#autotoc_md234", [
+        [ "HMI", "structuredtext_page.html#autotoc_md242", [
           [ "messagebox", "structuredtext_page.html#messagebox", null ],
           [ "inputdialog", "structuredtext_page.html#inputdialog", null ],
           [ "optiondialog", "structuredtext_page.html#optiondialog", null ]
         ] ]
       ] ],
-      [ "System Functions", "structuredtext_page.html#autotoc_md235", [
-        [ "Time", "structuredtext_page.html#autotoc_md236", [
+      [ "System Functions", "structuredtext_page.html#autotoc_md243", [
+        [ "Time", "structuredtext_page.html#autotoc_md244", [
           [ "sleep", "structuredtext_page.html#sleep", null ],
           [ "time", "structuredtext_page.html#time", null ],
           [ "beep", "structuredtext_page.html#beep", null ],
@@ -379,13 +383,13 @@ var NAVTREE =
           [ "memorytotal", "structuredtext_page.html#memorytotal", null ],
           [ "memoryused", "structuredtext_page.html#memoryused", null ]
         ] ],
-        [ "Preferences", "structuredtext_page.html#autotoc_md237", [
+        [ "Preferences", "structuredtext_page.html#autotoc_md245", [
           [ "preferencevalue", "structuredtext_page.html#preferencevalue", null ]
         ] ],
-        [ "Debug", "structuredtext_page.html#autotoc_md238", [
+        [ "Debug", "structuredtext_page.html#autotoc_md246", [
           [ "threadmessage", "structuredtext_page.html#threadmessage", null ]
         ] ],
-        [ "File Functions", "structuredtext_page.html#autotoc_md239", [
+        [ "File Functions", "structuredtext_page.html#autotoc_md247", [
           [ "open", "structuredtext_page.html#open", null ],
           [ "MODE", "structuredtext_page.html#mode", null ],
           [ "close", "structuredtext_page.html#close", null ],
@@ -393,16 +397,16 @@ var NAVTREE =
           [ "freadln", "structuredtext_page.html#freadln", null ]
         ] ]
       ] ],
-      [ "Server API Functions", "structuredtext_page.html#autotoc_md240", [
-        [ "Pause", "structuredtext_page.html#autotoc_md241", [
+      [ "Server API Functions", "structuredtext_page.html#autotoc_md248", [
+        [ "Pause", "structuredtext_page.html#autotoc_md249", [
           [ "pauseAll", "structuredtext_page.html#pauseall", null ],
           [ "pausebyname", "structuredtext_page.html#pausebyname", null ]
         ] ],
-        [ "Console and log", "structuredtext_page.html#autotoc_md242", [
+        [ "Console and log", "structuredtext_page.html#autotoc_md250", [
           [ "clearconsole", "structuredtext_page.html#clearconsole", null ],
           [ "clearlog", "structuredtext_page.html#clearlog", null ]
         ] ],
-        [ "Runtime control", "structuredtext_page.html#autotoc_md243", [
+        [ "Runtime control", "structuredtext_page.html#autotoc_md251", [
           [ "isruntime", "structuredtext_page.html#isruntime", null ],
           [ "stopsystem", "structuredtext_page.html#stopsystem", null ],
           [ "restartsystem", "structuredtext_page.html#restartsystem", null ],
@@ -419,26 +423,28 @@ var NAVTREE =
           [ "getnumberofrunningresources", "structuredtext_page.html#getnumberofrunningresources", null ],
           [ "attach", "structuredtext_page.html#attach", null ],
           [ "assembly", "structuredtext_page.html#assembly", null ],
-          [ "getmodelstates", "structuredtext_page.html#getmodelstates", null ]
+          [ "getmodelstates", "structuredtext_page.html#getmodelstates", null ],
+          [ "getoperations", "structuredtext_page.html#getoperations", null ],
+          [ "executeoperation", "structuredtext_page.html#executeoperation", null ]
         ] ],
-        [ "Object access", "structuredtext_page.html#autotoc_md244", [
+        [ "Object access", "structuredtext_page.html#autotoc_md252", [
           [ "getobject", "structuredtext_page.html#getobject", null ],
           [ "getrelation", "structuredtext_page.html#getrelation", null ],
           [ "getreference", "structuredtext_page.html#getreference", null ]
         ] ]
       ] ],
-      [ "Examples", "structuredtext_page.html#autotoc_md245", [
-        [ "Example 1 - Arrays", "structuredtext_page.html#autotoc_md246", null ],
-        [ "Example 2 - Interfaces and objects", "structuredtext_page.html#autotoc_md247", null ],
-        [ "Example 3 - Structures", "structuredtext_page.html#autotoc_md248", null ],
-        [ "Example 4 - MessageBox User Information", "structuredtext_page.html#autotoc_md249", null ],
-        [ "Example 5 - InputDialog", "structuredtext_page.html#autotoc_md250", null ],
-        [ "Example 6 - OptionDialog", "structuredtext_page.html#autotoc_md251", null ],
-        [ "Example 7 - JSON Get", "structuredtext_page.html#autotoc_md252", null ],
-        [ "Example 8 - JSON and Struct mapping", "structuredtext_page.html#autotoc_md253", null ],
-        [ "Example 9 - JSON Set", "structuredtext_page.html#autotoc_md254", null ],
-        [ "Example 10 - Sort", "structuredtext_page.html#autotoc_md255", null ],
-        [ "Example 11 - Foreach", "structuredtext_page.html#autotoc_md256", null ]
+      [ "Examples", "structuredtext_page.html#autotoc_md253", [
+        [ "Example 1 - Arrays", "structuredtext_page.html#autotoc_md254", null ],
+        [ "Example 2 - Interfaces and objects", "structuredtext_page.html#autotoc_md255", null ],
+        [ "Example 3 - Structures", "structuredtext_page.html#autotoc_md256", null ],
+        [ "Example 4 - MessageBox User Information", "structuredtext_page.html#autotoc_md257", null ],
+        [ "Example 5 - InputDialog", "structuredtext_page.html#autotoc_md258", null ],
+        [ "Example 6 - OptionDialog", "structuredtext_page.html#autotoc_md259", null ],
+        [ "Example 7 - JSON Get", "structuredtext_page.html#autotoc_md260", null ],
+        [ "Example 8 - JSON and Struct mapping", "structuredtext_page.html#autotoc_md261", null ],
+        [ "Example 9 - JSON Set", "structuredtext_page.html#autotoc_md262", null ],
+        [ "Example 10 - Sort", "structuredtext_page.html#autotoc_md263", null ],
+        [ "Example 11 - Foreach", "structuredtext_page.html#autotoc_md264", null ]
       ] ],
       [ "System include files", "structuredtext_page.html#system_include_files", [
         [ "ontology.inc", "structuredtext_page.html#ontology_inc", null ],
@@ -467,7 +473,7 @@ var NAVTREEINDEX =
 "classcmas_1_1ontology_1_1interfaces_1_1_interface_specialisation.html#aa8c936de9e879d7f6c9fc0e2e8ce9f2e",
 "classcmas_1_1ontology_1_1variables_1_1_variable_array.html#a883ab187281f486e3c72561e18557b06",
 "deployment_page.html#autotoc_md37",
-"structuredtext_page.html#abstractname"
+"requirements_page.html#requirements_introduction"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

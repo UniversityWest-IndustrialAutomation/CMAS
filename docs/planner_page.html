@@ -33,7 +33,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="logo_small.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Configurable Multiagent System for Plug&amp;Produce<span id="projectnumber">&#160;2.15.0</span>
+   <div id="projectname">Configurable Multiagent System for Plug&amp;Produce
    </div>
    <div id="projectbrief">CMAS</div>
   </td>
@@ -108,7 +108,7 @@ $(function() {
   <div class="headertitle"><div class="title">Planner </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1 class="doxsection"><a class="anchor" id="autotoc_md181"></a>
+<div class="textblock"><h1 class="doxsection"><a class="anchor" id="autotoc_md189"></a>
 Introduction</h1>
 <p>Assume that a product must execute process A in order to achieve a specific goal. The first step is to locate all resources capable of performing this process. In CMAS this can be achieved through negotiation with abstract interfaces to identify a suitable resource.</p>
 <p>However, once a resource has been selected, the system must also determine how the product can reach that resource. This involves identifying a valid path through the system and selecting appropriate transportation resources. In a production system this can quickly becomes complex, as multiple resources, routes, and constraints may exist.</p>
@@ -162,14 +162,14 @@ Executing the Plan</h2>
 Returning <em>processplan.failed</em> aborts the current execution.</dd>
 <dd>
 Returning <em>processplan.replan</em> aborts the current plan and triggers a replanning of the problem. This allows the Planner Agent to dynamically generate a new plan if resources become unavailable or execution constraints change during runtime.</dd></dl>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md182"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md190"></a>
 Example 1 - one robot</h1>
 <p>In this example we have four Agents, one Part called Product and three resources Buffer, Machine and Robot.</p>
 <div class="plantumlgraph">
-<img src="inline_umlgraph_13.png" />
+<img src="inline_umlgraph_7.png" />
 </div>
 <p>Let’s create a model that can make use of the Planning Agent.</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md183"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md191"></a>
 Machine</h2>
 <p>We start by building a <b>Resource</b> agent to represent the Machine. This resource will serve as a provider for process <em>A</em>. To model process <em>A</em>, we need to establish an interface. This interface will function as a destination for the part, meaning the part must be connected to the interface’s location in order for process <em>A</em> to run.</p>
 <p>To achieve this, we create a <b>LocationInterface</b>, which is essentially a standard interface with a specialization to act as a location as well. We can name this interface InterfaceProcessA. If we expand the interface, we will notice it already includes two skills that were automatically generated when the location interface was created: Detach and Attach. These skills can be filled with logic to define how to attach and detach from the interface. For instance, attaching might require clamping. However, for now, we can leave these skills empty as long as they return the value <em>processplan.done</em>. Note, that these two skills also have the <b>PostAction</b> property set to <em>ATTACHED</em> and <em>DETATCHED</em>.</p>
@@ -182,10 +182,10 @@ Machine</h2>
 <div class="line">    onRun:=processplan.done;</div>
 <div class="line">end.</div>
 </div><!-- fragment --><p>To run process A, we have a requirement that the part requesting the process must first be attached to it. We can model this requirement by selecting the <b>Requirements</b> folder for skill <em>A</em> and adding a new <b>Requirement</b>. Name this requirement <em>RequirementAttached</em> and set the <b>WorkFlowType</b> property to <em>ATTACHED</em>. This ensures that anyone wanting to execute skill <em>A</em> must first be attached to the interface.</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md184"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md192"></a>
 Buffer</h2>
 <p>Just like we created the <em>Machine</em>, we can now create the <em>Buffer</em> as a <b>Resource</b>. For the <em>Buffer</em>, we also need a <b>LocationInterface</b>, but this time, we can set the <em>position</em> to 1 instead. In this example, no additional specific skills are required on the <em>Buffer</em>, except for the one that was automatically created for the specialization. We can name the interface <b>InterfacePart</b>. To make it easier to distinguish the buffer skill, we can rename the skill <b>Attach</b> to <b>AttachOnBuffer</b>. We will need this later.</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md185"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md193"></a>
 Robot</h2>
 <p>Now, let's create a <b>Resource</b> agent and name it <em>Robot</em>. On the <em>Robot</em>, create a new specialization interface called <b>InterfacePart</b>. This interface will be specialized for transportation tasks.</p>
 <p>We can name the interface <em>InterfacePart</em>.</p>
@@ -216,7 +216,7 @@ Robot</h2>
 <div class="line"> </div>
 <div class="line">    onRun:=processplan.done;</div>
 <div class="line">end.</div>
-</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md186"></a>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md194"></a>
 Part</h2>
 <p>Now, create a <b>Part</b> agent and name it <em>Part</em>. On the <b>Part</b>, create a new <b>Interface</b> and name it <b>InterfacePart</b>. This will make the <b>Part</b> compatible with the <b>buffer</b>, <b>robot</b>, and <b>machine</b>. When the <b>Part</b> is deployed, it needs to be attached to the <b>buffer</b> in the system. To accomplish this, we need to define the logic for the deployment process. Select the <b>Part</b> and open the <b>Actions</b> editor. Here, we can use the dedicated skill <b>AttachOnBuffer</b> to ensure the <b>Part</b> attaches to the buffer, rather than to the machine or robot.</p>
 <div class="fragment"><div class="line">program Part;</div>
@@ -228,7 +228,7 @@ Part</h2>
 <div class="line">    aResource.AttachOnBuffer();</div>
 <div class="line">end.</div>
 </div><!-- fragment --><p>Now, open the process plan editor for the <b>Part</b> and create a new <b>Goal</b>. Edit the <b>Goal</b> by setting the process plan name to <em>A</em> and the interface to <em>InterfacePart</em>. Next, drag the goal to the goal chart and drop it on the start. The <b>Part</b> is now ready.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md187"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md195"></a>
 Example 2 - adding an operator</h1>
 <p>Now, we would like to add an operator to the system to handle situations when the robot is out of order, but only in those cases. We begin by adding a new <b>Resource</b> and naming it <em>Operator</em>. For the operator, we duplicate the interface of the <em>Robot</em>, which means creating an <b>InterfaceLocation</b> and naming it <b>InterfacePart</b>. Next, we update the two variables, <em>FromLocation</em> and <em>ToLocation</em>, by adding an integer variable named <em>position</em>, in the same way we did earlier for the <em>Robot</em>. Now, we need to implement the <em>Transport</em> skill. We start by renaming the default <em>Transport</em> skill to <em>ManualTransport</em>. This helps distinguish it as a manual task. Then, we set the cost for the <em>ManualTransport</em> skill, for example, 5. As long as the cost is higher than the robot's, any value will work. After that, we can implement the logic for the <em>ManualTransport</em> skill :</p>
 <div class="fragment"><div class="line">program ProcessplanManualTransport;</div>
@@ -258,7 +258,7 @@ Example 2 - adding an operator</h1>
 <div class="line">            </div>
 <div class="line">    onRun:=processplan.done;</div>
 <div class="line">end.</div>
-</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md188"></a>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md196"></a>
 Updated robot</h2>
 <p>Now, we need to update the <em>Robot</em> agent to handle errors. We begin by adding an agent variable to the <em>Robot</em>. This can be a boolean variable named <em>RobotError</em>. At this point, it's possible to map it to a physical signal using adapters, but for this example, we will leave it as is. The <em>Transport</em> skill must now check the <em>RobotError</em> signal and refuse to participate by rejecting any negotiation attempts when <em>RobotError</em> is true. This can be easily done by adding an <b>OR</b> <em>RobotError</em> condition to the rejection part of the onNegotiate function.</p>
 <div class="fragment"><div class="line">program ProcessplanTransport;</div>
@@ -288,14 +288,14 @@ Updated robot</h2>
 <div class="line"> </div>
 <div class="line">    onRun:=processplan.done;</div>
 <div class="line">end.</div>
-</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md189"></a>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md197"></a>
 Running Example 2</h2>
 <p>When running the example and deploying a part, we can see in the console that the planner selects the <b>Robot</b> for transportation. This is because the robot's cost is lower than the operator's.</p>
 <div class="fragment"><div class="line">Robot will pick up from {&quot;Position&quot;:&quot;1&quot;} and transport to {&quot;Position&quot;:&quot;2&quot;}</div>
 <div class="line">Robot will place at {&quot;Position&quot;:&quot;2&quot;}</div>
 <div class="line">Running process A on Machine</div>
 </div><!-- fragment --><p>If we deploy several parts, the system will always select the robot. However, if we open the running tree, access the robot agent, and change the <em>RobotError</em> signal to true during runtime, we will see that the next part is planned with the operator instead. For more complex scenarios, note that the planner will always attempt to optimize the total cost of the plan. We can observe the same effect if we undeploy the robot because we no longer need it. To do this, simply select the robot in the running tree and click "Undeploy." When we want to use the robot again, we can deploy it again from the depot.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md190"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md198"></a>
 Goal-Driven Planning</h1>
 <p>The example above illustrates a case where the planner must determine a transportation path to fulfill the requirement ATTACHED. However, the planning capabilities in CMAS extend beyond simple routing. In CMAS, planning is goal-driven and it is possible to state other requirements such as Skill requirement.</p>
 <p>For example:</p>
@@ -303,7 +303,7 @@ Goal-Driven Planning</h1>
 <p>A Skill Requirement defines a dependency between skills. If a skill requires another skill, the Planner Agent will ensure that the required skill is executed before the dependent skill can start. If a user specifies that the goal is to achieve C, the Planner Agent can automatically derives the required execution chain:</p>
 <p>A → B → C</p>
 <p>The planner then determines where each process can be executed and generates the transportation steps needed to move the product between resources. This means that the modeler specifies <em>what</em> should be achieved, while the Planner Agent determines <em>how</em> it can be achieved within the available system capabilities.</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md191"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md199"></a>
 Skill Requirements: AND / OR Semantics</h2>
 <p>In CMAS, a Skill Requirement defines a dependency between skills. Understanding how these dependencies interact with resource selection is key to using the Planner Agent effectively.</p>
 <p>Logical AND Across Skills</p>
@@ -315,7 +315,7 @@ Skill Requirements: AND / OR Semantics</h2>
 <p>A skill requirement states a WorkFlowType and a Target value. For WorkflowType = SKILL, the Target must be specified as either: skill_name – the name of the skill that must be executed as a requirement. interface_name:skill_name – specifies that the skill must be executed by a resource implementing a particular interface.</p>
 <dl class="section note"><dt>Note</dt><dd>interface_name identifies the abstract interface that provides the skill. If interface_name is left empty, the Planner Agent will attempt to match any compatible local interface for that skill. The Planner will then select the resource that satisfies the requirement with lowest cost.</dd></dl>
 <p>It is also possible to specify other requirements such as goals.</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md192"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md200"></a>
 Representing Skill Requirements in Structured Text</h2>
 <p>The concept of Skill Requirements in CMAS can also be expressed in Structured Text using <a class="el" href="abstractinterfaces_page.html">abstract interfaces</a> inside a Skill.</p>
 <p>First, an abstract interface is declared:</p>

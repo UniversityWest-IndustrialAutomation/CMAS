@@ -33,7 +33,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="logo_small.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Configurable Multiagent System for Plug&amp;Produce<span id="projectnumber">&#160;2.15.0</span>
+   <div id="projectname">Configurable Multiagent System for Plug&amp;Produce
    </div>
    <div id="projectbrief">CMAS</div>
   </td>
@@ -111,10 +111,10 @@ $(function() {
 <div class="textblock"><h1 class="doxsection"><a class="anchor" id="requirements_introduction"></a>
 Introduction</h1>
 <p>Requirements can serve as criteria representing necessary conditions that must be met prior to the execution of a skill or a goal. For instance, if a robot possesses the skill "MoveRobot," an ATTACHED requirement can specify that a part must be affixed to the robot before it can start to move. CMAS has a built in AI planner that can autonomously generate plans outlining how to fulfil requirements and then execute them.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md199"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md207"></a>
 Example requirement on a skill</h1>
 <p>In the following example, a part is placed in a buffer. The part has only one goal to run a process. The process is located on a machine that requires the part to be there. In between the buffer and the machine, there's a robot that can do transportation. By modelling the system with a requirement and specialised interfaces CMAS can find a path for the part to reach the process without explicitly setting it as goals.</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md200"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md208"></a>
 Model</h2>
 <p>The object illustration below demonstrates how the example can be modelled. The crucial elements in the model are the specialised interfaces paired with relevant skills and their associated PostActions, the AI planner will utilise these to find solutions.<br  />
 In this example we will use two templates for interface specialisation:</p><ul>
@@ -123,11 +123,11 @@ In this example we will use two templates for interface specialisation:</p><ul>
 </ul>
 <p><br  />
 </p><div class="plantumlgraph">
-<img src="inline_umlgraph_15.png" />
+<img src="inline_umlgraph_8.png" />
 </div>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md201"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md209"></a>
 Step-by-step instructions:</h2>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md202"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md210"></a>
 1. Buffer</h3>
 <ul>
 <li>1.1 Create a resource and name it Buffer. The buffer will serve as a source for our parts later on.<br  />
@@ -139,7 +139,7 @@ Step-by-step instructions:</h2>
  1.6. Select the new skill and change PostAction to ATTACHED.<br  />
  </li>
 </ul>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md203"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md211"></a>
 2. Machine</h3>
 <ul>
 <li>2.1 Create a resource and name it Machine.<br  />
@@ -153,7 +153,7 @@ Step-by-step instructions:</h2>
 </div><!-- fragment --> <br  />
 </li>
 </ul>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md204"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md212"></a>
 3. Robot</h3>
 <ul>
 <li>3.1 Create a resource and name it Robot.<br  />
@@ -172,7 +172,7 @@ Step-by-step instructions:</h2>
  <br  />
 </li>
 </ul>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md205"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md213"></a>
 4. ProductA</h3>
 <ul>
 <li>4.1 Add a new Part<br  />
@@ -197,7 +197,7 @@ Step-by-step instructions:</h2>
 </div><!-- fragment --> <br  />
  </li>
 </ul>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md206"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md214"></a>
 Run</h3>
 <ol type="1">
 <li>Press Run to start the system (if auto deploy is not on deploy everything).<br  />
@@ -214,20 +214,20 @@ Example requirements in a process plan</h1>
 <img src="GoalchartRequirements.png" alt="" height="400"/>
 <div class="caption">
 A process plan for a part with only requirements.</div></div>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md207"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md215"></a>
 Assembly</h2>
 <p>Similar to how we specified ATTACHED as a requirement in the previous example, we can also specify ASSEMBLY as a requirement. While ASSEMBLY is closely related to ATTACHED, there is a key difference: when an agent, typically a material agent, is assembled with another agent, the assembled agent is marked as finished and can no longer be used. The modelling pattern involves representing the main structure as a <em>Part</em> agent and all subassemblies as <em>Material</em> agents. This allows the planner to generate solutions for how to <em>assemble</em> <em>materials</em> and <em>attach</em> <em>parts</em>.</p>
 <p>The material to be assembled must have a specialized interface <em>InterfaceAssembly</em>. Similarly, the main structure must have a specialized interface <em>InterfaceLocation</em>, that is compatible with the assembly interface, to tell where to assembly the material.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md208"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md216"></a>
 InterfaceSpecialisation</h1>
 <p>An InterfaceSpecialisation resembles a regular Interface but includes an additional relation called Specialisation, which can incorporate variables. It also have a property called SpecialisationName that indicates the purpose of the interface. Unlike the standard interface relation Variables, the Specialisation relation is disregarded during the negotiation process and in determining the compatibility of two interfaces. The specialisation variables are utilised by the internal AI planner to gather information for plans or can be used in applications to introduce variables that don't interfere with the negotiation process.</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md209"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md217"></a>
 InterfaceLocation</h2>
 <p>InterfaceLocation is a template for creating InterfaceSpecialisation for locations. It automatically creates a InterfaceSpecialisation with a VariableObject named Location and SpecialisationName set to Location. It also assigns SpecialisationName to a read only value "Location".</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md210"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md218"></a>
 InterfaceTransport</h2>
 <p>InterfaceTransport is a template for creating an InterfaceSpecialisation tailored for transport. It automatically generates an InterfaceSpecialisation that includes two VariableObjects named FromLocation and ToLocation. Additionally, it creates a Skill named Transport with the PostAction configured as TRANSFERED and assigns SpecialisationName to a read only value "Transport".</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md211"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md219"></a>
 InterfaceAssembly</h2>
 <p>InterfaceAsembly is a template for creating an Interface that can be used for assembly. It automatically creates a InterfaceSpecialisation with the SpecialisationName set to Assembly.</p>
 <dl class="section note"><dt>Note</dt><dd>It is possible to manually create a specialisation interface by setting the correct values and adding the VariableObjects manually on an <em>InterfaceSpecialisation</em>. </dd></dl>

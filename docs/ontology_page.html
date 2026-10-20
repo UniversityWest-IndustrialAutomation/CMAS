@@ -33,7 +33,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="logo_small.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Configurable Multiagent System for Plug&amp;Produce<span id="projectnumber">&#160;2.15.0</span>
+   <div id="projectname">Configurable Multiagent System for Plug&amp;Produce
    </div>
    <div id="projectbrief">CMAS</div>
   </td>
@@ -116,7 +116,7 @@ For a brief overview of the CMAS ontology see the figure below (or see the inher
 <p>The diagram in Figure 1 provides a high-level overview of the CMAS ontology. It highlights the foundational <span class="tt">Entity</span> class and the main abstract pillars of the model: agents, interfaces, variables, and process plans.</p>
 <p>All objects in the CMAS ontology inherit from <span class="tt">Entity</span>, which defines the common identity, naming, and lifecycle-related properties. The overview intentionally omits detailed relationships and concrete specialisations in order to present a clear conceptual structure of the system.</p>
 <div class="plantumlgraph">
-<img src="inline_umlgraph_3.png" />
+<img src="inline_umlgraph_2.png" />
 </div>
 <p><br  />
 <br  />
@@ -132,7 +132,7 @@ For a brief overview of the CMAS ontology see the figure below (or see the inher
 </summary>
 </p>
 <div class="plantumlgraph">
-<img src="inline_umlgraph_4.png" />
+<img src="inline_umlgraph_3.png" />
 </div>
 <p> 
 </details>
@@ -153,7 +153,7 @@ For a brief overview of the CMAS ontology see the figure below (or see the inher
 </summary>
 </p>
 <div class="plantumlgraph">
-<img src="inline_umlgraph_5.png" />
+<img src="inline_umlgraph_4.png" />
 </div>
 <p> 
 </details>
@@ -173,7 +173,7 @@ For a brief overview of the CMAS ontology see the figure below (or see the inher
 </summary>
 </p>
 <div class="plantumlgraph">
-<img src="inline_umlgraph_6.png" />
+<img src="inline_umlgraph_5.png" />
 </div>
 <p> 
 </details>
@@ -193,7 +193,7 @@ For a brief overview of the CMAS ontology see the figure below (or see the inher
 </summary>
 </p>
 <div class="plantumlgraph">
-<img src="inline_umlgraph_7.png" />
+<img src="inline_umlgraph_6.png" />
 </div>
 <p>  
 </details>
@@ -201,7 +201,7 @@ For a brief overview of the CMAS ontology see the figure below (or see the inher
 <p><br  />
 <br  />
 </p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md138"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md145"></a>
 How to Read the CMAS Ontology</h1>
 <ul>
 <li>Classes describe modelling-time objects.</li>
@@ -210,7 +210,7 @@ How to Read the CMAS Ontology</h1>
 <li>Runtime properties are read-only and only valid during execution.</li>
 <li>Abstract classes cannot be instantiated.</li>
 </ul>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md139"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md146"></a>
 cmas.ontology Objects</h1>
 <p>All main objects in the CMAS ontology and their specific properties are described in the following section.</p>
 <h2 class="doxsection"><a class="anchor" id="entity"></a>
@@ -265,28 +265,47 @@ Note</h2>
 <hr  />
 <p> <br  />
  </p>
-<h2 class="doxsection"><a class="anchor" id="settings"></a>
-Settings</h2>
-<p>The <em>Settings</em> object provides a centralized view of selected properties from across the model. Its purpose is to simplify configuration by allowing important parameters to be collected and edited from a single location.</p>
-<p>Rather than navigating through the model to locate individual objects and their properties, the user can add references to selected properties in the <em>Settings</em> object. This creates a convenient configuration interface for frequently adjusted values.</p>
+<h2 class="doxsection"><a class="anchor" id="modelsettings"></a>
+ModelSettings</h2>
+<p>The <em>ModelSettings</em> object provides a centralized view of selected properties from across the model. Its purpose is to simplify configuration by allowing important parameters to be collected and edited from a single location.</p>
+<p>Rather than navigating through the model to locate individual objects and their properties, the user can add references to selected properties in the <em>ModelSettings</em> object. This creates a convenient configuration interface for frequently adjusted values.</p>
 <p>For example, a model may contain several process plans located in different parts of the model hierarchy. By adding their Cost properties to the <em>Settings</em> object, all costs can be viewed and modified from one place without needing to locate each individual process plan.</p>
-<p>The <em>Settings</em> object does not introduce new behavior and does not store independent values. Instead, it provides direct access to properties that already belong to other entities in the model. Any changes made through Settings are immediately reflected in the original objects.</p>
+<p>The <em>ModelSettings</em> object does not introduce new behavior and does not store independent values. Instead, it provides direct access to properties that already belong to other entities in the model. Any changes made through Settings are immediately reflected in the original objects.</p>
 <p>Typical uses include:</p>
 <p>Collecting configurable process parameters. Exposing planning and optimisation settings. Creating a simplified configuration view for end users. Grouping frequently modified properties in a single location.</p>
-<p>The <em>Settings</em> object is intended purely as a modeling and configuration aid and has no direct impact on runtime execution beyond the property values it exposes.</p>
+<p>The <em>ModelSettings</em> object is intended purely as a modeling and configuration aid and has no direct impact on runtime execution beyond the property values it exposes.</p>
 <table class="doxtable">
 <tr>
-<td colspan="1">Table Settings class attributes </td></tr>
+<td colspan="1">Table ModelSettings class attributes </td></tr>
 </table>
 <table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadNone">Property  </th><th class="markdownTableHeadNone">Description  </th><th class="markdownTableHeadNone">Type  </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">Settings::PropertySet <a class="anchor" id="settings_propertyset"></a>  </td><td class="markdownTableBodyNone">The set of properties that can be configured.  </td><td class="markdownTableBodyNone">Property []  </td></tr>
+<td class="markdownTableBodyNone">ModelSettings::PropertySet <a class="anchor" id="modelsettings_propertyset"></a>  </td><td class="markdownTableBodyNone">The set of properties that can be configured during modelling.  </td><td class="markdownTableBodyNone">Property []  </td></tr>
 </table>
 <hr  />
 <p> <br  />
- <a class="anchor" id="dataroot"></a> </p>
+</p>
+<h2 class="doxsection"><a class="anchor" id="modelstate"></a>
+ModelState</h2>
+<p>The <em>ModelState</em> object provides a centralized view of selected properties across the runtime environment. Its purpose is to to provide a runtime state based on selected properties of running agents. The current state can be viwed in the ModelState viewer or from Structured Text. <br  />
+ Typical uses include:</p>
+<p>Collecting runtime states to make decisions. Creating a simplified state view for end users. Grouping state variables to be provided to external agents.</p>
+<table class="doxtable">
+<tr>
+<td colspan="1">Table ModelState class attributes </td></tr>
+</table>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Property  </th><th class="markdownTableHeadNone">Description  </th><th class="markdownTableHeadNone">Type  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">ModelState::PropertySet <a class="anchor" id="modelstate_propertyset"></a>  </td><td class="markdownTableBodyNone">The set of properties that can be viewed during runtime.  </td><td class="markdownTableBodyNone">Property []  </td></tr>
+</table>
+<hr  />
+<p> <br  />
+</p>
+<p><a class="anchor" id="dataroot"></a> </p>
 <h2 class="doxsection"><a class="anchor" id="folder"></a>
 Folder</h2>
 <p>A folder is an organizational entity used to structure the model in a way that enhances readability and understanding. It helps group related objects together, making it easier to navigate and manage complex models.</p>
@@ -303,7 +322,7 @@ Folder</h2>
 <hr  />
 <p> <br  />
  </p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md144"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md152"></a>
 cmas.ontology.processplans</h1>
 <h2 class="doxsection"><a class="anchor" id="processplan"></a>
 ProcessPlan</h2>
@@ -443,7 +462,7 @@ Risk</h2>
 <hr  />
 <p> <br  />
  </p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md150"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md158"></a>
 cmas.ontology.agent</h1>
 <p>All agents in CMAS ontology are based on the object Agent.</p>
 <table class="doxtable">
@@ -581,7 +600,10 @@ Material</h2>
  </p>
 <h2 class="doxsection"><a class="anchor" id="part"></a>
 Part</h2>
-<p>A Part agent is an active agent that will try to fulfil all goals. A Part agent has a relation named Goals that accept all GoalTypes.</p>
+<p>A Part agent is normally active and autonomous, attempting to fulfil all its goals according to its Goal chart.</p>
+<p>Its behaviour can be configured using ControlMode: AUTONOMOUS - The agent autonomously follows its Goal chart to pursue its goals. MANAGED - The agent's goal progression is controlled by user-defined logic or another agent.</p>
+<p>A Part agent has a relation named Goals, which accepts all GoalType instances. These goals can be arranged in a Goal chart to define the order in which they are pursued. Note, if ControlMode is set to MANAGED the GoalChart is ignored.</p>
+<p>When all goals are fulfilled, the Part is considered ready and is moved from the runtime tree to the finished tree.</p>
 <table class="doxtable">
 <tr>
 <td colspan="1">Table Part class attributes </td></tr>
@@ -591,6 +613,8 @@ Part</h2>
 <th class="markdownTableHeadNone">Property  </th><th class="markdownTableHeadNone">Description  </th><th class="markdownTableHeadNone">Type  </th></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">Part::ProcessPlan <a class="anchor" id="part_processplan"></a>  </td><td class="markdownTableBodyNone">A <a class="el" href="goalcharts_page.html">goal chart</a> that express the order of the goals.  </td><td class="markdownTableBodyNone">ProcessPlanGoals  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Part::ControlMode <a class="anchor" id="part_controlmode"></a>  </td><td class="markdownTableBodyNone">Defines how an agent's goal progression is controlled.  </td><td class="markdownTableBodyNone">ControlModeType  </td></tr>
 </table>
 <p><br  />
  </p><table class="doxtable">
@@ -642,7 +666,7 @@ DeploymentAgent</h2>
 <hr  />
 <p> <br  />
  </p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md157"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md165"></a>
 cmas.ontology.variables</h1>
 <h2 class="doxsection"><a class="anchor" id="variable"></a>
 Variable</h2>
@@ -801,7 +825,7 @@ VariableObject</h2>
 <hr  />
 <p> <br  />
  </p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md166"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md174"></a>
 cmas.ontology.interfaces</h1>
 <h2 class="doxsection"><a class="anchor" id="interfacebase"></a>
 InterfaceBase</h2>
@@ -961,7 +985,7 @@ InterfaceSpecialisation</h2>
 <hr  />
 <p> <br  />
  </p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md171"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md179"></a>
 InterfaceSpecialisation templates</h2>
 <p>The listed InterfaceSpecialisation objects below are not new object types but rather templates based on the InterfaceSpecialisation class. These templates are designed to simplify the modelling of specific specialisations by predefining certain relations and property values.</p>
 <ul>
@@ -972,7 +996,7 @@ InterfaceSpecialisation templates</h2>
 <hr  />
 <p> <br  />
  </p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md173"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md181"></a>
 cmas.ontology.workflow</h1>
 <h2 class="doxsection"><a class="anchor" id="workflow"></a>
 WorkFlow</h2>
@@ -1032,7 +1056,7 @@ Requirement</h2>
 <hr  />
 <p> <br  />
  </p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md177"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md185"></a>
 cmas.ontology.batch</h1>
 <h2 class="doxsection"><a class="anchor" id="batch"></a>
 Batch</h2>
@@ -1071,7 +1095,7 @@ BatchItem</h2>
 <hr  />
 <p> <br  />
  </p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md180"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md188"></a>
 Extended Ontology</h1>
 <p>It is possible to extend the existing ontology in CMAS by creating new objects based on the existing ones. During the startup of CMAS, if the file <b>cmas-ontology.json</b> exists, it is read and interpreted.</p>
 <dl class="section note"><dt>Note</dt><dd>Normally, an extension should be achieved by simply adding new variables or modifying existing ones, rather than defining a new ontology with new object types.</dd></dl>

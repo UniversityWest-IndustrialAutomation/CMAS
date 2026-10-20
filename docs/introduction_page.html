@@ -33,7 +33,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="logo_small.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Configurable Multiagent System for Plug&amp;Produce<span id="projectnumber">&#160;2.15.0</span>
+   <div id="projectname">Configurable Multiagent System for Plug&amp;Produce
    </div>
    <div id="projectbrief">CMAS</div>
   </td>
@@ -108,11 +108,11 @@ $(function() {
   <div class="headertitle"><div class="title">Plug &amp; Produce and Multiagent </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1 class="doxsection"><a class="anchor" id="autotoc_md123"></a>
+<div class="textblock"><h1 class="doxsection"><a class="anchor" id="autotoc_md130"></a>
 CMAS</h1>
 <p>CMAS is a framework for Plug &amp; Produce that makes it possible to use configurations rather than programming to model and handle parts in a manufacturing system. The key tasks are to define goals for parts. Goals are central in the design of autonomous multi-agent systems. The final goal for a part is to become manufactured and this can be divided into several subgoals. A goal can achieve its completion by requiesting skills from available resources. Therefore, the task of defining skills for resources is important. Typically, a resource skill is established upon resource acquisition and tends to remain relatively constant throughout the resource's lifespan. It's worth noting that a skill might demand additional control logic to function effectively, hence, it is possible to develop more conventional programs for skill execution as well. Typically, before the first deployment the system integrators will carrying out the definition of low-level skills.</p>
 <p>Goal-oriented multi-agent control is one approach to handle flexible and reconfigurable manufacturing systems. Goals are important to be able to create autonomous agents. An autonomous agent must have the possibility to decide not only how to achieve a goal, but also which goal to select. For parts that will be manufactured, a state-oriented model is adopted implying that each agent associated with a part tries to reach a final state by executing all assigned goals. When all goals are finalized, the part is ready. A part is defined as a part of a product or the product itself that will be manufactured within the boundary of the actual manufacturing system. Hence, a goal can only be fulfilled by utilizing skills on resources within this boundary. To assist part-agents to reach their goals, process plans exist that defines skills needed to reach a specific goal. Process plans can be define without specifying resources, only required skills, requirements, and abstract interfaces are specified. Abstract interfaces are connected to a resource-agent when needed during runtime, the resource-agent are selected after a negotiation process. Hence, the process plans of goals separate the resources from the goals. This makes it possible to have several potential solutions in the system for the autonomous agents to select the most suitable process plans. A goal depicts the future desired state of the system. However, the sequence of goals is important, methods to configure and execute concurrent and parallel sequence of goals. Plug &amp; Produce systems, controlled by CMAS, enables the possibility to rapidly plug in and out resources to adapt to the actual manufacturing situation. Resources prepared with suitable skills and process plans can be plugged in without doing any software reconfiguration of the CMAS. Parallel goals can utilize resources concurrently in parallel. If only one resource is available, goals that are configured to execute in parallel will be executed in sequence instead by the single resource. This approach enables the possibility to rapidly avoid bottlenecks in the production that can appear due to for example changed customer orders just by plugging in suitable resources. No reprogramming or software reconfiguration is needed in these situations.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md124"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md131"></a>
 Overview of CMAS execution model</h1>
 <p>The CMAS execution model separates <em>what should be achieved</em> from <em>how it is executed</em>. <br  />
  Instead of programming specific machines or robots directly, programs describe goals and required capabilities. The system then determines how to achieve them using the available resources.</p>
@@ -125,11 +125,11 @@ Overview of CMAS execution model</h1>
 <li>Resources</li>
 <li>Planner Agent</li>
 </ul>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md125"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md132"></a>
 Goals</h1>
 <p>A Goal represents a desired state or result that should be achieved in the system.</p>
 <p>A goal does not describe how the task should be executed. Instead, it defines <em>what outcome is required</em>. The Planner Agent is responsible for determining how the goal can be achieved using the available skills and resources. Goals are used on Part Agents.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md126"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md133"></a>
 Skills</h1>
 <p>A Skill represents an executable operation provided by a resource agent. <br  />
  Examples of skills could be:</p>
@@ -141,7 +141,7 @@ Skills</h1>
 <li>Inspect</li>
 </ul>
 <p>Skills are typically implemented by agents representing machines, robots, or software components in the system.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md127"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md134"></a>
 Interfaces</h1>
 <p>Interfaces define the capabilities that a resource exposes to the system. <br  />
  Agents interact with interfaces rather than directly with specific resources.</p>
@@ -153,7 +153,7 @@ Interfaces</h1>
 <div class="line">Robot.Place();</div>
 </div><!-- fragment --><p>The program does not specify which robot should perform the task. <br  />
  Instead, the system selects a compatible resource during runtime.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md128"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md135"></a>
 Resources</h1>
 <p>Resources are agents representing physical or logical entities that provide skills in the system.</p>
 <p>Examples include:</p>
@@ -164,7 +164,7 @@ Resources</h1>
 <li>Software agents</li>
 </ul>
 <p>Each resource exposes one or more interfaces that describe the skills and variables it provides.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md129"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md136"></a>
 Planner Agent</h1>
 <p>The Planner Agent coordinates the execution of goals and skills.</p>
 <p>Its responsibilities include:</p>
@@ -175,7 +175,7 @@ Planner Agent</h1>
 <li>Optimizing resource usage based on cost or availability</li>
 </ul>
 <p>By combining goals, skills, and interfaces, the Planner Agent can automatically determine how a task should be executed within the system.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md130"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md137"></a>
 Summary</h1>
 <p>The CMAS execution model allows developers to focus on describing the required operations rather than controlling specific hardware.</p>
 <p>Programs define goals and call skills through interfaces, while the system automatically handles:</p>

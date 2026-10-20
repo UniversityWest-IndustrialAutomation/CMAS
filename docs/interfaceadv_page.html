@@ -33,7 +33,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="logo_small.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Configurable Multiagent System for Plug&amp;Produce<span id="projectnumber">&#160;2.15.0</span>
+   <div id="projectname">Configurable Multiagent System for Plug&amp;Produce
    </div>
    <div id="projectbrief">CMAS</div>
   </td>
@@ -108,10 +108,10 @@ $(function() {
   <div class="headertitle"><div class="title">Advanced Interface Concepts </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1 class="doxsection"><a class="anchor" id="autotoc_md116"></a>
+<div class="textblock"><h1 class="doxsection"><a class="anchor" id="autotoc_md123"></a>
 Parallel Interfaces</h1>
 <p>An interface can serve one remote interaction at a time. When booking is used (which is the preferred approach in many situations), the interface is reserved and other agents must wait until it is unbooked. In most cases, this behavior is sufficient since other agents will simply wait until the interface becomes available. However, in scenarios where multiple requests must be handled concurrently, it is possible to expose multiple identical interface instances. This can be achieved by setting the ParallelCapacity property on a resource interface. The ParallelCapacity defines how many parallel instances of the interface can be active at the same time. During runtime, the agent will create multiple identical interface instances based on this value. Each instance behaves as an independent interface and can be negotiated and booked separately. This allows multiple agents to interact with the same type of resource in parallel, while still maintaining controlled access to each individual interface instance.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md117"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md124"></a>
 Interface Queues</h1>
 <p>When multiple agents attempt to access a single interface, the onNegotiate() function is called to decide whether a request should be accepted or rejected. By default, requests are processed in a first-come, first-served manner. However, the resource agent can implement custom logic to control how requests are prioritized and executed. By setting the interface property QueueRequest to <em>true</em>, the global interface variable <span class="tt">queue</span> (as defined in queue.inc, see <a class="el" href="structuredtext_page.html#queue_inc">structure text include</a>) is enabled. The members of the queue are listed in the table below. When enabled, the onQueue() function is called before onNegotiate(), allowing the agent to inspect and manage incoming requests. The onNegotiate() function can then use this information to make more informed decisions.</p>
 <table class="markdownTable">
@@ -135,11 +135,11 @@ Interface Queues</h1>
 </ul>
 <p>As a result, scheduling behavior emerges over time rather than being explicitly controlled in a single decision step. This behavior reflects the real-time nature of the system, where decisions are made incrementally as requests arrive.</p>
 <dl class="section note"><dt>Note</dt><dd>Queue entries are not explicitly removed when a request is refused. Instead, entries become outdated over time. The <span class="tt">time</span> field can be used to determine the age of a request and to ignore stale entries in scheduling logic.</dd></dl>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md118"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md125"></a>
 Recommended Scheduling Pattern</h2>
 <p>Due to the reactive nature of the negotiation mechanism, scheduling decisions must be implemented incrementally. Since onNegotiate() can only accept or refuse the current request, it is not possible to directly select a specific request from the queue.</p>
 <p>A recommended pattern is therefore to combine queue inspection, selective acceptance, and retry-based prioritization.</p>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md119"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md126"></a>
 Pattern Overview</h3>
 <ol type="1">
 <li>Enable queue inspection <br  />
@@ -162,7 +162,7 @@ Pattern Overview</h3>
 <li>Coordinate execution <br  />
  Route accepted requests through a local internal interface to ensure consistent execution and avoid resource conflicts.</li>
 </ol>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md120"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md127"></a>
 Example Strategy</h2>
 <p>A simple priority strategy could be:</p>
 <ul>
@@ -171,7 +171,7 @@ Example Strategy</h2>
 <li>Wait until there is a queue of agents</li>
 </ul>
 <p>This pattern allows the resource agent to implement flexible scheduling strategies within the constraints of the negotiation model. By combining queue visibility with selective acceptance and retry-based prioritization, it is possible to approximate optimal execution order in a fully distributed and reactive system.</p>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md121"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md128"></a>
 Example: Queue-based scheduling with cost selection</h3>
 <p>In the following example, a resource interface waits until three agents have initiated negotiation. Each agent provides a cost value, which is stored in the queue.</p>
 <p>When all three requests have arrived within a given time window, the resource agent selects the request with the highest cost and accepts it, while the others are refused and must retry.</p>

@@ -33,7 +33,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="logo_small.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Configurable Multiagent System for Plug&amp;Produce<span id="projectnumber">&#160;2.15.0</span>
+   <div id="projectname">Configurable Multiagent System for Plug&amp;Produce
    </div>
    <div id="projectbrief">CMAS</div>
   </td>
@@ -108,7 +108,7 @@ $(function() {
   <div class="headertitle"><div class="title">Variable adapters </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1 class="doxsection"><a class="anchor" id="autotoc_md257"></a>
+<div class="textblock"><h1 class="doxsection"><a class="anchor" id="autotoc_md265"></a>
 Introduction</h1>
 <p>Variables can be used to handle values inside an agent. With a variable adapter it is possible to access external data. Example of external data might be a sensor value from a transducer. An Adapter, is a low level implementation, to be able to handle different communication protocols.</p>
 <p>Supported adapters are:</p><ul>
@@ -140,7 +140,7 @@ OPC UA</h1>
 <p>OPC UA address example: </p><div class="fragment"><div class="line">ns=3;i=1006</div>
 </div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="REST"></a>
 REST</h1>
-<p>For REST adapters, the source string must follow this format: REST[.type]:HTTP:HOST:PORT:[LIMIT]:[AUTH]:[USER]:[PASW] eg, REST:http:localhost:80:-1:DIGEST:Default</p>
+<p>For REST adapters, the source string must follow this format: REST[.type]:HTTP:HOST:PORT:[LIMIT]:[AUTH]:[USER]:[PASS] eg, REST:http:localhost:80:-1:DIGEST:Default</p>
 <ul>
 <li>REST static prefix indicating the REST protocol.</li>
 <li>TYPE adapter mode is optional. Default is NON can be set to .ASSOCIATE</li>
@@ -150,27 +150,28 @@ REST</h1>
 <li>LIMIT minimum time in milliseconds between consecutive read operations, default value is -1 (ignore).</li>
 <li>AUTH authorization method, BASIC, DIGEST or NONE (default value NONE)</li>
 <li>USER user name</li>
-<li>PASW password</li>
+<li>PASS password</li>
 </ul>
 <p>By default, a REST adapter uses static references for the Source and Address properties. This means that read operations do not depend on the current value of the variable.</p>
-<p>When using the REST.ASSOCIATE type, the adapter associates the current value of the variable with the REST request before performing a read operation. This is useful for REST APIs that expect a request body (for example, a JSON payload in POST requests).</p>
+<p>When using the REST.ASSOCIATE type, the adapter associates the current value of the variable with the REST request before performing a read operation. This is useful for REST APIs that expect a request body (for example, a JSON payload in POST requests). If the s format specifier is used in the value it will be replace by the name of the variable.</p>
 <table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadNone">REST type  </th><th class="markdownTableHeadNone">HTTP  </th><th class="markdownTableHeadNone">Body  </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">ASSOCIATE  </td><td class="markdownTableBodyNone">POST  </td><td class="markdownTableBodyNone">JSON  </td></tr>
+<td class="markdownTableBodyNone">ASSOCIATE  </td><td class="markdownTableBodyNone">POST  </td><td class="markdownTableBodyNone">Request body  </td></tr>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">NONE  </td><td class="markdownTableBodyNone">GET  </td><td class="markdownTableBodyNone">None  </td></tr>
 </table>
-<p>Use the LIMIT parameter to avoid overloading REST servers when variables are read frequently inside CMAS. The default value of LIMIT is -1, which means that CMAS will read from the REST server as fast as possible. If LIMIT is set to a value greater than 0 (for example, 10), CMAS will only perform a read operation if the last value was read more than 10 ms ago. If a new read is not performed due to the LIMIT constraint, the adapter returns the most recently cached value.</p>
-<p>Example 1 - source: Set the source to connect to an ABB robot </p><div class="fragment"><div class="line">REST:http:localhost:80:DIGEST:Default User:robotics</div>
+<p>For ASSOCIATE, the current value of the variable is converted to a string and sent as the request body. When a JSON request is required, the variable value should therefore contain a valid JSON object.</p>
+<p>Use the LIMIT parameter to avoid overloading REST servers when variables are read frequently inside CMAS. The default value is -1, which means that CMAS can read from the REST server without a rate limit. If LIMIT is set to a value greater than 0 (for example, 10), CMAS only performs a read operation if the last read was more than 10 ms ago. If a new read is not performed because of the LIMIT constraint, the adapter returns the most recently cached value.</p>
+<p>Example 1 - source: Set the source to connect to an ABB robot </p><div class="fragment"><div class="line">REST:http:localhost:80:-1:DIGEST:Default User:robotics</div>
 </div><!-- fragment --><p>The <b>Address</b> indicates which variable to read and should normally start with a slash / <br  />
  Example 1 - address: </p><div class="fragment"><div class="line">/rw/rapid/symbol/data/RAPID/T_ROB1/MainModule/</div>
 </div><!-- fragment --><p>Example 2: In this example, CMAS connects to an Ollama server via REST to access a large language model. A string variable, named llama, exists in the Agent Variable relation with the following source and address settings:</p>
-<div class="fragment"><div class="line">Source = REST.ASSOCIATED:HTTP:localhost:11434</div>
+<div class="fragment"><div class="line">Source = REST.ASSOCIATE:HTTP:localhost:11434</div>
 <div class="line">Address = /api/generate</div>
 </div><!-- fragment --><p>To use the ASSOCIATE behavior, we need to set the variable’s value. An onRun procedure for the agent can look like this:</p>
-<div class="fragment"><div class="line">{ Rest associated variable example with ollama REST server }</div>
+<div class="fragment"><div class="line">{ Rest associate variable example with ollama REST server }</div>
 <div class="line">Program Example;</div>
 <div class="line"> </div>
 <div class="line">// Create a struct type for ollama</div>
@@ -192,7 +193,7 @@ REST</h1>
 <div class="line">  aRequest.prompt:=&#39;Hello World!&#39;;</div>
 <div class="line"> </div>
 <div class="line">  // Associate a JSON object to the llama variable</div>
-<div class="line">  // This associated value will be used when reading from the REST adapter later on</div>
+<div class="line">  // This associate value will be used when reading from the REST adapter later on</div>
 <div class="line">  agent.llama := structtoj(aRequest);</div>
 <div class="line">  </div>
 <div class="line">  // Read the value from the REST server by associating the value</div>

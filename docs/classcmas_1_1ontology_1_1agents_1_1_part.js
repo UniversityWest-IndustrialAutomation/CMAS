@@ -1,5 +1,6 @@
 var classcmas_1_1ontology_1_1agents_1_1_part =
 [
+    [ "ControlModeType", "enumcmas_1_1ontology_1_1agents_1_1_part_1_1_control_mode_type.html", null ],
     [ "copy", "classcmas_1_1ontology_1_1agents_1_1_part_ab23b1b6dab08985333111adffda10765.html#ab23b1b6dab08985333111adffda10765", null ],
     [ "Factory", "classcmas_1_1ontology_1_1agents_1_1_part.html#a804a2bd43e24a0d247832f69b2a6094d", null ],
     [ "findRelationByName", "classcmas_1_1ontology_1_1agents_1_1_part.html#a03ca0ee81469bb6737ee994cbeb4c7ea", null ],

@@ -52,7 +52,7 @@
                 :return bestInterface;
                 end
 @enduml
-@startuml inline_umlgraph_3.png
+@startuml inline_umlgraph_2.png
 caption Figure 1. CMAS ontology overview.
 package cmas.ontology {
     legend top left
@@ -103,7 +103,7 @@ package cmas.ontology {
   ProcessPlan --|> Entity
 }
 @enduml
-@startuml inline_umlgraph_4.png
+@startuml inline_umlgraph_3.png
 caption Figure 2. CMAS ontology.
 
 
@@ -127,6 +127,11 @@ enum AgentState {
     FAILED
     STOPPED
 }
+
+enum ControlModeType {
+        AUTONOMOUS
+        MANAGED
+    }
 
 abstract class Agent extends cmas.ontology.Entity {
     -- Properties --
@@ -171,7 +176,10 @@ class Material extends Component {
 }
 
 class Part extends Component {
--- Relations --
+    -- Properties --
+    +ControlModeType : ControlMode
+
+    -- Relations --
     +interfaces.InterfaceBase : Interfaces[0..*]
     +interfaces.Goal : Goals[1..*]
 }
@@ -273,7 +281,7 @@ package action {
 
 }
 @enduml
-@startuml inline_umlgraph_5.png
+@startuml inline_umlgraph_4.png
 caption Figure 3. CMAS ontology.
 
 package cmas {
@@ -374,7 +382,7 @@ class VariableProperty extends Value
 }
 }
 @enduml
-@startuml inline_umlgraph_6.png
+@startuml inline_umlgraph_5.png
 caption Figure 4. CMAS ontology.
 
 package cmas {
@@ -384,28 +392,36 @@ package cmas {
             Boolean : ShowInModel
             Boolean : ShowOnLoad
             Boolean : ShowBeforeRun
-        }
-        
-        class Settings extends cmas.ontology.Entity {
-            -- Properties --
-            Property : PropertySet[0..*]
-        }   
+        }       
     }
-
-    package ontology.batch {
-        class Batch extends cmas.ontology.Entity {
-            -- Properties --
-            +BatchItem: Batch set
+    
+        package ontology.model {        
+            class ModelAspect extends cmas.ontology.Entity {
+                -- Properties --
+                Property : PropertySet[0..*]
+            }
+            
+            class ModelSettings extends ModelAspect {
+            }
+    
+            class ModelState extends ModelAspect {
+            }   
         }
-
-        class BatchItem {
-            -- Properties --
-            String : AgentID    
-            String : AttachToID
-            Integer : NumberOfItems
-            String : Description
-        }   
-    }
+    
+        package ontology.batch {
+            class Batch extends cmas.ontology.Entity {
+                -- Properties --
+                +BatchItem: Batch set
+            }
+    
+            class BatchItem {
+                -- Properties --
+                String : AgentID    
+                String : AttachToID
+                Integer : NumberOfItems
+                String : Description
+            }   
+        }
 
     package ontology.workflow {
         enum WorkFlowTypes { 
@@ -449,7 +465,7 @@ package cmas {
     }
 }
 @enduml
-@startuml inline_umlgraph_7.png
+@startuml inline_umlgraph_6.png
 caption Figure 5. CMAS ontology
 
 package cmas {
@@ -504,7 +520,7 @@ package cmas {
     }
 }
 @enduml
-@startuml inline_umlgraph_13.png
+@startuml inline_umlgraph_7.png
 Caption Four agents
     json "<b>Product:Part" as JPart{
     }   
@@ -515,7 +531,7 @@ Caption Four agents
     json "<b>Robot:Resource" as JRobot {    
     }
 @enduml
-@startuml inline_umlgraph_15.png
+@startuml inline_umlgraph_8.png
 json "<b>Buffer:Resource" as JBuffer {
    "Name":"Buffer",
    "Interfaces": [{"1":{ "Name":"BufferInterface",
@@ -571,7 +587,7 @@ json "<b>ProductA:Part" as JProductA {
    ]
 }
 @enduml
-@startuml inline_umlgraph_17.png
+@startuml inline_umlgraph_9.png
 caption Figure CMAS variable ontology.
 
 abstract class Variable {

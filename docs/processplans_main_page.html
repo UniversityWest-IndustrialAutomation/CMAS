@@ -33,7 +33,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="logo_small.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Configurable Multiagent System for Plug&amp;Produce<span id="projectnumber">&#160;2.15.0</span>
+   <div id="projectname">Configurable Multiagent System for Plug&amp;Produce
    </div>
    <div id="projectbrief">CMAS</div>
   </td>
@@ -119,13 +119,13 @@ $(function() {
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">Global Process Plan  </td><td class="markdownTableBodyNone">defined in the root of the modelling tree and can be used by parts or resources  </td><td class="markdownTableBodyNone">ST or GC  </td></tr>
 </table>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md196"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md204"></a>
 Part Agent</h1>
 <p>Before commencing production, process planning is essential, outlining the necessary steps to manufacture or assemble the end product. This crucial stage establishes the prerequisites and the sequence of operations. This must be expressed as a sequence in goal chart for a part agent. A goal serves as a bridge between product design and manufacturing and describes something that we need to reach. An example of a goal might be to get hole in the centre of the part. The process requirements are reflected in the order or sequence of the goals. For example, it might be more useful to first create a hole and then deburr it, rather than doing it the other way around. In CMAS all part agents must have at least one goal and a process plan that utilise at least one goal. To reach the part process plan select the part in the modelling tree and in the property window select processplan Edit button you can also double click on the part in the tree to open the process plan.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md197"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md205"></a>
 Resource Agent</h1>
 <p><a class="anchor" id="processplan_resource_agent"></a>A resource will publish available skills through <a class="el" href="interfaces_page.html">interfaces</a>. An interface describes requirements as variables and skills as process plans. A skill is a process plan describing the required steps needed to perform the skill. A skill can be used to fulfil a goal or as a required step in another skill. A well-crafted skill allows for adaptability and flexibility. To edit a skill double click on it in the modelling tree.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md198"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md206"></a>
 Global process plans</h1>
 <p>A global process plan is defined in the root of the modelling tree and can be used by parts when they are searching for a way to fulfil a goal. When used to fulfil a goal the process plan will be executed by the part agent it self.</p>
 <p>It is also possible to use global process plans to describe skills on resources. To do this drag the global process plan to a resource interface and drop it and select reference.</p>
