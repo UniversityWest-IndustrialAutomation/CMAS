@@ -45,8 +45,11 @@ Download `CMAS`, that is a zip file containing all files you need to run. For wi
 You are welcome to use, adapt, and build upon this project for research, education, and industrial applications.
 If this project, its methods, or its underlying concepts contribute to work that is published, we kindly ask you to cite the following original research publications:
 
-    A. Nilsson, F. Danielsson, B. Svensson, “Customization and flexible manufacturing capacity using a graphical method applied on a configurable multi-agent system,” Robotics and Computer-Integrated Manufacturing, 2023. [https://doi.org/10.1016/j.rcim.2022.102450](https://doi.org/10.1016/j.rcim.2022.102450)
-    M. Bennulf, F. Danielsson, B. Svensson, B. Lennartson, “Goal-oriented process plans in a multiagent system for plug & produce,” IEEE Transactions on Industrial Informatics, 2020. [https://doi.org/10.1109/TII.2020.2994032](https://doi.org/10.1109/TII.2020.2994032)
+    A. Nilsson, F. Danielsson, B. Svensson, “Customization and flexible manufacturing capacity using a graphical method applied on a configurable multi-agent system,” Robotics and Computer-Integrated Manufacturing, 2023. https://doi.org/10.1016/j.rcim.2022.102450
+    M. Bennulf, F. Danielsson, B. Svensson, B. Lennartson, “Goal-oriented process plans in a multiagent system for plug & produce,” IEEE Transactions on Industrial Informatics, 2020. https://doi.org/10.1109/TII.2020.2994032
+
+[https://doi.org/10.1016/j.rcim.2022.102450](https://doi.org/10.1016/j.rcim.2022.102450)
+[https://doi.org/10.1109/TII.2020.2994032](https://doi.org/10.1109/TII.2020.2994032)
 
 We believe that open access to research and software encourages innovation and collaboration. We simply ask that the original research and the contributions of its authors are acknowledged when building upon this work.
 
