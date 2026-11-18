@@ -33,7 +33,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="logo_small.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Configurable Multiagent System for Plug&amp;Produce
+   <div id="projectname">Configurable Multiagent System for Plug&amp;Produce<span id="projectnumber">&#160;2.15.0</span>
    </div>
    <div id="projectbrief">CMAS</div>
   </td>
@@ -110,16 +110,35 @@ $(function() {
 <div class="contents">
 <div class="textblock"><h1 class="doxsection"><a class="anchor" id="structured_text"></a>
 Introduction</h1>
-<p>Structured text can be used to describe skills and process plans. We will start with the famous Hello World in structured text.</p>
+<p>Structured text can be used to describe behaviour, skills and process plans in CMAS. Structured Text (ST) is a high-level programming language used in industrial automation to program controllers such as PLCs (Programmable Logic Controllers). Structured Text uses a syntax similar to traditional programming languages such as Pascal. This makes it relatively easy to read and understand, even for those who are new to automation and programming. Note, the ST implementation in CMAS does not strictly follow the standard and includes several CMAS-specific extensions.</p>
+<p><br  />
+ We will start with the famous Hello World in structured text.</p>
 <div class="fragment"><div class="line">Program HelloWorld;</div>
 <div class="line"> </div>
 <div class="line">{ Program to write Hello World on the console }</div>
 <div class="line">Begin</div>
 <div class="line">  writeln(&#39;Hello World&#39;);</div>
 <div class="line">End.</div>
-</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md220"></a>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md220"></a>
+Understanding the code</h2>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Code  </th><th class="markdownTableHeadNone">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Program HelloWorld;  </td><td class="markdownTableBodyNone">Declares the program and gives it the name HelloWorld.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">{ Program to write Hello World on the console }  </td><td class="markdownTableBodyNone">A comment to add explanations or notes to your code. Ignored by the compiler.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Begin  </td><td class="markdownTableBodyNone">Marks the beginning of the program's instructions.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">writeln('Hello World');  </td><td class="markdownTableBodyNone">Writes the text "Hello World" to the console.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">End.  </td><td class="markdownTableBodyNone">Marks the end of the program.  </td></tr>
+</table>
+<p>In the following section, the overall structure of the language is explained.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md221"></a>
 The overall structure in a program</h1>
-<p>A program consist of the following sections:</p><ul>
+<p>A program consists of the following sections:</p><ul>
 <li><a class="el" href="#program">Program name</a> (optional)</li>
 <li><a class="el" href="#directives">Directives</a> (optional)</li>
 <li><a class="el" href="#struct">Struct type</a> (optional)</li>
@@ -134,7 +153,7 @@ The overall structure in a program</h1>
 Program</h2>
 <p><b>Section:</b> Program name <br  />
 <b>Syntax:</b> <span class="tt"> Program &lt;Name&gt;; </span> <br  />
-<b>Description:</b> &lt;Name&gt; is a descriptive text string that defines the name of the program. <br  />
+<b>Description:</b> &lt;Name&gt; is a descriptive text string that defines the name of the program. Note, include files cannot have a <em>program</em> statement.<br  />
 <b>Example:</b> <br  />
 </p><div class="fragment"><div class="line">Program HelloWorld;</div>
 <div class="line"> </div>
@@ -145,7 +164,7 @@ Program</h2>
 </div><!-- fragment --><hr  />
 <h2 class="doxsection"><a class="anchor" id="directives"></a>
 Directives</h2>
-<p>The following directive exists</p>
+<p>The following directives exist:</p>
 <table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadLeft">Directive  </th><th class="markdownTableHeadLeft">Value  </th><th class="markdownTableHeadLeft">Description  </th></tr>
@@ -202,10 +221,10 @@ Error</h3>
 </p><div class="fragment"><div class="line">Program DoNotCompile;</div>
 <div class="line"> </div>
 <div class="line">Begin</div>
-<div class="line">  // Will prevent any one to compile and use this resource </div>
+<div class="line">  // Will prevent the use of this resource </div>
 <div class="line">  $error &#39;Do not use this resource yet it is not ready!&#39;</div>
 <div class="line">End.</div>
-</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>$error will generate an error when compiling for run time errors use <a class="el" href="#error">error</a> instead</dd></dl>
+</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>$error will generate an error when compiling. For run time errors use <a class="el" href="#error">error</a> instead.</dd></dl>
 <hr  />
 <h2 class="doxsection"><a class="anchor" id="struct"></a>
 Struct type</h2>
@@ -250,29 +269,29 @@ Interface</h2>
 <li><a class="el" href="#define">Define</a></li>
 <li><a class="el" href="#static">Static</a></li>
 </ul>
-<p>All abstract interfaces expose some static and some asynchronous functions. The asynchronous functions starts with an underscore _. For more details see the section <a class="el" href="negotiation_page.html">interfaces and negotiation</a>.</p>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md221"></a>
+<p>All abstract interfaces expose some static and some asynchronous functions. The asynchronous functions start with an underscore _. For more details see the section <a class="el" href="negotiation_page.html">interfaces and negotiation</a>.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md222"></a>
 Asynchronous functions</h3>
 <h4 class="doxsection"><a class="anchor" id="_book"></a>
 _book</h4>
 <p><em>abstractinterface</em>._book() will try to book the abstract interface. See <a class="el" href="negotiation_page.html#async_book">_book()</a></p>
 <h4 class="doxsection"><a class="anchor" id="_unbook"></a>
 _unbook</h4>
-<p><em>abstractinterface</em>._unbook() win unbook the abstract interface. See <a class="el" href="negotiation_page.html#async_unbook">_unbook()</a></p>
+<p><em>abstractinterface</em>._unbook() will unbook the abstract interface. See <a class="el" href="negotiation_page.html#async_unbook">_unbook()</a></p>
 <h4 class="doxsection"><a class="anchor" id="__isbookedbyme"></a>
 _isbookedbyme</h4>
-<p><em>abstractinterface</em>.isbookedbyme() will return done if the remote interface is booked by current agent. See <a class="el" href="negotiation_page.html#async_isbookedbyme">_isbookedbyme()</a></p>
+<p><em>abstractinterface</em>._isbookedbyme() will return done if the remote interface is booked by current agent. See <a class="el" href="negotiation_page.html#async_isbookedbyme">_isbookedbyme()</a></p>
 <h4 class="doxsection"><a class="anchor" id="__isbooked"></a>
 _isbooked</h4>
 <p><em>abstractinterface</em>._isbooked() will return done if the remote interface is booked by anyone. See <a class="el" href="negotiation_page.html#async_isbooked">_isbooked()</a></p>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md222"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md223"></a>
 Static functions</h3>
-<h4 class="doxsection"><a class="anchor" id="__clearfunctions"></a>
+<h4 class="doxsection"><a class="anchor" id="clearfunctions"></a>
 clearfunctions</h4>
-<p><em>abstractinterface</em>._clearfunctions() will clear all desired functions for the abstract interface.</p>
-<h4 class="doxsection"><a class="anchor" id="__clearvariables"></a>
+<p><em>abstractinterface</em>.clearfunctions() will clear all desired functions for the abstract interface.</p>
+<h4 class="doxsection"><a class="anchor" id="clearvariables"></a>
 clearvariables</h4>
-<p><em>abstractinterface</em>._clearvariables() will clear all desired variables for the abstract interface.</p>
+<p><em>abstractinterface</em>.clearvariables() will clear all desired variables for the abstract interface.</p>
 <h4 class="doxsection"><a class="anchor" id="negotiate"></a>
 negotiate</h4>
 <p><em>abstractinterface</em>.negotiate() will make a single attempt to locate a compatible remote interface from the accessible resources. See <a class="el" href="negotiation_page.html#static_negotiate">negotiate()</a></p>
@@ -284,12 +303,12 @@ agree</h4>
 <p>The <em>abstractinterface</em>.agree() will try forever to locate a compatible remote interface from the accessible resources. See <a class="el" href="negotiation_page.html#static_agree">agree()</a></p>
 <h4 class="doxsection"><a class="anchor" id="agreeandbook"></a>
 agreeandbook</h4>
-<p>The <em>abstractinterface</em>.agreeeandbook() will try forever to locate and book a compatible remote interface from the accessible resources. See <a class="el" href="negotiation_page.html#static_agreeandbook">agreeandbook()</a></p>
+<p>The <em>abstractinterface</em>.agreeandbook() will try forever to locate and book a compatible remote interface from the accessible resources. See <a class="el" href="negotiation_page.html#static_agreeandbook">agreeandbook()</a></p>
 <h3 class="doxsection"><a class="anchor" id="abstract"></a>
 Abstract interface declarations</h3>
 <p><b>Section:</b> Abstract interface declarations <br  />
 <b>Syntax:</b> <span class="tt"> abstract [handle] [local] &lt;name1&gt; [, &lt;name2&gt;] [, …] :  interface; </span> <br  />
-<b>Description:</b> <a class="el" href="abstractinterfaces_page.html">Declaration of abstract interfaces.</a> Abstract interfaces are mapped during runtime through a negotiation process. The negotiation process consider variables and used skills. If there are many interfaces that accept the negotiation the one with the lowest cost is selected. The negotiation process starts automatically when an item of an abstract interface is accessed for the first time. It is possible to force a negotiation for an interface by calling the negotiation() action on the abstract interface. It is possible to add the modifier handle for an abstract interface, see <a class="el" href="negotiation_page.html#interface_details">interface details</a> for more information. If the <em>local</em> modifier is specified the search will be done on the agent it self to find a local interface that is compatible with the abstract interface.<br  />
+<b>Description:</b> <a class="el" href="abstractinterfaces_page.html">Declaration of abstract interfaces.</a> Abstract interfaces are mapped during runtime through a negotiation process. The negotiation process considers variables and used skills. If there are many interfaces that accept the negotiation the one with the lowest cost is selected. The negotiation process starts automatically when a member of an abstract interface is accessed for the first time. It is possible to force a negotiation for an interface by calling the negotiate() action on the abstract interface. It is possible to add the modifier handle for an abstract interface, see <a class="el" href="negotiation_page.html#interface_details">interface details</a> for more information. If the <em>local</em> modifier is specified the search will be done on the agent itself to find a local interface that is compatible with the abstract interface.<br  />
 <a class="anchor" id="handle"></a> <b>Example</b> <b>1</b>:</p>
 <div class="fragment"><div class="line">Program AbstractExample;</div>
 <div class="line">{ Abstract remote interfaces }</div>
@@ -317,7 +336,7 @@ Abstract interface declarations</h3>
 <div class="line">    // this is necessary since the call is done with an result variable</div>
 <div class="line">    repeat</div>
 <div class="line">        sleep(100);</div>
-<div class="line">    until returnValue=processplan.running;</div>
+<div class="line">    until returnValue=processplan.done;</div>
 <div class="line">    </div>
 <div class="line">    transport._unbook();</div>
 <div class="line">    onRun:=returnValue;</div>
@@ -328,7 +347,7 @@ Abstract interface declarations</h3>
 Define interface declaration</h3>
 <p><b>Section:</b> Define a new local interface syntax 1<br  />
 <b>Syntax1:</b> <span class="tt"> define [handle] [local] &lt;name&gt; :  interface; Begin &lt;variable declarations&gt;  &lt;function definitions&gt;End;</span> <br  />
-<b>Description:</b> Declaration of a new local interface for use to find compatible remote or local interfaces. This can be used when it is not possible define it in the configuration. The declared name of the interface is the name used for matching with remote interfaces. All declared variables together with all skill calls used on the abstract interface is automatically added to the requirement list for matching. It is also possible to add skills manually by defining function names in the interface. If <em>local</em> is specified the search will be done on the agent it self to find a local interface that is compatible with the defined interface. The defined name of the interface is used during negotiation to find a matching interface. It is possible to override the name by defining name inside the begin end block.<br  />
+<b>Description:</b> Declaration of a new local interface for finding compatible remote or local interfaces. This can be used when it is not possible define it in the configuration. The declared name of the interface is the name used for matching with remote interfaces. All declared variables together with all skill calls used on the abstract interface is automatically added to the requirement list for matching. It is also possible to add skills manually by defining function names in the interface. If <em>local</em> is specified the search will be done on the agent itself to find a local interface that is compatible with the defined interface. The defined name of the interface is used during negotiation to find a matching interface. It is possible to override the name by defining name inside the begin end block.<br  />
 <b>Example:</b> </p>
 <div class="fragment"><div class="line">Program DefineExample1;</div>
 <div class="line"> </div>
@@ -355,7 +374,7 @@ Define interface declaration</h3>
 </div><!-- fragment --><p><br  />
  <b>Section:</b> Define a reference to an existing local interface syntax 2<br  />
 <b>Syntax2:</b> <span class="tt"> define [handle] &lt;name&gt; :='&lt;interface name&gt;'  interface;</span> <br  />
-<b>Description:</b> Define a reference to of an existing local interface, named &lt;interface name&gt; for use to find compatible remote interfaces. This can be used when you do not want to search locally for an interface. Note, &lt;name&gt; will be used as interface name during the negotiation process.<br  />
+<b>Description:</b> Define a reference to an existing local interface, named &lt;interface name&gt; for use in finding compatible remote interfaces. This can be used when you do not want to search locally for an interface. Note, &lt;name&gt; will be used as interface name during the negotiation process.<br  />
 <b>Example:</b> </p>
 <div class="fragment"><div class="line">Program DefineExample2;</div>
 <div class="line"> </div>
@@ -429,8 +448,8 @@ Arrays</h2>
 Comment</h2>
 <p><b>Section:</b> Comment <br  />
 <b>Syntax</b> 1: <span class="tt"> { &lt;multi line text&gt; }   |  (* &lt;multi line text&gt; *) </span> <br  />
-<b>Syntax</b> 2: <span class="tt"> // &lt;single line text&gt; </span> <br  />
-<b>Description:</b> Comments are ignored by the compiler and are optional but can improve the readability of the code. Comment can be single line // that ends when the line ends or multiline { } that end at the end of the comment character }. Note that comments cannot be nested, i.e. a comment cannot contain another comment. The comment type { } is equivalent to (* *). <br  />
+<b>Syntax</b> 2: <span class="tt"> // &lt;single-line text&gt; </span> <br  />
+<b>Description:</b> Comments are ignored by the compiler and are optional but can improve the readability of the code. Comments can be single-line // that ends when the line ends or multiline { } that end at the end of the comment character }. Note that comments cannot be nested, i.e. a comment cannot contain another comment. The comment type { } is equivalent to (* *). <br  />
 <b>Example:</b> <br  />
 </p><div class="fragment"><div class="line">{  Program to write Hello World on the console </div>
 <div class="line">  The program will show the basic idea of structured text</div>
@@ -512,13 +531,13 @@ Overriding ontology functions and procedures</h2>
 <p>Some objects in the <a class="el" href="ontology_page.html#ontology_introduction">ontology</a> have predefined functions (actions) that can be overridden, either as <a class="el" href="processplanaction_page.html">processplan actions</a>, <a class="el" href="interfaceanaction_page.html">interface actions</a> or as <a class="el" href="agentaction_page.html">agent actions</a>.</p>
 <p>To override a function and implement your own behavior, simply define a procedure or function with the same name in your code.</p>
 <p><a class="el" href="processplanaction_page.html">Processplan action</a></p><ul>
-<li><a class="el" href="processplanaction_page.html#onnegotitate_pp">onNegotiate</a></li>
+<li>onnegotiate_pp</li>
 <li><a class="el" href="processplanaction_page.html#onrun_pp">onRun (processplan)</a></li>
 <li><a class="el" href="processplanaction_page.html#onfinished_pp">onFinished</a></li>
 <li><a class="el" href="processplanaction_page.html#onoverlap_pp">onOverlap</a></li>
 </ul>
 <p><a class="el" href="interfaceanaction_page.html">Interface action</a></p><ul>
-<li><a class="el" href="interfaceanaction_page.html#onatach">onAttach</a></li>
+<li>onattach</li>
 <li><a class="el" href="interfaceanaction_page.html#ondetach">onDetach</a></li>
 <li><a class="el" href="interfaceanaction_page.html#onnegotiate">onNegotiate</a></li>
 <li><a class="el" href="interfaceanaction_page.html#onoverlap">onOverlap</a></li>
@@ -546,7 +565,7 @@ Main program block</h2>
 <span class="tt"> begin <br  />
     [code] <br  />
 end. </span> <br  />
-<b>Description:</b> Each program can have a main program block and for most objects this is the constructor that will be called when the object is initialised. The main program block must be defined at the end of the program file. The main program block starts at <span class="tt">begin</span> and ends at <span class="tt">end</span>. Note that the main program block ends with a period (.). <br  />
+<b>Description:</b> Programs can have a main program block (optional) and for most objects this is the constructor that will be called when the object is initialised. When used the main program block must be defined at the end of the program file. The main program block starts at <span class="tt">begin</span> and ends at <span class="tt">end</span>. Note that the main program block ends with a period (.). <br  />
 <b>Example:</b> <br  />
 </p><div class="fragment"><div class="line">Program HelloWorld;</div>
 <div class="line">{ Program to write Hello World! on the console }</div>
@@ -554,7 +573,7 @@ end. </span> <br  />
 <div class="line">  writeln(&#39;Hello World!&#39;);</div>
 <div class="line">End.</div>
 </div><!-- fragment --><hr  />
-<h1 class="doxsection"><a class="anchor" id="autotoc_md223"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md224"></a>
 Control structures</h1>
 <p>The following control structures exist:</p><ul>
 <li><a class="el" href="#while">while</a></li>
@@ -600,7 +619,7 @@ repeat</h2>
  <span class="tt"> repeat<br  />
     [code block] <br  />
 until &lt;expression&gt;; </span> <br  />
- <b>Description:</b> Iterates the code block as long as the expression evaluates to true. <br  />
+ <b>Description:</b> Iterates the code block as long as the expression evaluates to false. <br  />
 Note, the expression is evaluated after the code block is executed. <br  />
 <b>Example:</b> </p><div class="fragment"><div class="line">Program WhileIterator;</div>
 <div class="line">var Counter :integer;</div>
@@ -609,7 +628,7 @@ Note, the expression is evaluated after the code block is executed. <br  />
 <div class="line">    repeat</div>
 <div class="line">        writeln(&#39;Countdown &#39;, Counter);</div>
 <div class="line">        Counter:=Counter-1;</div>
-<div class="line">    until Counter&gt;0;</div>
+<div class="line">    until Counter=0;</div>
 <div class="line">End.</div>
 </div><!-- fragment --> <hr  />
 <h2 class="doxsection"><a class="anchor" id="for"></a>
@@ -643,7 +662,7 @@ begin <br  />
     [code block] <br  />
 end; </span> <br  />
  <b>Description:</b> Iterates the code block or the statement over all elements in the &lt;iterablevariable&gt;. The &lt;variable_name&gt; will be a name that can be used to reference each element in the &lt;iterablevariable&gt;. <br  />
-</p><dl class="section note"><dt>Note</dt><dd>The &lt;iterablevariable&gt; must be of a type that can be iterable, e.g, arrays, structs or strings.</dd></dl>
+</p><dl class="section note"><dt>Note</dt><dd>The &lt;iterablevariable&gt; must be of a type that can be iterated over, e.g, arrays, structs or strings.</dd></dl>
 <p><b>Example:</b> </p><div class="fragment"><div class="line">Program ForEachIterator;</div>
 <div class="line">var anArray: array [ 1 .. 4] of integer; </div>
 <div class="line"> </div>
@@ -659,8 +678,8 @@ end; </span> <br  />
 <div class="line">end.</div>
 </div><!-- fragment --> <hr  />
 <h2 class="doxsection"><a class="anchor" id="downto"></a>
-for dwonto</h2>
-<p><b>Control</b> <b>iterator:</b> for dwonto <br  />
+for downto</h2>
+<p><b>Control</b> <b>iterator:</b> for downto <br  />
 <a class="anchor" id="downto"></a> <b>Syntax</b> <b>1</b> - block: <br  />
 <span class="tt"> for &lt;variable&gt;:=&lt;fromexpression&gt; downto &lt;toexpression&gt; do <br  />
 begin <br  />
@@ -669,7 +688,7 @@ end; </span> <br  />
 <b>Syntax</b> <b>2</b> - no block: <br  />
 <span class="tt"> for &lt;variable&gt;:=&lt;fromexpression&gt; downto &lt;toexpression&gt; do <br  />
     [single statement] </span> <br  />
- <b>Description:</b> Iterates the code block or the statement n times with an integer variable as a counter. The iteration starts from fromexpression and countdown to toexpression. <br  />
+ <b>Description:</b> Iterates the code block or the statement n times with an integer variable as a counter. The iteration starts from &lt;fromexpression&gt; and countdown to &lt;toexpression&gt;. <br  />
 <b>Example:</b> </p><div class="fragment"><div class="line">Program ForDowntoIterator;</div>
 <div class="line">var Counter :integer;</div>
 <div class="line">Begin</div>
@@ -728,7 +747,7 @@ end;] </span> <br  />
 <div class="line">        writeln(&#39;a=b&#39;);</div>
 <div class="line">    end;</div>
 <div class="line">End.</div>
-</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>For syntax 2 each single line expression ends with a semicolon ; <br  />
+</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>For syntax 2 each single-line expression ends with a semicolon ; <br  />
  However, it can be safer to work with blocks as in syntax 1 for complex or nested if/else sections.<div class="fragment"><div class="line">if a&gt;0 then</div>
 <div class="line">    writeln(&#39;Greater&#39;); </div>
 <div class="line">else if a=0 then</div>
@@ -783,7 +802,7 @@ exit</h2>
 <div class="line">        begin</div>
 <div class="line">            exit;</div>
 <div class="line">        end;</div>
-<div class="line">        WriteLn(&#39;a = &#39;, a);</div>
+<div class="line">        writeln(&#39;a = &#39;, a);</div>
 <div class="line">    end;</div>
 <div class="line">End.</div>
 </div><!-- fragment --> <hr  />
@@ -801,9 +820,9 @@ break</h2>
 <div class="line">        begin</div>
 <div class="line">            break;</div>
 <div class="line">        end;</div>
-<div class="line">        WriteLn(&#39;a = &#39;, a);</div>
+<div class="line">        writeln(&#39;a = &#39;, a);</div>
 <div class="line">    end;</div>
-<div class="line">    WriteLn(&#39;Loop is ready&#39;);</div>
+<div class="line">    writeln(&#39;Loop is ready&#39;);</div>
 <div class="line">End.</div>
 </div><!-- fragment --> <hr  />
 <h2 class="doxsection"><a class="anchor" id="error"></a>
@@ -851,7 +870,7 @@ label</h2>
 parallel</h2>
 <p><b>Control</b> <b>statement:</b> parallel <br  />
 <b>Syntax:</b> &lt; &lt;statement&gt;; | &lt;statement&gt;; | ... | &lt;statement n&gt;; &gt; <br  />
-<b>Description:</b> The parallel statement executes all n statements in parallel and waits until all statements have completed. A statement can be a single line or a block enclosed by begin and end, allowing multiple statements to be executed as one parallel branch. If execution is interrupted or the enclosing block requests termination, all running parallel statements are cancelled. Parallel statements are separated by a |</p>
+<b>Description:</b> The parallel statement executes all n statements in parallel and waits until all statements have completed. A statement can be a single-line or a block enclosed by begin and end, allowing multiple statements to be executed as one parallel branch. If execution is interrupted or the enclosing block requests termination, all running parallel statements are cancelled. Parallel statements are separated by a |</p>
 <p><br  />
  </p><dl class="section note"><dt>Note</dt><dd>Shared variables and resources accessed by parallel statements are not synchronized automatically. The user is responsible for ensuring safe concurrent access and for avoiding race conditions or conflicting operations on shared resources.</dd></dl>
 <p><br  />
@@ -859,16 +878,16 @@ parallel</h2>
 <div class="line"> </div>
 <div class="line">begin   </div>
 <div class="line"> </div>
-<div class="line">    &lt; writeln(&#39;statment 1&#39;); | writeln(&#39;statment 2&#39;); | begin writeln(&#39;statment 3a&#39;); writeln(&#39;statment 3b&#39;); end. &gt;</div>
+<div class="line">    &lt; writeln(&#39;statement 1&#39;); | writeln(&#39;statement 2&#39;); | begin writeln(&#39;statement 3a&#39;); writeln(&#39;statement 3b&#39;); end. &gt;</div>
 <div class="line"> </div>
 <div class="line">end. </div>
 </div><!-- fragment --><hr  />
- <h1 class="doxsection"><a class="anchor" id="autotoc_md224"></a>
+ <h1 class="doxsection"><a class="anchor" id="autotoc_md225"></a>
 Operators</h1>
 <p>Operators define computations, comparisons, boolean logic, and state updates in expressions.</p>
 <p>The following operators exist: <br  />
  </p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md225"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md226"></a>
 Arithmetic</h2>
 <p>Arithmetic operators perform numeric computations on numeric operands and produce a numeric result. However, it is also possible to use addition (+) to merge strings.</p>
 <table class="markdownTable">
@@ -888,7 +907,7 @@ Arithmetic</h2>
 <td class="markdownTableBodyLeft">Modulus  </td><td class="markdownTableBodyLeft">mod  </td></tr>
 </table>
 <hr  />
-<h2 class="doxsection"><a class="anchor" id="autotoc_md226"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md227"></a>
 Assignment</h2>
 <p>Assign values to variables.</p>
 <table class="markdownTable">
@@ -912,14 +931,14 @@ Assignment</h2>
 <div class="line">end.</div>
 </div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>Assignment is an expression and yields the assigned value. This allows chained assignments such as a := b := c := 1.</dd></dl>
 <hr  />
-<h2 class="doxsection"><a class="anchor" id="autotoc_md227"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md228"></a>
 Relations</h2>
 <p>Compare two values and produce a Boolean result.</p>
 <table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadLeft">Operator  </th><th class="markdownTableHeadLeft">Notation  </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyLeft">Equeal  </td><td class="markdownTableBodyLeft">=  </td></tr>
+<td class="markdownTableBodyLeft">Equal  </td><td class="markdownTableBodyLeft">=  </td></tr>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft">Less equal  </td><td class="markdownTableBodyLeft">&lt;=  </td></tr>
 <tr class="markdownTableRowOdd">
@@ -932,7 +951,7 @@ Relations</h2>
 <td class="markdownTableBodyLeft">Not equal  </td><td class="markdownTableBodyLeft">&lt;&gt;  </td></tr>
 </table>
 <hr  />
-<h2 class="doxsection"><a class="anchor" id="autotoc_md228"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md229"></a>
 Logical</h2>
 <p>Combine or negate Boolean expressions and produce a Boolean result.</p>
 <table class="markdownTable">
@@ -970,7 +989,7 @@ Logical</h2>
 </table>
 <dl class="section note"><dt>Note</dt><dd>Will only operate on integers.</dd></dl>
 <hr  />
-<h2 class="doxsection"><a class="anchor" id="autotoc_md230"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md231"></a>
 Object</h2>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -979,7 +998,7 @@ Object</h2>
 <td class="markdownTableBodyLeft">Access member operator  </td><td class="markdownTableBodyLeft">.  </td></tr>
 </table>
 <hr  />
-<h2 class="doxsection"><a class="anchor" id="autotoc_md231"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md232"></a>
 Array</h2>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -988,7 +1007,7 @@ Array</h2>
 <td class="markdownTableBodyLeft">Index operator  </td><td class="markdownTableBodyLeft">[ ]  </td></tr>
 </table>
 <hr  />
-<h1 class="doxsection"><a class="anchor" id="autotoc_md232"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md233"></a>
 Types</h1>
 <p>The following types exist:</p><ul>
 <li><a class="el" href="#real">REAL</a></li>
@@ -1031,12 +1050,12 @@ String</h2>
 <div class="line">avariable:=&#39;Text message&#39;;</div>
 </div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="typestruct"></a>
 Struct</h2>
-<p><a class="el" href="#struct">Struct type</a> variables are data structures based on a user defined type. User defined types are global and act as templates to be used when variables are declared. A <a class="el" href="#struct">Struct type</a> consist of base types (integer, real, boolean or string) or other structs.</p>
+<p><a class="el" href="#struct">Struct type</a> variables are data structures based on a user defined type. User defined types are global and act as templates to be used when variables are declared. A <a class="el" href="#struct">Struct type</a> consists of base types (integer, real, boolean or string) or other structs.</p>
 <hr  />
 <h2 class="doxsection"><a class="anchor" id="objects"></a>
 Objects</h2>
 <p>Objects cannot be defined within a program. They exist from the start and they are instances of structs. All agents have an object defined called agent. All interfaces are defined as objects one per interface and share the name of the interface. It is possible to refer to interfaces on other agents by declaring abstract interfaces. Use the dot operator to access any member of an object, variables and skills. If the agent has goals the goal variables are defined under the object called goal. <br  />
- The following objects exists:</p>
+ The following objects exist:</p>
 <h3 class="doxsection"><a class="anchor" id="this"></a>
 this</h3>
 <p>The entity representing the program. Example of an entity is a goal. See the <a class="el" href="ontology_page.html#ontology_introduction">ontology</a> overview for object definitions.</p>
@@ -1048,7 +1067,7 @@ interface</h3>
 <p>Interface is an object that represents an interface on the current agent (local). Interface can be any of the interface objects in the <a class="el" href="ontology_page.html#ontology_introduction">ontology</a>.</p>
 <h3 class="doxsection"><a class="anchor" id="remoteinterface"></a>
 remoteinterface</h3>
-<p>Remoteinterface is an object that represents an interface on an remote agent during negotiation.</p>
+<p>Remoteinterface is an object that represents an interface on a remote agent during negotiation.</p>
 <h3 class="doxsection"><a class="anchor" id="goal"></a>
 Goal</h3>
 <p>Goal is an object that represents a goal, only process plans can reach a goal objects</p>
@@ -1090,7 +1109,7 @@ ProcessPlan</h3>
 <div class="line">writeln(this.Name);</div>
 <div class="line"> </div>
 <div class="line">{ For process plans it is possible to access variables defined for goals }</div>
-<div class="line">WriteLn(&#39;Goal position is &#39;, goal.Pos); </div>
+<div class="line">writeln(&#39;Goal position is &#39;, goal.Pos); </div>
 <div class="line"> </div>
 <div class="line">{ Will set return value to done }</div>
 <div class="line">onRun:=processplan.done;</div>
@@ -1105,9 +1124,9 @@ Example:</p>
 <div class="line">    writeln(&#39;Negotiate with agent &#39;, agentObject.name, &#39; on interface &#39;, interfaceObject.name);</div>
 <div class="line">end.</div>
 </div><!-- fragment --><hr  />
-<h1 class="doxsection"><a class="anchor" id="autotoc_md233"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md234"></a>
 Procedures</h1>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md234"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md235"></a>
 Input and output</h2>
 <h3 class="doxsection"><a class="anchor" id="writeln"></a>
 writeln</h3>
@@ -1148,7 +1167,7 @@ readln</h3>
 <div class="line">    // Repeat until a valid integer is read</div>
 <div class="line">    repeat</div>
 <div class="line">        readln(input); // Read user input from console</div>
-<div class="line">    until not stringisinteger(input);</div>
+<div class="line">    until stringisinteger(input);</div>
 <div class="line">    Menu:=stringtoint(input);   </div>
 <div class="line">end.</div>
 <div class="line"> </div>
@@ -1163,11 +1182,11 @@ readln</h3>
 <div class="line">        writeln(&#39;wrong menu&#39;);</div>
 <div class="line">end.</div>
 </div><!-- fragment --><hr  />
- <h2 class="doxsection"><a class="anchor" id="autotoc_md235"></a>
+ <h2 class="doxsection"><a class="anchor" id="autotoc_md236"></a>
 Abstract Interface Functions</h2>
 <h3 class="doxsection"><a class="anchor" id="abstractname"></a>
 abstractname</h3>
-<p><b>Procedure:</b> abstractname <br  />
+<p><b>Function:</b> abstractname <br  />
 <b>Syntax:</b> <span class="tt"> abstractname(&lt;interface&gt;] [, &lt;string_name&gt;]) : string </span> <br  />
 <b>Description:</b> Will get the &lt;interface&gt; name and if &lt;string_name&gt; is given also change the name.<br  />
  <b>Return</b> <b>value:</b> the new name if changed otherwise current name. <br  />
@@ -1186,7 +1205,7 @@ abstractname</h3>
 <div class="line">end.</div>
 </div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="abstractcost"></a>
 abstractcost</h3>
-<p><b>Procedure:</b> abstractcost <br  />
+<p><b>Function:</b> abstractcost <br  />
 <b>Syntax:</b> <span class="tt"> abstractcost(&lt;interface&gt;]) : integer </span> <br  />
 <b>Description:</b> Will get the total cost to call all planed skills on the abstract interface &lt;interface&gt;. The cost will only include the skills used by the abstract &lt;interface&gt;. If the &lt;interface&gt; is not negotiated the cost returned is 0.<br  />
 <b>Return</b> <b>value:</b> the total cost. <br  />
@@ -1200,7 +1219,7 @@ abstractcost</h3>
 <div class="line">end.</div>
 </div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="abstractshare"></a>
 abstractshare</h3>
-<p><b>Procedure:</b> abstractshare <br  />
+<p><b>Function:</b> abstractshare <br  />
 <b>Syntax:</b> <span class="tt"> abstractshare(&lt;string_name&gt;, &lt;interface&gt;) : boolean </span> <br  />
 <b>Description:</b> Will add the &lt;interface&gt; as a global abstract interface available for all skills on the same agent. The global abstract interface can be found with the help of the &lt;string_name&gt;<br  />
  <b>Return</b> <b>value:</b> true if it was possible to add the abstract interface. <br  />
@@ -1218,7 +1237,7 @@ abstractshare</h3>
 <div class="line">end.</div>
 </div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="abstractfind"></a>
 abstractfind</h3>
-<p><b>Procedure:</b> abstractfind <br  />
+<p><b>Function:</b> abstractfind <br  />
 <b>Syntax:</b> <span class="tt"> abstractfind(&lt;string_name&gt;, &lt;interface&gt;) : boolean </span> <br  />
 <b>Description:</b> Will search for a shared abstract interface by the name &lt;string_name&gt;. If an interface is found it is associated with the &lt;interface&gt;. All variables and functions for the global interface will be available on the local defined interface after a successful find. <br  />
 <b>Return</b> <b>value:</b> true if it was possible to find a global interface. <br  />
@@ -1236,10 +1255,10 @@ abstractfind</h3>
 <div class="line">end.</div>
 </div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="ignorebooked"></a>
 ignorebooked</h3>
-<p><b>Procedure:</b> ignorebooked <br  />
-<b>Syntax:</b> <span class="tt"> ignorebooked(&lt;interface&gt;] [, &lt;boolean_value&gt;]) : boolean</span> <br  />
+<p><b>Function:</b> ignorebooked <br  />
+<b>Syntax:</b> <span class="tt"> ignorebooked(&lt;interface&gt; [, &lt;boolean_value&gt;]) : boolean</span> <br  />
 <b>Description:</b> Will get the &lt;interface&gt; property IgnoreBooked and if &lt;boolean_value&gt; is given also change the value. This property affects negotiation process and how to handle remote interfaces.<br  />
- <b>Return</b> <b>value:</b> the new vaule if changed otherwise current value. <br  />
+ <b>Return</b> <b>value:</b> the new value if changed otherwise current value. <br  />
 <b>Example:</b> </p><div class="fragment"><div class="line">define handle example : interface;</div>
 <div class="line">begin</div>
 <div class="line">    var x, y : integer;</div>
@@ -1253,11 +1272,11 @@ ignorebooked</h3>
 <div class="line">end.</div>
 </div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="ignorebusy"></a>
 ignorebusy</h3>
-<p><b>Procedure:</b> ignorebusy <br  />
-<b>Syntax:</b> <span class="tt"> ignorebusy(&lt;interface&gt;] [, &lt;boolean_value&gt;]) : boolean</span> <br  />
+<p><b>Function:</b> ignorebusy <br  />
+<b>Syntax:</b> <span class="tt"> ignorebusy(&lt;interface&gt; [, &lt;boolean_value&gt;]) : boolean</span> <br  />
 <b>Description:</b> Will get the &lt;interface&gt; property IgnoreBusy and if &lt;boolean_value&gt; is given also change the value.<br  />
  This property affects negotiation process and how to handle remote interfaces.<br  />
- <b>Return</b> <b>value:</b> the new vaule if changed otherwise current value. <br  />
+ <b>Return</b> <b>value:</b> the new value if changed otherwise current value. <br  />
 <b>Example:</b> </p><div class="fragment"><div class="line">define handle example : interface;</div>
 <div class="line">begin</div>
 <div class="line">    var x, y : integer;</div>
@@ -1270,11 +1289,11 @@ ignorebusy</h3>
 <div class="line">    example.run();</div>
 <div class="line">end.</div>
 </div><!-- fragment --><hr  />
-<h2 class="doxsection"><a class="anchor" id="autotoc_md236"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md237"></a>
 Test Functions</h2>
 <h3 class="doxsection"><a class="anchor" id="isreal"></a>
 isreal</h3>
-<p><b>Procedure:</b> isreal<br  />
+<p><b>Function:</b> isreal<br  />
 <b>Syntax:</b> <span class="tt">  isreal(&lt;expression&gt;) : boolean </span> <br  />
 <b>Description:</b> Will test if the &lt;expression&gt; is of the type real. <br  />
 <b>Return</b> <b>value:</b> true if &lt;expression&gt; is of specific type otherwise false. <br  />
@@ -1292,28 +1311,28 @@ isreal</h3>
 <div class="line">end.</div>
 </div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="isboolean"></a>
 isboolean</h3>
-<p><b>Procedure:</b> isboolean<br  />
+<p><b>Function:</b> isboolean<br  />
 <b>Syntax:</b> <span class="tt">  isboolean(&lt;expression&gt;) : boolean </span> <br  />
 <b>Description:</b> Will test if the &lt;expression&gt; is of the type boolean. <br  />
 <b>Return</b> <b>value:</b> true if &lt;expression&gt; is of specific type otherwise false. <br  />
  </p>
 <h3 class="doxsection"><a class="anchor" id="isinteger"></a>
 isinteger</h3>
-<p><b>Procedure:</b> isinteger<br  />
+<p><b>Function:</b> isinteger<br  />
 <b>Syntax:</b> <span class="tt">  isinteger(&lt;expression&gt;) : boolean </span> <br  />
 <b>Description:</b> Will test if the &lt;expression&gt; is of the type integer. <br  />
 <b>Return</b> <b>value:</b> true if &lt;expression&gt; is of specific type otherwise false. <br  />
  </p>
 <h3 class="doxsection"><a class="anchor" id="isstring"></a>
 isstring</h3>
-<p><b>Procedure:</b> isstring<br  />
+<p><b>Function:</b> isstring<br  />
 <b>Syntax:</b> <span class="tt">  isstring(&lt;expression&gt;) : boolean </span> <br  />
 <b>Description:</b> Will test if the &lt;expression&gt; is of the type string. <br  />
 <b>Return</b> <b>value:</b> true if &lt;expression&gt; is of specific type otherwise false. <br  />
  </p>
 <h3 class="doxsection"><a class="anchor" id="stringisreal"></a>
 stringisreal</h3>
-<p><b>Procedure:</b> stringisreal<br  />
+<p><b>Function:</b> stringisreal<br  />
 <b>Syntax:</b> <span class="tt"> stringisreal(&lt;string&gt;) : boolean </span> <br  />
 <b>Description:</b> Will test if the content of the &lt;string&gt; can be interpreted and converted to real. <br  />
 <b>Return</b> value: true if &lt;string&gt; can be converted otherwise false. <br  />
@@ -1328,21 +1347,21 @@ stringisreal</h3>
 </p>
 <h3 class="doxsection"><a class="anchor" id="stringisinteger"></a>
 stringisinteger</h3>
-<p><b>Procedure:</b> stringisinteger<br  />
+<p><b>Function:</b> stringisinteger<br  />
 <b>Syntax:</b> <span class="tt"> stringisinteger(&lt;string&gt;) : boolean </span> <br  />
 <b>Description:</b> Will test if the content of the &lt;string&gt; can be interpreted and converted to integer. <br  />
 <b>Return</b> value: true if &lt;string&gt; can be converted otherwise false. <br  />
 </p>
 <h3 class="doxsection"><a class="anchor" id="stringisboolean"></a>
 stringisboolean</h3>
-<p><b>Procedure:</b> stringisboolean<br  />
+<p><b>Function:</b> stringisboolean<br  />
 <b>Syntax:</b> <span class="tt"> stringisboolean(&lt;string&gt;) : boolean </span> <br  />
 <b>Description:</b> Will test if the content of the &lt;string&gt; can be interpreted and converted to boolean. <br  />
 <b>Return</b> value: true if &lt;string&gt; can be converted otherwise false. <br  />
 </p>
 <h3 class="doxsection"><a class="anchor" id="stringisempty"></a>
 stringisempty</h3>
-<p><b>Procedure:</b> stringisempty<br  />
+<p><b>Function:</b> stringisempty<br  />
 <b>Syntax:</b> <span class="tt"> stringisempty(&lt;string&gt;) : boolean </span> <br  />
 <b>Description:</b> Will test if the &lt;string&gt; is empty or not. <br  />
 <b>Return</b> value: true if \&lt;string&gt; is empty otherwise false . <br  />
@@ -1354,10 +1373,10 @@ stringisempty</h3>
 </div><!-- fragment --><p> <br  />
 </p>
 <hr  />
-<h2 class="doxsection"><a class="anchor" id="autotoc_md237"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md238"></a>
 Converting Functions</h2>
 <p>This section documents a set of type conversion procedures available, and they all follow the same general pattern, as described below. Since Structured Text is type-sensitive, it is important to use the correct type. These procedures can be used to assist in converting values or variables to the required types.</p>
-<p><b>Procedure:</b> &lt;type_from&gt;to&lt;type_to&gt; <br  />
+<p><b>Function:</b> &lt;type_from&gt;to&lt;type_to&gt; <br  />
 <b>Syntax:</b> <span class="tt"> &lt;type_from&gt;to&lt;type_to&gt;(&lt;expression&gt;) : &lt;type_to&gt; </span> <br  />
 <b>Description:</b> Will convert the &lt;expression&gt; value from the &lt;type_from&gt; to &lt;type_to&gt;. <br  />
 <b>Return</b> <b>value:</b> The &lt;expression&gt; value converted to &lt;type_to&gt;. <br  />
@@ -1370,7 +1389,7 @@ Converting Functions</h2>
 <div class="line">Var d:=&#39;Hello&#39;:String;</div>
 <div class="line"> </div>
 <div class="line">Begin</div>
-<div class="line">    WriteLn(&#39;a is &#39;, a, </div>
+<div class="line">    writeln(&#39;a is &#39;, a, </div>
 <div class="line">            &#39; b is &#39;, b,</div>
 <div class="line">            &#39; c is &#39;, c, </div>
 <div class="line">            &#39; and d is &#39;, d);</div>
@@ -1380,129 +1399,129 @@ Converting Functions</h2>
 <div class="line">    a:=realtoint(b);</div>
 <div class="line">    b:=booleantoreal(c);</div>
 <div class="line">    </div>
-<div class="line">    WriteLn(&#39;and now a is &#39;, a, </div>
+<div class="line">    writeln(&#39;and now a is &#39;, a, </div>
 <div class="line">            &#39; b is &#39;, b,</div>
 <div class="line">            &#39; c is &#39;, c, </div>
 <div class="line">            &#39; and d is &#39;, d);</div>
 <div class="line">End.</div>
 </div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="realtoint"></a>
 realtoint</h3>
-<p><b>Procedure:</b> realtoint <br  />
+<p><b>Function:</b> realtoint <br  />
  <b>Syntax:</b> <span class="tt"> realtoint(&lt;expression&gt;) : int </span> <br  />
  <b>Description:</b> Will convert the &lt;expression&gt; value from the real to int. <br  />
  <b>Return</b> <b>value:</b> The &lt;expression&gt; value converted to int. <br  />
 </p>
 <h3 class="doxsection"><a class="anchor" id="inttoint"></a>
 inttoint</h3>
-<p><b>Procedure:</b> inttoint <br  />
+<p><b>Function:</b> inttoint <br  />
  <b>Syntax:</b> <span class="tt"> inttoint(&lt;expression&gt;) : int </span> <br  />
  <b>Description:</b> Will convert the &lt;expression&gt; value from the int to int. <br  />
  <b>Return</b> <b>value:</b> The &lt;expression&gt; value converted to int. <br  />
 </p>
 <h3 class="doxsection"><a class="anchor" id="booleantoint"></a>
 booleantoint</h3>
-<p><b>Procedure:</b> booleantoint <br  />
+<p><b>Function:</b> booleantoint <br  />
  <b>Syntax:</b> <span class="tt"> booleantoint(&lt;expression&gt;) : int </span> <br  />
  <b>Description:</b> Will convert the &lt;expression&gt; value from the boolean to int. <br  />
  <b>Return</b> <b>value:</b> The &lt;expression&gt; value converted to int. <br  />
 </p>
 <h3 class="doxsection"><a class="anchor" id="stringtoint"></a>
 stringtoint</h3>
-<p><b>Procedure:</b> stringtoint <br  />
+<p><b>Function:</b> stringtoint <br  />
  <b>Syntax:</b> <span class="tt"> stringtoint(&lt;expression&gt;) : int </span> <br  />
  <b>Description:</b> Will convert the &lt;expression&gt; value from the string to int. <br  />
  <b>Return</b> <b>value:</b> The &lt;expression&gt; value converted to int. <br  />
 </p>
 <h3 class="doxsection"><a class="anchor" id="realtoreal"></a>
 realtoreal</h3>
-<p><b>Procedure:</b> realtoreal <br  />
+<p><b>Function:</b> realtoreal <br  />
  <b>Syntax:</b> <span class="tt"> realtoreal(&lt;expression&gt;) : real </span> <br  />
  <b>Description:</b> Will convert the &lt;expression&gt; value from the real to real. <br  />
  <b>Return</b> <b>value:</b> The &lt;expression&gt; value converted to real. <br  />
 </p>
 <h3 class="doxsection"><a class="anchor" id="inttoreal"></a>
 inttoreal</h3>
-<p><b>Procedure:</b> inttoreal <br  />
+<p><b>Function:</b> inttoreal <br  />
  <b>Syntax:</b> <span class="tt"> inttoreal(&lt;expression&gt;) : real </span> <br  />
  <b>Description:</b> Will convert the &lt;expression&gt; value from the int to real. <br  />
  <b>Return</b> <b>value:</b> The &lt;expression&gt; value converted to real. <br  />
 </p>
 <h3 class="doxsection"><a class="anchor" id="booleantoreal"></a>
 booleantoreal</h3>
-<p><b>Procedure:</b> booleantoreal <br  />
+<p><b>Function:</b> booleantoreal <br  />
  <b>Syntax:</b> <span class="tt"> booleantoreal(&lt;expression&gt;) : real </span> <br  />
  <b>Description:</b> Will convert the &lt;expression&gt; value from the boolean to real. <br  />
  <b>Return</b> <b>value:</b> The &lt;expression&gt; value converted to real. <br  />
 </p>
 <h3 class="doxsection"><a class="anchor" id="stringtoreal"></a>
 stringtoreal</h3>
-<p><b>Procedure:</b> stringtoreal <br  />
+<p><b>Function:</b> stringtoreal <br  />
  <b>Syntax:</b> <span class="tt"> stringtoreal(&lt;expression&gt;) : real </span> <br  />
  <b>Description:</b> Will convert the &lt;expression&gt; value from the string to real. <br  />
  <b>Return</b> <b>value:</b> The &lt;expression&gt; value converted to real. <br  />
 </p>
 <h3 class="doxsection"><a class="anchor" id="realtoboolean"></a>
 realtoboolean</h3>
-<p><b>Procedure:</b> realtoboolean <br  />
+<p><b>Function:</b> realtoboolean <br  />
  <b>Syntax:</b> <span class="tt"> realtoboolean(&lt;expression&gt;) : boolean </span> <br  />
  <b>Description:</b> Will convert the &lt;expression&gt; value from the real to boolean. <br  />
  <b>Return</b> <b>value:</b> The &lt;expression&gt; value converted to boolean. <br  />
 </p>
 <h3 class="doxsection"><a class="anchor" id="inttoboolean"></a>
 inttoboolean</h3>
-<p><b>Procedure:</b> inttoboolean <br  />
+<p><b>Function:</b> inttoboolean <br  />
  <b>Syntax:</b> <span class="tt"> inttoboolean(&lt;expression&gt;) : boolean </span> <br  />
  <b>Description:</b> Will convert the &lt;expression&gt; value from the int to boolean. <br  />
  <b>Return</b> <b>value:</b> The &lt;expression&gt; value converted to boolean. <br  />
 </p>
 <h3 class="doxsection"><a class="anchor" id="booleantoboolean"></a>
 booleantoboolean</h3>
-<p><b>Procedure:</b> booleantoboolean <br  />
+<p><b>Function:</b> booleantoboolean <br  />
  <b>Syntax:</b> <span class="tt"> booleantoboolean(&lt;expression&gt;) : boolean </span> <br  />
  <b>Description:</b> Will convert the &lt;expression&gt; value from the boolean to boolean. <br  />
  <b>Return</b> <b>value:</b> The &lt;expression&gt; value converted to boolean. <br  />
 </p>
 <h3 class="doxsection"><a class="anchor" id="stringtoboolean"></a>
 stringtoboolean</h3>
-<p><b>Procedure:</b> stringtoboolean <br  />
+<p><b>Function:</b> stringtoboolean <br  />
  <b>Syntax:</b> <span class="tt"> stringtoboolean(&lt;expression&gt;) : boolean </span> <br  />
  <b>Description:</b> Will convert the &lt;expression&gt; value from the string to boolean. <br  />
  <b>Return</b> <b>value:</b> The &lt;expression&gt; value converted to boolean. <br  />
 </p>
 <h3 class="doxsection"><a class="anchor" id="realtostring"></a>
 realtostring</h3>
-<p><b>Procedure:</b> realtostring <br  />
+<p><b>Function:</b> realtostring <br  />
  <b>Syntax:</b> <span class="tt"> realtostring(&lt;expression&gt;) : string </span> <br  />
  <b>Description:</b> Will convert the &lt;expression&gt; value from the real to string. <br  />
  <b>Return</b> <b>value:</b> The &lt;expression&gt; value converted to string. <br  />
 </p>
 <h3 class="doxsection"><a class="anchor" id="inttostring"></a>
 inttostring</h3>
-<p><b>Procedure:</b> inttostring <br  />
+<p><b>Function:</b> inttostring <br  />
  <b>Syntax:</b> <span class="tt"> inttostring(&lt;expression&gt;) : string </span> <br  />
  <b>Description:</b> Will convert the &lt;expression&gt; value from the int to string. <br  />
  <b>Return</b> <b>value:</b> The &lt;expression&gt; value converted to string. <br  />
 </p>
 <h3 class="doxsection"><a class="anchor" id="booleantostring"></a>
 booleantostring</h3>
-<p><b>Procedure:</b> booleantostring <br  />
+<p><b>Function:</b> booleantostring <br  />
  <b>Syntax:</b> <span class="tt"> booleantostring(&lt;expression&gt;) : string </span> <br  />
  <b>Description:</b> Will convert the &lt;expression&gt; value from the boolean to string. <br  />
  <b>Return</b> <b>value:</b> The &lt;expression&gt; value converted to string. <br  />
 </p>
 <h3 class="doxsection"><a class="anchor" id="stringtostring"></a>
 stringtostring</h3>
-<p><b>Procedure:</b> stringtostring <br  />
+<p><b>Function:</b> stringtostring <br  />
  <b>Syntax:</b> <span class="tt"> stringtostring(&lt;expression&gt;) : string </span> <br  />
  <b>Description:</b> Will convert the &lt;expression&gt; value from the string to string. <br  />
  <b>Return</b> <b>value:</b> The &lt;expression&gt; value converted to string. <br  />
 </p>
 <hr  />
-<h2 class="doxsection"><a class="anchor" id="autotoc_md238"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md239"></a>
 String Functions</h2>
 <h3 class="doxsection"><a class="anchor" id="len"></a>
 len</h3>
-<p><b>Procedure:</b> len <br  />
+<p><b>Function:</b> len <br  />
 <b>Syntax:</b> <span class="tt"> len(&lt;string&gt;) : integer </span> <br  />
 <b>Description:</b> Will return the length of the &lt;string&gt;.<br  />
 <b>Return</b> <b>value:</b> &lt;string&gt; length as an integer. <br  />
@@ -1514,11 +1533,11 @@ len</h3>
 <div class="line">    writeln(&#39;string s is of length &#39;, len(s));          // Will print 11</div>
 <div class="line">    writeln(&#39;the first 5 letters of s &#39;, left(s, 5));   // Will print Hello</div>
 <div class="line">    writeln(&#39;the last 5 letters of s &#39;, right(s, 5));   // Will print World</div>
-<div class="line">    writeln(&#39;the mid part of s &#39;, mid(s, 5 ,3));        // Will print lo Wo</div>
+<div class="line">    writeln(&#39;the mid part of s &#39;, mid(s, 3, 5));        // Will print lo Wo</div>
 <div class="line">End.</div>
 </div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="left"></a>
 left</h3>
-<p><b>Procedure:</b> left <br  />
+<p><b>Function:</b> left <br  />
 <b>Syntax:</b> <span class="tt"> left(&lt;string&gt;, &lt;integer&gt;) : string </span> <br  />
 <b>Description:</b> Will return a new string based on &lt;string&gt; containing &lt;integer&gt; number of characters from the left side of the &lt;string&gt;.<br  />
 <b>Return</b> <b>value:</b> A new string. <br  />
@@ -1529,11 +1548,11 @@ left</h3>
 <div class="line">    writeln(&#39;string s is of length &#39;, len(s));          // Will print 11</div>
 <div class="line">    writeln(&#39;the first 5 letters of s &#39;, left(s, 5));   // Will print Hello</div>
 <div class="line">    writeln(&#39;the last 5 letters of s &#39;, right(s, 5));   // Will print World</div>
-<div class="line">    writeln(&#39;the mid part of s &#39;, mid(s, 5 ,3));        // Will print lo Wo</div>
+<div class="line">    writeln(&#39;the mid part of s &#39;, mid(s, 3, 5));        // Will print lo Wo</div>
 <div class="line">End.</div>
 </div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="right"></a>
 right</h3>
-<p><b>Procedure:</b> right <br  />
+<p><b>Function:</b> right <br  />
 <b>Syntax:</b> <span class="tt"> right(&lt;string&gt;, &lt;integer&gt;) : string </span> <br  />
 <b>Description:</b> Will return a new string based on &lt;string&gt; containing &lt;integer&gt; number of characters from the right side of the &lt;string&gt;.<br  />
 <b>Return</b> <b>value:</b> A new string. <br  />
@@ -1544,11 +1563,11 @@ right</h3>
 <div class="line">    writeln(&#39;string s is of length &#39;, len(s));          // Will print 11</div>
 <div class="line">    writeln(&#39;the first 5 letters of s &#39;, left(s, 5));   // Will print Hello</div>
 <div class="line">    writeln(&#39;the last 5 letters of s &#39;, right(s, 5));   // Will print World</div>
-<div class="line">    writeln(&#39;the mid part of s &#39;, mid(s, 5 ,3));        // Will print lo Wo</div>
+<div class="line">    writeln(&#39;the mid part of s &#39;, mid(s, 3, 5));        // Will print lo Wo</div>
 <div class="line">End.</div>
 </div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="mid"></a>
 mid</h3>
-<p><b>Procedure:</b> mid <br  />
+<p><b>Function:</b> mid <br  />
 <b>Syntax:</b> <span class="tt"> mid(&lt;string&gt;, &lt;integer_start&gt;, &lt;integer_length&gt;) : string </span> <br  />
 <b>Description:</b> Will return a new string based on &lt;string&gt; containing &lt;integer_length&gt; number of characters starting from &lt;integer_start&gt; of the &lt;string&gt; (zero based index).<br  />
 <b>Return</b> value: A new string. <br  />
@@ -1559,11 +1578,11 @@ mid</h3>
 <div class="line">    writeln(&#39;string s is of length &#39;, len(s));          // Will print 11</div>
 <div class="line">    writeln(&#39;the first 5 letters of s &#39;, left(s, 5));   // Will print Hello</div>
 <div class="line">    writeln(&#39;the last 5 letters of s &#39;, right(s, 5));   // Will print World</div>
-<div class="line">    writeln(&#39;the mid part of s &#39;, mid(s, 5 ,3));        // Will print lo Wo</div>
+<div class="line">    writeln(&#39;the mid part of s &#39;, mid(s, 3, 5));        // Will print lo Wo</div>
 <div class="line">End.</div>
 </div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="trim"></a>
 trim</h3>
-<p><b>Procedure:</b> trim <br  />
+<p><b>Function:</b> trim <br  />
 <b>Syntax:</b> <span class="tt"> trim(&lt;string&gt;) : string </span> <br  />
 <b>Description:</b> Will return a new string without any leading or trailing whitespace based on &lt;string&gt;.<br  />
 <b>Return</b> <b>value:</b> a trimmed string without leading or trailing whitespace. <br  />
@@ -1577,7 +1596,7 @@ trim</h3>
 <div class="line">End.</div>
 </div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="replace"></a>
 replace</h3>
-<p><b>Procedure:</b> replace <br  />
+<p><b>Function:</b> replace <br  />
 <b>Syntax:</b> <span class="tt"> replace(&lt;string_input&gt;, &lt;string_find&gt;, &lt;string_replace&gt;) : string </span> <br  />
 <b>Description:</b> Will return a new string based on &lt;string_input&gt; where all occurrences of &lt;string_find&gt; is replaced with &lt;string_replace&gt;. If &lt;string_replace&gt; is empty all occurrences of &lt;tring_find&gt; will be deleted.<br  />
 <b>Return</b> <b>value:</b> a new string that does not contain &lt;string_find&gt;. <br  />
@@ -1591,7 +1610,7 @@ replace</h3>
 <div class="line">End.</div>
 </div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="contains"></a>
 contains</h3>
-<p><b>Procedure:</b> contains <br  />
+<p><b>Function:</b> contains <br  />
 <b>Syntax:</b> <span class="tt"> contains(&lt;string_input&gt;, &lt;string_find&gt;) : boolean </span> <br  />
 <b>Description:</b> Check if &lt;string_input&gt; contains &lt;string_find&gt;.<br  />
 <b>Return</b> <b>value:</b> True if &lt;string_find&gt; is a part of &lt;string_input&gt;. <br  />
@@ -1605,7 +1624,7 @@ contains</h3>
 <div class="line">End.</div>
 </div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="tolowercase"></a>
 tolowercase</h3>
-<p><b>Procedure:</b> tolowercase <br  />
+<p><b>Function:</b> tolowercase <br  />
 <b>Syntax:</b> <span class="tt"> tolowercase(&lt;string&gt;) : string </span> <br  />
 <b>Description:</b> Converts all of the characters in &lt;string&gt; to lowercase. <br  />
 <b>Return</b> <b>value:</b> a new string with all character in lowercase. <br  />
@@ -1618,7 +1637,7 @@ tolowercase</h3>
 <div class="line">End.</div>
 </div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="touppercase"></a>
 touppercase</h3>
-<p><b>Procedure:</b> touppercase <br  />
+<p><b>Function:</b> touppercase <br  />
 <b>Syntax:</b> <span class="tt"> touppercase(&lt;string&gt;) : string </span> <br  />
 <b>Description:</b> Converts all of the characters in &lt;string&gt; to uppercase. <br  />
 <b>Return</b> <b>value:</b> a new string with all character in uppercase. <br  />
@@ -1631,7 +1650,7 @@ touppercase</h3>
 <div class="line">End.</div>
 </div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="split"></a>
 split</h3>
-<p><b>Procedure:</b> split <br  />
+<p><b>Function:</b> split <br  />
 <b>Syntax:</b> <span class="tt"> split(&lt;string&gt;, &lt;string_find&gt;) : string </span> <br  />
 <b>Description:</b> Will split &lt;string&gt; if the &lt;string_find&gt; is found and return the first part. <br  />
 <b>Return</b> <b>value:</b> a new string. <br  />
@@ -1644,7 +1663,7 @@ split</h3>
 <div class="line">End.</div>
 </div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="tostring"></a>
 tostring</h3>
-<p><b>Procedure:</b> tostring <br  />
+<p><b>Function:</b> tostring <br  />
 <b>Syntax:</b> <span class="tt"> tostring(&lt;expression&gt;) : string </span> <br  />
 <b>Description:</b> Will return a string based on the &lt;expression&gt;.<br  />
 <b>Return</b> <b>value:</b> &lt;expression&gt; converted to a string. <br  />
@@ -1659,7 +1678,7 @@ tostring</h3>
 <div class="line">End.</div>
 </div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="chr"></a>
 chr</h3>
-<p><b>Procedure:</b> chr <br  />
+<p><b>Function:</b> chr <br  />
 <b>Syntax:</b> <span class="tt"> chr(&lt;integer&gt;) : string </span> <br  />
 <b>Description:</b> Converts an &lt;integer&gt; representing an ASCII code into the corresponding character and returns it as a single-character &lt;string&gt;. <br  />
 <b>Return</b> <b>value:</b> A &lt;string&gt; containing the character corresponding to the given ASCII value. <br  />
@@ -1671,7 +1690,7 @@ chr</h3>
 <div class="line">End.</div>
 </div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="ord"></a>
 ord</h3>
-<p><b>Procedure:</b> ord <br  />
+<p><b>Function:</b> ord <br  />
 <b>Syntax:</b> <span class="tt"> ord(&lt;string&gt;) : integer </span> <br  />
 <b>Description:</b> Converts a single-character &lt;string&gt; into its corresponding ASCII code and returns the result as an &lt;integer&gt;. <br  />
 <b>Return</b> <b>value:</b> An &lt;integer&gt; representing the ASCII value of the given character. <br  />
@@ -1684,7 +1703,7 @@ ord</h3>
 </div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>Chr and Ord procedure operates on ASCII character encoding only. Unicode, UTF-8, and other multibyte character encodings are not supported.</dd></dl>
 <h3 class="doxsection"><a class="anchor" id="space"></a>
 space</h3>
-<p><b>Procedure:</b> space <br  />
+<p><b>Function:</b> space <br  />
 <b>Syntax</b> <b>1</b>: <span class="tt"> space(&lt;integer&gt;) : string </span> <br  />
 <b>Description:</b> Will return a string with &lt;integer&gt; spaces.<br  />
 <b>Return</b> <b>value:</b> a string. <br  />
@@ -1694,7 +1713,7 @@ space</h3>
 <div class="line">Begin</div>
 <div class="line">    writeln(&#39;Hello&#39;, space(4), &#39;world!&#39;);  // Will print &#39;Hello    world!&#39;</div>
 <div class="line">End.</div>
-</div><!-- fragment --><p><b>Procedure:</b> space <br  />
+</div><!-- fragment --><p><b>Function:</b> space <br  />
 <b>Syntax</b> <b>2</b>: <span class="tt"> space(&lt;integer&gt;, &lt;string&gt;) : string </span> <br  />
 <b>Description:</b> Will return a string based on &lt;string&gt; padded with spaces. The string is always &lt;integer&gt; long.<br  />
  <b>Return</b> <b>value:</b> Returns a left-aligned string padded with trailing spaces to the specified &lt;integer&gt; width.<br  />
@@ -1710,11 +1729,11 @@ space</h3>
 <div class="line">    end;</div>
 <div class="line">End.</div>
 </div><!-- fragment --><hr  />
-<h2 class="doxsection"><a class="anchor" id="autotoc_md239"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md240"></a>
 JSON functions</h2>
 <h3 class="doxsection"><a class="anchor" id="getjelement"></a>
 GetJElement</h3>
-<p><b>Procedure:</b> getjelement <br  />
+<p><b>Function:</b> getjelement <br  />
 <b>Syntax:</b> <span class="tt"> getjelement(&lt;string_json&gt;, &lt;string_element&gt;) : string </span> <br  />
 <b>Description:</b> Will get &lt;string_elemnt&gt; value from a JSON string &lt;string_json&gt;. <br  />
 <b>Return</b> <b>value:</b> the value as a string. <br  />
@@ -1723,13 +1742,13 @@ GetJElement</h3>
 <div class="line">Var JSONString:=&#39;{&quot;value&quot;: &quot;Hello World&quot;}&#39; : String;</div>
 <div class="line"> </div>
 <div class="line">Begin</div>
-<div class="line">     WriteLn(getjelement(JSONString, &#39;value&#39;));             // Will print Hello World</div>
+<div class="line">     writeln(getjelement(JSONString, &#39;value&#39;));             // Will print Hello World</div>
 <div class="line">End.</div>
 </div><!-- fragment --><p><br  />
 </p>
 <h3 class="doxsection"><a class="anchor" id="setjelement"></a>
 SetJElement</h3>
-<p><b>Procedure:</b> setjelement <br  />
+<p><b>Function:</b> setjelement <br  />
 <b>Syntax:</b> <span class="tt"> setjelement(&lt;string_json&gt;, &lt;string_element&gt;, &lt;string_value&gt;) : string </span> <br  />
 <b>Description:</b> Will set &lt;string_element&gt; to &lt;string_value&gt; in the JSON string &lt;string_json&gt;. <br  />
 <b>Return</b> <b>value:</b> a new JSON string with the new value. <br  />
@@ -1738,7 +1757,7 @@ SetJElement</h3>
 <div class="line">Var JSONString:=&#39;{&quot;value&quot;: &quot;Hello World&quot;}&#39; : String;</div>
 <div class="line"> </div>
 <div class="line">Begin</div>
-<div class="line">     WriteLn(setjelement(JSONString, &#39;value&#39;, &#39;HI!&#39;));             // Will print {&quot;value&quot;: &quot;HI!&quot;}</div>
+<div class="line">     writeln(setjelement(JSONString, &#39;value&#39;, &#39;HI!&#39;));             // Will print {&quot;value&quot;: &quot;HI!&quot;}</div>
 <div class="line">End.</div>
 </div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="jtostruct"></a>
 JToStruct</h3>
@@ -1759,7 +1778,7 @@ JToStruct</h3>
 <div class="line"> </div>
 <div class="line">Begin</div>
 <div class="line">    data:=jtostruct(JSONString);</div>
-<div class="line">    WriteLn(data);             // Will print {&quot;value&quot;:&quot;Hello World!&quot;}</div>
+<div class="line">    writeln(data);             // Will print {&quot;value&quot;:&quot;Hello World!&quot;}</div>
 <div class="line">End.</div>
 </div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="structtoj"></a>
 StructToJ</h3>
@@ -1779,11 +1798,11 @@ StructToJ</h3>
 <div class="line"> </div>
 <div class="line">Begin</div>
 <div class="line">    str:=structtoj(data);</div>
-<div class="line">    WriteLn(str);             // Will print {&quot;value&quot;:&quot;Hello World!&quot;}</div>
+<div class="line">    writeln(str);             // Will print {&quot;value&quot;:&quot;Hello World!&quot;}</div>
 <div class="line">End.</div>
 </div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="getjarray"></a>
 GetJArray</h3>
-<p><b>Procedure:</b> getjarray <br  />
+<p><b>Function:</b> getjarray <br  />
 <b>Syntax:</b> <span class="tt"> getjarray(&lt;string_json&gt;, &lt;integer_index&gt;) : string </span> <br  />
 <b>Description:</b> Will get index &lt;integer_index&gt; from a JSON array &lt;string_json&gt;. Index is zero based. <br  />
 <b>Return</b> <b>value:</b> the value of as a string. <br  />
@@ -1792,7 +1811,7 @@ GetJArray</h3>
 <div class="line">Var JSONString:=&#39;[{&quot;x&quot;:1}, {&quot;x&quot;:2}]&#39; : String;</div>
 <div class="line"> </div>
 <div class="line">Begin</div>
-<div class="line">     WriteLn(getjarray(JSONString, 0));             // Will print {x:1}</div>
+<div class="line">     writeln(getjarray(JSONString, 0));             // Will print {x:1}</div>
 <div class="line">End.</div>
 </div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="isjson"></a>
 IsJson</h3>
@@ -1843,23 +1862,23 @@ JsonWrite</h3>
 <div class="line">    jsonwrite((&#39;[{&quot;x&quot;:1}, {&quot;x&quot;:2}]&#39;));             </div>
 <div class="line">End.</div>
 </div><!-- fragment --><hr  />
-<h2 class="doxsection"><a class="anchor" id="autotoc_md240"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md241"></a>
 Math functions</h2>
-<p><b>Procedure:</b> &lt;math_function&gt;<br  />
+<p><b>Function:</b> &lt;math_function&gt;<br  />
 <b>Syntax:</b> <span class="tt">  &lt;math_function&gt;(&lt;expression&gt;) : integer | real </span> <br  />
 <b>Description:</b> The &lt;mat function&gt; accept a real or integer &lt;expression&gt;. The math functions will return a value based on the input type, i.e., if the &lt;expression&gt; input type is integer the output will be of type integer. Note that, the min and max functions requires two expressions that must match by type. <br  />
 <b>Return</b> <b>value:</b> An integer or a real number. <br  />
 <b>Example:</b> </p><div class="fragment"><div class="line">Program Math;</div>
 <div class="line"> </div>
 <div class="line">Begin</div>
-<div class="line">    WriteLn( abs( -1) );   { Will write 1 }</div>
-<div class="line">    WriteLn( abs( -1.0) ); { Will write 1.0 }</div>
+<div class="line">    writeln( abs( -1) );   { Will write 1 }</div>
+<div class="line">    writeln( abs( -1.0) ); { Will write 1.0 }</div>
 <div class="line"> </div>
-<div class="line">    WriteLn( random(10) ); { Will write a random number between 0-9 }</div>
-<div class="line">    WriteLn( random(1.0) ); { Will write a random number between 0.0 and 1.0 }</div>
+<div class="line">    writeln( random(10) ); { Will write a random number between 0-9 }</div>
+<div class="line">    writeln( random(1.0) ); { Will write a random number between 0.0 and 1.0 }</div>
 <div class="line">    </div>
-<div class="line">    WriteLn( min(3, 2) );  { Will write 2 }</div>
-<div class="line">    WriteLn( max(3, 2) );  { Will write 3 }</div>
+<div class="line">    writeln( min(3, 2) );  { Will write 2 }</div>
+<div class="line">    writeln( max(3, 2) );  { Will write 3 }</div>
 <div class="line">    </div>
 <div class="line">End.</div>
 </div><!-- fragment --><p><br  />
@@ -1930,7 +1949,7 @@ List of all math functions: </p><table class="markdownTable">
 </p>
 <h3 class="doxsection"><a class="anchor" id="abs"></a>
 abs</h3>
-<p><b>Procedure:</b> abs<br  />
+<p><b>Function:</b> abs<br  />
 <b>Syntax:</b> <span class="tt"> abs(&lt;expression&gt;) : &lt;type&gt;</span><br  />
 <b>Description:</b> Absolute value of &lt;expression&gt;.<br  />
 <b>Return</b> <b>value:</b> Will return the non-negative value of the input.<br  />
@@ -1938,7 +1957,7 @@ abs</h3>
  </p>
 <h3 class="doxsection"><a class="anchor" id="ceil"></a>
 ceil</h3>
-<p><b>Procedure:</b> ceil<br  />
+<p><b>Function:</b> ceil<br  />
 <b>Syntax:</b> <span class="tt"> ceil(&lt;expression&gt;) : &lt;type&gt;</span><br  />
 <b>Description:</b> Round &lt;expression&gt; up to nearest integer value.<br  />
 <b>Return</b> <b>value:</b> Will return the smallest integer greater than or equal to the input.<br  />
@@ -1946,7 +1965,7 @@ ceil</h3>
  </p>
 <h3 class="doxsection"><a class="anchor" id="floor"></a>
 floor</h3>
-<p><b>Procedure:</b> floor<br  />
+<p><b>Function:</b> floor<br  />
 <b>Syntax:</b> <span class="tt"> floor(&lt;expression&gt;) : &lt;type&gt;</span><br  />
 <b>Description:</b> Round &lt;expression&gt; down to nearest integer value.<br  />
 <b>Return</b> <b>value:</b> Will return the largest integer less than or equal to the input.<br  />
@@ -1954,7 +1973,7 @@ floor</h3>
  </p>
 <h3 class="doxsection"><a class="anchor" id="round"></a>
 round</h3>
-<p><b>Procedure:</b> round<br  />
+<p><b>Function:</b> round<br  />
 <b>Syntax:</b> <span class="tt"> round(&lt;expression&gt;) : &lt;type&gt;</span><br  />
 <b>Description:</b> Round &lt;expression&gt; to the nearest integer value.<br  />
 <b>Return</b> <b>value:</b> Will return the closest integer to the input.<br  />
@@ -1962,7 +1981,7 @@ round</h3>
  </p>
 <h3 class="doxsection"><a class="anchor" id="max"></a>
 max</h3>
-<p><b>Procedure:</b> max<br  />
+<p><b>Function:</b> max<br  />
 <b>Syntax:</b> <span class="tt"> max(&lt;expression1&gt;, &lt;expression2&gt;) : &lt;type&gt;</span><br  />
 <b>Description:</b> Returns the greater value of &lt;expression1&gt; and &lt;expression2&gt;. Note, &lt;expression1&gt; and &lt;expression2&gt; must be of the same type.<br  />
 <b>Return</b> <b>value:</b> Will return the larger of the two input values.<br  />
@@ -1970,7 +1989,7 @@ max</h3>
  </p>
 <h3 class="doxsection"><a class="anchor" id="min"></a>
 min</h3>
-<p><b>Procedure:</b> min<br  />
+<p><b>Function:</b> min<br  />
 <b>Syntax:</b> <span class="tt"> min(&lt;expression1&gt;, &lt;expression2&gt;) : &lt;type&gt;</span><br  />
 <b>Description:</b> Returns the smaller value of &lt;expression1&gt; and &lt;expression2&gt;. Note, &lt;expression1&gt; and &lt;expression2&gt; must be of the same type.<br  />
 <b>Return</b> <b>value:</b> Will return the smaller of the two input values.<br  />
@@ -1978,7 +1997,7 @@ min</h3>
  </p>
 <h3 class="doxsection"><a class="anchor" id="exp"></a>
 exp</h3>
-<p><b>Procedure:</b> exp<br  />
+<p><b>Function:</b> exp<br  />
 <b>Syntax:</b> <span class="tt"> exp(&lt;expression&gt;) : &lt;type&gt;</span><br  />
 <b>Description:</b> e raised to the power of &lt;expression&gt;.<br  />
 <b>Return</b> <b>value:</b> Will return the result of e^&lt;expression&gt;.<br  />
@@ -1986,7 +2005,7 @@ exp</h3>
  </p>
 <h3 class="doxsection"><a class="anchor" id="log"></a>
 log</h3>
-<p><b>Procedure:</b> log<br  />
+<p><b>Function:</b> log<br  />
 <b>Syntax:</b> <span class="tt"> log(&lt;expression&gt;) : &lt;type&gt;</span><br  />
 <b>Description:</b> Natural logarithm of &lt;expression&gt;.<br  />
 <b>Return</b> <b>value:</b> Will return the base-e logarithm of the input.<br  />
@@ -1994,7 +2013,7 @@ log</h3>
  </p>
 <h3 class="doxsection"><a class="anchor" id="log10"></a>
 log10</h3>
-<p><b>Procedure:</b> log10<br  />
+<p><b>Function:</b> log10<br  />
 <b>Syntax:</b> <span class="tt"> log10(&lt;expression&gt;) : &lt;type&gt;</span><br  />
 <b>Description:</b> 10 logarithm of &lt;expression&gt;.<br  />
 <b>Return</b> <b>value:</b> Will return the base-10 logarithm of the input.<br  />
@@ -2002,7 +2021,7 @@ log10</h3>
  </p>
 <h3 class="doxsection"><a class="anchor" id="sqrt"></a>
 sqrt</h3>
-<p><b>Procedure:</b> sqrt<br  />
+<p><b>Function:</b> sqrt<br  />
 <b>Syntax:</b> <span class="tt"> sqrt(&lt;expression&gt;) : &lt;type&gt;</span><br  />
 <b>Description:</b> Square root of &lt;expression&gt;.<br  />
 <b>Return</b> <b>value:</b> Will return the square root of the input.<br  />
@@ -2010,7 +2029,7 @@ sqrt</h3>
  </p>
 <h3 class="doxsection"><a class="anchor" id="sin"></a>
 sin</h3>
-<p><b>Procedure:</b> sin<br  />
+<p><b>Function:</b> sin<br  />
 <b>Syntax:</b> <span class="tt"> sin(&lt;expression&gt;) : &lt;type&gt;</span><br  />
 <b>Description:</b> Trigonometric sine of an angle in radians.<br  />
 <b>Return</b> <b>value:</b> Will return the sine of the input angle.<br  />
@@ -2018,7 +2037,7 @@ sin</h3>
  </p>
 <h3 class="doxsection"><a class="anchor" id="cos"></a>
 cos</h3>
-<p><b>Procedure:</b> cos<br  />
+<p><b>Function:</b> cos<br  />
 <b>Syntax:</b> <span class="tt"> cos(&lt;expression&gt;) : &lt;type&gt;</span><br  />
 <b>Description:</b> Trigonometric cosine of an angle in radians.<br  />
 <b>Return</b> <b>value:</b> Will return the cosine of the input angle.<br  />
@@ -2026,7 +2045,7 @@ cos</h3>
  </p>
 <h3 class="doxsection"><a class="anchor" id="tan"></a>
 tan</h3>
-<p><b>Procedure:</b> tan<br  />
+<p><b>Function:</b> tan<br  />
 <b>Syntax:</b> <span class="tt"> tan(&lt;expression&gt;) : &lt;type&gt;</span><br  />
 <b>Description:</b> Trigonometric tangent of an angle in radians.<br  />
 <b>Return</b> <b>value:</b> Will return the tangent of the input angle.<br  />
@@ -2034,7 +2053,7 @@ tan</h3>
  </p>
 <h3 class="doxsection"><a class="anchor" id="asin"></a>
 asin</h3>
-<p><b>Procedure:</b> asin<br  />
+<p><b>Function:</b> asin<br  />
 <b>Syntax:</b> <span class="tt"> asin(&lt;expression&gt;) : &lt;type&gt;</span><br  />
 <b>Description:</b> Arc sine in radians.<br  />
 <b>Return</b> <b>value:</b> Will return the angle in radians whose sine is the input.<br  />
@@ -2042,7 +2061,7 @@ asin</h3>
  </p>
 <h3 class="doxsection"><a class="anchor" id="acos"></a>
 acos</h3>
-<p><b>Procedure:</b> acos<br  />
+<p><b>Function:</b> acos<br  />
 <b>Syntax:</b> <span class="tt"> acos(&lt;expression&gt;) : &lt;type&gt;</span><br  />
 <b>Description:</b> Arc cosine in radians.<br  />
 <b>Return</b> <b>value:</b> Will return the angle in radians whose cosine is the input.<br  />
@@ -2050,7 +2069,7 @@ acos</h3>
  </p>
 <h3 class="doxsection"><a class="anchor" id="atan"></a>
 atan</h3>
-<p><b>Procedure:</b> atan<br  />
+<p><b>Function:</b> atan<br  />
 <b>Syntax:</b> <span class="tt"> atan(&lt;expression&gt;) : &lt;type&gt;</span><br  />
 <b>Description:</b> Arc tangent in radians.<br  />
 <b>Return</b> <b>value:</b> Will return the angle in radians whose tangent is the input.<br  />
@@ -2058,7 +2077,7 @@ atan</h3>
  </p>
 <h3 class="doxsection"><a class="anchor" id="sinh"></a>
 sinh</h3>
-<p><b>Procedure:</b> sinh<br  />
+<p><b>Function:</b> sinh<br  />
 <b>Syntax:</b> <span class="tt"> sinh(&lt;expression&gt;) : &lt;type&gt;</span><br  />
 <b>Description:</b> Hyperbolic sine.<br  />
 <b>Return</b> <b>value:</b> Will return the hyperbolic sine of the input.<br  />
@@ -2066,7 +2085,7 @@ sinh</h3>
  </p>
 <h3 class="doxsection"><a class="anchor" id="cosh"></a>
 cosh</h3>
-<p><b>Procedure:</b> cosh<br  />
+<p><b>Function:</b> cosh<br  />
 <b>Syntax:</b> <span class="tt"> cosh(&lt;expression&gt;) : &lt;type&gt;</span><br  />
 <b>Description:</b> Hyperbolic cosine.<br  />
 <b>Return</b> <b>value:</b> Will return the hyperbolic cosine of the input.<br  />
@@ -2074,7 +2093,7 @@ cosh</h3>
  </p>
 <h3 class="doxsection"><a class="anchor" id="tanh"></a>
 tanh</h3>
-<p><b>Procedure:</b> tanh<br  />
+<p><b>Function:</b> tanh<br  />
 <b>Syntax:</b> <span class="tt"> tanh(&lt;expression&gt;) : &lt;type&gt;</span><br  />
 <b>Description:</b> Hyperbolic tangent.<br  />
 <b>Return</b> <b>value:</b> Will return the hyperbolic tangent of the input.<br  />
@@ -2082,7 +2101,7 @@ tanh</h3>
  </p>
 <h3 class="doxsection"><a class="anchor" id="todegrees"></a>
 todegrees</h3>
-<p><b>Procedure:</b> todegrees<br  />
+<p><b>Function:</b> todegrees<br  />
 <b>Syntax:</b> <span class="tt"> todegrees(&lt;expression&gt;) : &lt;type&gt;</span><br  />
 <b>Description:</b> Convert radians to degrees.<br  />
 <b>Return</b> <b>value:</b> Will return the input angle converted from radians to degrees.<br  />
@@ -2090,7 +2109,7 @@ todegrees</h3>
 </p>
 <h3 class="doxsection"><a class="anchor" id="toradians"></a>
 toradians</h3>
-<p><b>Procedure:</b> toradians<br  />
+<p><b>Function:</b> toradians<br  />
 <b>Syntax:</b> <span class="tt"> toradians(&lt;expression&gt;) : &lt;type&gt;</span><br  />
 <b>Description:</b> Convert degrees to radians.<br  />
 <b>Return</b> <b>value:</b> Will return the input angle converted from degrees to radians.<br  />
@@ -2098,17 +2117,17 @@ toradians</h3>
  </p>
 <h3 class="doxsection"><a class="anchor" id="random"></a>
 random</h3>
-<p><b>Procedure:</b> random<br  />
+<p><b>Function:</b> random<br  />
 <b>Syntax:</b> <span class="tt"> random(&lt;expression&gt;) : &lt;type&gt;</span><br  />
 <b>Description:</b> Generate a pseudo random number between 0 and &lt;expression&gt;.<br  />
 <b>Return</b> <b>value:</b> Will return a pseudo random number in the range [0, &lt;expression&gt;). <br  />
  <br  />
 </p><hr  />
-<h2 class="doxsection"><a class="anchor" id="autotoc_md241"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md242"></a>
 Array Functions</h2>
 <h3 class="doxsection"><a class="anchor" id="length"></a>
 length</h3>
-<p><b>Procedure:</b> length <br  />
+<p><b>Function:</b> length <br  />
 <b>Syntax:</b> <span class="tt"> length(&lt;any_array&gt;) : integer </span> <br  />
 <b>Description:</b> Will return the length of an array.<br  />
 <b>Return</b> <b>value:</b> Array length. <br  />
@@ -2136,7 +2155,7 @@ length</h3>
 <div class="line">End.</div>
 </div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="startindex"></a>
 startindex</h3>
-<p><b>Procedure:</b> startindex <br  />
+<p><b>Function:</b> startindex <br  />
 <b>Syntax:</b> <span class="tt"> startindex(&lt;any_array&gt;) : integer </span> <br  />
 <b>Description:</b> Will return the first index of an array.<br  />
 <b>Return</b> <b>value:</b> First index. <br  />
@@ -2145,17 +2164,17 @@ startindex</h3>
 </p>
 <h3 class="doxsection"><a class="anchor" id="endindex"></a>
 endindex</h3>
-<p><b>Procedure:</b> endindex <br  />
+<p><b>Function:</b> endindex <br  />
 <b>Syntax:</b> <span class="tt"> endindex(&lt;any_array&gt;) : integer </span> <br  />
 <b>Description:</b> Will return the last index of an array.<br  />
 <b>Return</b> <b>value:</b> Last index. <br  />
 <b>Example:</b> see length.<br  />
  </p><hr  />
-<h2 class="doxsection"><a class="anchor" id="autotoc_md242"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md243"></a>
 HMI</h2>
 <h3 class="doxsection"><a class="anchor" id="messagebox"></a>
 messagebox</h3>
-<p><b>Procedure:</b> messagebox <br  />
+<p><b>Function:</b> messagebox <br  />
 <b>Syntax:</b> <span class="tt"> messagebox(&lt;string_message&gt;, [&lt;string_title&gt;], [&lt;integer_options&gt;]) : integer </span> <br  />
 <b>Description:</b> Will show an message box with a user message &lt;string_message&gt;. It is possible, but optional, to give the dialog a title &lt;string_title&gt;. &lt;integer_option&gt; gives a possibility to change the type of message and number of buttons, see example for the values. <br  />
 <b>Return</b> <b>value:</b> The button pressed, see example for values. <br  />
@@ -2191,24 +2210,24 @@ messagebox</h3>
 <div class="line">   </div>
 <div class="line">    if Result=DIALOG_ANSWER_YES then</div>
 <div class="line">    begin</div>
-<div class="line">      WriteLn(&#39;You pressed Yes&#39;);</div>
+<div class="line">      writeln(&#39;You pressed Yes&#39;);</div>
 <div class="line">    end</div>
 <div class="line">    else if Result=DIALOG_ANSWER_NO then</div>
 <div class="line">    begin</div>
-<div class="line">      WriteLn(&#39;You pressed No&#39;);</div>
+<div class="line">      writeln(&#39;You pressed No&#39;);</div>
 <div class="line">    end</div>
 <div class="line">    else if Result=DIALOG_ANSWER_CANCEL then</div>
 <div class="line">    begin</div>
-<div class="line">      WriteLn(&#39;You pressed Cancel&#39;);</div>
+<div class="line">      writeln(&#39;You pressed Cancel&#39;);</div>
 <div class="line">    end</div>
 <div class="line">    else</div>
 <div class="line">    begin</div>
-<div class="line">      WriteLn(&#39;You closed the window&#39;);</div>
+<div class="line">      writeln(&#39;You closed the window&#39;);</div>
 <div class="line">    end;</div>
 <div class="line">End. </div>
 </div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="inputdialog"></a>
 inputdialog</h3>
-<p><b>Procedure:</b> inputdialog <br  />
+<p><b>Function:</b> inputdialog <br  />
 <b>Syntax:</b> <span class="tt"> inputdialog(&lt;string_prompt&gt;, [&lt;string_default_value&gt;]) : string </span> <br  />
 <b>Description:</b> Will show an input dialog window containing a message &lt;string_prompt&gt; and <br  />
  an input filed with a default value of &lt;string_default_value&gt;. The user can input any string value in the dialog. <b>Return</b> <b>value:</b> The value entered by the user or an empty string if the user clicks cancel. <br  />
@@ -2226,18 +2245,18 @@ inputdialog</h3>
 <div class="line"> </div>
 <div class="line">    if not StringIsEmpty(Result) and StringIsInteger(Result) then</div>
 <div class="line">    begin</div>
-<div class="line">       Iterator:=StringToInt(Result);</div>
+<div class="line">       Iterator:=stringtoint(Result);</div>
 <div class="line"> </div>
 <div class="line">       while Iterator&gt;0 do</div>
 <div class="line">       begin</div>
-<div class="line">         WriteLn(&#39;Loop - &#39;, Iterator);</div>
+<div class="line">         writeln(&#39;Loop - &#39;, Iterator);</div>
 <div class="line">         Iterator:=Iterator-1;</div>
 <div class="line">       end;</div>
 <div class="line">    end;</div>
 <div class="line">End.</div>
 </div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="optiondialog"></a>
 optiondialog</h3>
-<p><b>Procedure:</b> optiondialog <br  />
+<p><b>Function:</b> optiondialog <br  />
 <b>Syntax</b> <b>1</b>: <span class="tt"> optiondialog(&lt;integer_handle&gt;, &lt;integer_value&gt;, &lt;string_message&gt;, &lt;string_title&gt;, &lt;string_option_1&gt; [,&lt;string option_2&gt;] [, ...]) : boolean </span> <br  />
 <b>Syntax</b> <b>2</b>: <span class="tt"> optiondialog(&lt;integer_handle&gt;, &lt;boolean_condition&gt;) : boolean </span> <br  />
 <b>Description:</b> Will show a message box with a user message &lt;string_message&gt; and a title &lt;string_title&gt;. &lt;string_option_1&gt; is a string associated with a button 1. It is possible to give many &lt;string_options&gt; to create many buttons.The integer handle must be unique to create a new dialog. A handle can be reused if the dialog is closed in between or if you want to refer to an already open dialog. <br  />
@@ -2269,9 +2288,9 @@ optiondialog</h3>
 <div class="line">        optiondialog(1, false); // Close the dialog</div>
 <div class="line">End.</div>
 </div><!-- fragment --><hr  />
-<h1 class="doxsection"><a class="anchor" id="autotoc_md243"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md244"></a>
 System Functions</h1>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md244"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md245"></a>
 Time</h2>
 <h3 class="doxsection"><a class="anchor" id="sleep"></a>
 sleep</h3>
@@ -2283,15 +2302,15 @@ sleep</h3>
 </p><div class="fragment"><div class="line">Program Sleep_Example;</div>
 <div class="line"> </div>
 <div class="line">Begin</div>
-<div class="line">  WriteLn(&#39;Wait for it ...&#39;);</div>
+<div class="line">  writeln(&#39;Wait for it ...&#39;);</div>
 <div class="line">  sleep(3000);</div>
-<div class="line">  WriteLn(&#39;wait for it ...&#39;);</div>
+<div class="line">  writeln(&#39;wait for it ...&#39;);</div>
 <div class="line">  sleep(&#39;3s&#39;);</div>
-<div class="line">  WriteLn(&#39;legendary!&#39;);</div>
+<div class="line">  writeln(&#39;legendary!&#39;);</div>
 <div class="line">End.</div>
 </div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="time"></a>
 time</h3>
-<p><b>Procedure:</b> time<br  />
+<p><b>Function:</b> time<br  />
 <b>Syntax:</b> <span class="tt"> time() : integer </span> <br  />
 <b>Description:</b> Will return the time since start as an integer.<br  />
 <b>Return</b> <b>value:</b> &lt;integer&gt; <br  />
@@ -2302,6 +2321,71 @@ time</h3>
 <div class="line">    t=time();</div>
 <div class="line">    sleep(100);</div>
 <div class="line">    writeln(time()-t); // Will write aprox. 100</div>
+<div class="line">End.</div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md246"></a>
+Memory</h2>
+<h3 class="doxsection"><a class="anchor" id="memoryfree"></a>
+memoryfree</h3>
+<p><b>Function:</b> memoryfree<br  />
+<b>Syntax:</b> <span class="tt"> memoryfree() : integer</span> <br  />
+<b>Description:</b> Will give the amount of free memory.<br  />
+<b>Return</b> <b>value:</b> &lt;integer&gt; as an approximation of the total amount of memory currently available, measured in MB. <br  />
+<b>Example:</b> <br  />
+</p><div class="fragment"><div class="line">Program Memory_Example;</div>
+<div class="line">Begin</div>
+<div class="line">    writeln(&#39;Free memory in MB = &#39;, memoryFree());</div>
+<div class="line">End.</div>
+</div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="memorytotal"></a>
+memorytotal</h3>
+<p><b>Function:</b> memorytotal<br  />
+<b>Syntax:</b> <span class="tt"> memorytotal() : integer</span> <br  />
+<b>Description:</b> Will give the total memory size.<br  />
+<b>Return</b> <b>value:</b> &lt;integer&gt; as the total amount of memory available, measured in MB. <br  />
+ <br  />
+</p><dl class="section note"><dt>Note</dt><dd>The memory functions give an approximation of the memory handled by the underlying virtual machine. For each call to a memory function the value might change even if the amount of memory used by CMAS is fixed. <br  />
+</dd></dl>
+<p><b>Example:</b> <br  />
+</p><div class="fragment"><div class="line">Program Memory_Example;</div>
+<div class="line">Begin</div>
+<div class="line">    writeln(&#39;Total memory in MB = &#39;, memoryTotal());</div>
+<div class="line">End.</div>
+</div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="memoryused"></a>
+memoryused</h3>
+<p><b>Function:</b> memoryused<br  />
+<b>Syntax:</b> <span class="tt"> memoryused() : integer</span> <br  />
+<b>Description:</b> Will give the used memory size as memoryTotal() - memoryFree()().<br  />
+<b>Return</b> <b>value:</b> &lt;integer&gt; the amount of used memory, measured in MB. <br  />
+<b>Example:</b> <br  />
+</p><div class="fragment"><div class="line">Program Memory_Example;</div>
+<div class="line">Begin</div>
+<div class="line">    writeln(&#39;Used memory in MB = &#39;, memoryUsed());</div>
+<div class="line">End.</div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md247"></a>
+Preferences</h2>
+<h3 class="doxsection"><a class="anchor" id="preferencevalue"></a>
+preferencevalue</h3>
+<p><b>Function:</b> preferencevalue<br  />
+<b>Syntax:</b> <span class="tt"> preferencevalue(&lt;string_name&gt;, [&lt;value&gt;&gt;]) : string</span> <br  />
+<b>Description:</b> Will set or get a global preference value. All available values can be found in the Preferences. <b>Return</b> <b>value:</b> &lt;string&gt; <br  />
+<b>Example:</b> <br  />
+</p><div class="fragment"><div class="line">Program Example;</div>
+<div class="line"> </div>
+<div class="line">Begin</div>
+<div class="line">    writeln(&#39;RetryOnBusy=&#39;, preferencevalue(&#39;RetryOnBusy&#39;, false));</div>
+<div class="line">End.</div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md248"></a>
+Debug</h2>
+<h3 class="doxsection"><a class="anchor" id="threadmessage"></a>
+threadmessage</h3>
+<p><b>Function:</b> threadmessage<br  />
+<b>Syntax:</b> <span class="tt"> threadmessage([&lt;string_message&gt;]) : string</span> <br  />
+<b>Description:</b> Will set or get the user message for current agent thread. A thread user message can be seen in the Agent thread viewer during runtime and the user message is ignored by the system. It can be used to display various information for e.g. debug purposes.<br  />
+<b>Return</b> <b>value:</b> &lt;string&gt; <br  />
+<b>Example:</b> <br  />
+</p><div class="fragment"><div class="line">Program Example;</div>
+<div class="line"> </div>
+<div class="line">Begin</div>
+<div class="line">    threadmessage(&#39;Init of agent - running constructor&#39;);</div>
 <div class="line">End.</div>
 </div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="beep"></a>
 beep</h3>
@@ -2315,75 +2399,12 @@ beep</h3>
 <div class="line">    sleep(1000);</div>
 <div class="line">    beep();</div>
 <div class="line">End.</div>
-</div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="memoryfree"></a>
-memoryfree</h3>
-<p><b>Procedure:</b> meoryfree<br  />
-<b>Syntax:</b> <span class="tt"> memoryfree() : integer</span> <br  />
-<b>Description:</b> Will give the amount of free memory.<br  />
-<b>Return</b> <b>value:</b> &lt;integer&gt; as an approximation of the total amount of memory currently available, measured in MB. <br  />
-<b>Example:</b> <br  />
-</p><div class="fragment"><div class="line">Program Memory_Example;</div>
-<div class="line">Begin</div>
-<div class="line">    writeln(&#39;Free memory in MB = &#39;, memoryFree());</div>
-<div class="line">End.</div>
-</div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="memorytotal"></a>
-memorytotal</h3>
-<p><b>Procedure:</b> meorytotal<br  />
-<b>Syntax:</b> <span class="tt"> memorytotal() : integer</span> <br  />
-<b>Description:</b> Will give the total memory size.<br  />
-<b>Return</b> <b>value:</b> &lt;integer&gt; as the total amount of memory available, measured in MB. <br  />
- <br  />
-</p><dl class="section note"><dt>Note</dt><dd>The memory functions gives an approximation of the memory handled by the underlying virtual machine. For each call to a memory function the value might change even if the amount of memory used by CMAS is fixed. <br  />
-</dd></dl>
-<p><b>Example:</b> <br  />
-</p><div class="fragment"><div class="line">Program Memory_Example;</div>
-<div class="line">Begin</div>
-<div class="line">    writeln(&#39;Total memory in MB = &#39;, memoryTotal());</div>
-<div class="line">End.</div>
-</div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="memoryused"></a>
-memoryused</h3>
-<p><b>Procedure:</b> meoryused<br  />
-<b>Syntax:</b> <span class="tt"> memoryused() : integer</span> <br  />
-<b>Description:</b> Will give the used memory size as memoryTotal() - memoryFree()().<br  />
-<b>Return</b> <b>value:</b> &lt;integer&gt; the amount of used memory, measured in MB. <br  />
-<b>Example:</b> <br  />
-</p><div class="fragment"><div class="line">Program Memory_Example;</div>
-<div class="line">Begin</div>
-<div class="line">    writeln(&#39;Used memory in MB = &#39;, memoryUsed());</div>
-<div class="line">End.</div>
-</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md245"></a>
-Preferences</h2>
-<h3 class="doxsection"><a class="anchor" id="preferencevalue"></a>
-preferencevalue</h3>
-<p><b>Procedure:</b> preferencevalue<br  />
-<b>Syntax:</b> <span class="tt"> preferencevalue(&lt;string_name&gt;, [&lt;value&gt;&gt;]) : string</span> <br  />
-<b>Description:</b> Will set or get a global preference value. All available values can be found in the Preferences. <b>Return</b> <b>value:</b> &lt;string&gt; <br  />
-<b>Example:</b> <br  />
-</p><div class="fragment"><div class="line">Program Example;</div>
-<div class="line"> </div>
-<div class="line">Begin</div>
-<div class="line">    writeln(&#39;RetryOnBusy=&#39;, preferencevalue(&#39;RetryOnBusy&#39;, false));</div>
-<div class="line">End.</div>
-</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md246"></a>
-Debug</h2>
-<h3 class="doxsection"><a class="anchor" id="threadmessage"></a>
-threadmessage</h3>
-<p><b>Procedure:</b> threadmessage<br  />
-<b>Syntax:</b> <span class="tt"> threadmessage([&lt;string_message&gt;]) : string</span> <br  />
-<b>Description:</b> Will set or get the user message for current agent thread. A thread user message can be seen in the Agent thread viewer during runtime and the user message is ignored by the system. It can be use to display various information for e.g. debug purposes.<br  />
-<b>Return</b> <b>value:</b> &lt;string&gt; <br  />
-<b>Example:</b> <br  />
-</p><div class="fragment"><div class="line">Program Example;</div>
-<div class="line"> </div>
-<div class="line">Begin</div>
-<div class="line">    threadmessage(&#39;Init of agent - running constructor&#39;);</div>
-<div class="line">End.</div>
-</div><!-- fragment --> <hr  />
-<h2 class="doxsection"><a class="anchor" id="autotoc_md247"></a>
+</div><!-- fragment --><hr  />
+<h2 class="doxsection"><a class="anchor" id="autotoc_md249"></a>
 File Functions</h2>
 <h3 class="doxsection"><a class="anchor" id="open"></a>
 open</h3>
-<p><b>Procedure:</b> open <br  />
+<p><b>Function:</b> open <br  />
 <b>Syntax:</b> <span class="tt"> open(&lt;string_filename&gt;, &lt;integer_filemode&gt;) : integer </span> <br  />
 <b>Description:</b> Will open the &lt;string_filename&gt; file. The &lt;integer_filemode&gt; decides if the file is opened for reading or writing.<br  />
 <b>Return</b> <b>value:</b> a file handle (integer) that can be used to access the file. If file handle&lt;0 an error occurred and the file cannot be opened.<br  />
@@ -2414,7 +2435,7 @@ MODE</h3>
 </p>
 <h3 class="doxsection"><a class="anchor" id="close"></a>
 close</h3>
-<p><b>Procedure:</b> close <br  />
+<p><b>Function:</b> close <br  />
 <b>Syntax:</b> <span class="tt"> close(&lt;integer_filehandle&gt;) : boolean </span> <br  />
 <b>Description:</b> Will close the &lt;integer_filehandle&gt; file. The &lt;integer_handle&gt; must be a valid file handle returned from an open.<br  />
 <b>Return</b> <b>value:</b> true if the file was closed otherwise false. <br  />
@@ -2450,7 +2471,7 @@ fwriteln</h3>
 <div class="line">end.</div>
 </div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="freadln"></a>
 freadln</h3>
-<p><b>Procedure:</b> freadln <br  />
+<p><b>Function:</b> freadln <br  />
 <b>Syntax:</b> <span class="tt"> freadln(&lt;integer_filehandle&gt;, [&lt;variable_1&gt;] [, &lt;variable_2&gt;] [, ...]) : boolean </span> <br  />
 <b>Description:</b> Will read values from the &lt;integer_filehandle&gt; file and store the result in &lt;variable&gt;. The &lt;integer_handle&gt; must be a valid file handle returned from an open.<br  />
 <b>Return</b> <b>value:</b> Number of &lt;variable&gt; assigned a value. <br  />
@@ -2495,9 +2516,9 @@ freadln</h3>
 <div class="line">    readFromFile1();</div>
 <div class="line">    readFromFile2();</div>
 <div class="line">end.</div>
-</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md248"></a>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md250"></a>
 Server API Functions</h1>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md249"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md251"></a>
 Pause</h2>
 <h3 class="doxsection"><a class="anchor" id="pauseall"></a>
 pauseAll</h3>
@@ -2526,7 +2547,7 @@ pausebyname</h3>
 <div class="line">    // Will pause all agent with a ID=1</div>
 <div class="line">    pauseByID(&#39;1&#39;);</div>
 <div class="line">End.</div>
-</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md250"></a>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md252"></a>
 Console and log</h2>
 <h3 class="doxsection"><a class="anchor" id="clearconsole"></a>
 clearconsole</h3>
@@ -2547,11 +2568,11 @@ clearlog</h3>
 </p><div class="fragment"><div class="line">Begin</div>
 <div class="line">    clearlog();</div>
 <div class="line">End.</div>
-</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md251"></a>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md253"></a>
 Runtime control</h2>
 <h3 class="doxsection"><a class="anchor" id="isruntime"></a>
 isruntime</h3>
-<p><b>Procedure:</b> isruntime<br  />
+<p><b>Function:</b> isruntime<br  />
 <b>Syntax:</b> <span class="tt"> isruntime() </span> <br  />
 <b>Description:</b> Will check if runtime environment is running. This is only valid if you test run inside the editor.<br  />
 <b>Example:</b> <br  />
@@ -2608,7 +2629,7 @@ getagentsbyid</h3>
 <div class="line">End.</div>
 </div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="deployandattach"></a>
 deployandattach</h3>
-<p><b>Procedure:</b> deployandattach<br  />
+<p><b>Function:</b> deployandattach<br  />
 <b>Syntax</b> 1: <span class="tt"> deployandattach(&lt;string_name&gt;, &lt;string_deployinterfacename&gt;, &lt;string_localinterfaceid&gt;) : boolean </span> <br  />
 <b>Description:</b> Will deploy an agent that match the name with &lt;string_name&gt; and attach the newly deployed agent interface named &lt;string_deployinterfacename&gt; to a local interface with an ID of &lt;string_localinterfaceid&gt;.<br  />
 <b>Syntax</b> 2: <span class="tt"> deployandattach(&lt;string_name&gt;) : boolean </span> <br  />
@@ -2626,7 +2647,7 @@ deploybyinstanceid</h3>
 deploybyid</h3>
 <h3 class="doxsection"><a class="anchor" id="deploybyname"></a>
 deploybyname</h3>
-<p><b>Procedure:</b> deploybyname<br  />
+<p><b>Function:</b> deploybyname<br  />
 <b>Syntax:</b> <span class="tt"> deploybyname(&lt;string_id&gt;) : boolean </span> <br  />
 <b>Syntax:</b> <span class="tt"> deploybyinstanceid(&lt;string_id&gt;) : boolean </span> <br  />
 <a class="anchor" id="deploybyinstanceid"></a> <b>Syntax:</b> <span class="tt"> deploybyid(&lt;string_id&gt;) : boolean </span> <br  />
@@ -2640,7 +2661,7 @@ deploybyname</h3>
 <div class="line">End.</div>
 </div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="deployall"></a>
 deployall</h3>
-<p><b>Procedure:</b> deployall<br  />
+<p><b>Function:</b> deployall<br  />
 <b>Syntax:</b> <span class="tt"> deployall() : integer </span> <br  />
 <b>Description:</b> Will deploy all agents in the depot.<br  />
 <b>Return</b> <b>value:</b> <b>number</b> of agents deployed.<br  />
@@ -2655,7 +2676,7 @@ deployall</h3>
 <div class="line">End.</div>
 </div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="undeploybyname"></a>
 undeploybyname</h3>
-<p><b>Procedure:</b> undeploybyname<br  />
+<p><b>Function:</b> undeploybyname<br  />
 <b>Syntax:</b> <span class="tt"> undeploybyname(&lt;string_id&gt;) : boolean </span> <br  />
 <b>Description:</b> Will undeploy agents that match &lt;string_ID&gt;.<br  />
 <b>Return</b> <b>value:</b> <b>true</b> if any agent was undeployed otherwise <b>false</b>. <br  />
@@ -2667,7 +2688,7 @@ undeploybyname</h3>
 <div class="line">End.</div>
 </div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="undeploybyid"></a>
 undeploybyid</h3>
-<p><b>Procedure:</b> undeploybyid<br  />
+<p><b>Function:</b> undeploybyid<br  />
 <b>Syntax:</b> <span class="tt"> undeploybyid(&lt;string_id&gt;) : boolean </span> <br  />
 <b>Description:</b> Will undeploy agents that match &lt;string_ID&gt;.<br  />
 <b>Return</b> <b>value:</b> <b>true</b> if any agent was undeployed otherwise <b>false</b>. <br  />
@@ -2679,7 +2700,7 @@ undeploybyid</h3>
 <div class="line">End.</div>
 </div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="undeploybyinstanceid"></a>
 undeploybyinstanceid</h3>
-<p><b>Procedure:</b> undeploybyinstanceid<br  />
+<p><b>Function:</b> undeploybyinstanceid<br  />
 <b>Syntax:</b> <span class="tt"> undeploybyinstanceid(&lt;string_id&gt;) : boolean </span> <br  />
 <b>Description:</b> Will undeploy agents that match &lt;string_ID&gt;.<br  />
 <b>Return</b> <b>value:</b> <b>true</b> if any agent was undeployed otherwise <b>false</b>. <br  />
@@ -2691,7 +2712,7 @@ undeploybyinstanceid</h3>
 <div class="line">End.</div>
 </div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="undeployall"></a>
 undeployall</h3>
-<p><b>Procedure:</b> undeployall<br  />
+<p><b>Function:</b> undeployall<br  />
 <b>Syntax:</b> <span class="tt"> undeployall() : integer </span> <br  />
 <b>Description:</b> Will undeploy all agents.<br  />
 <b>Return</b> <b>value:</b> <b>number</b> of agents undeployed.<br  />
@@ -2706,7 +2727,7 @@ undeployall</h3>
 <div class="line">End.</div>
 </div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="getnumberofrunningparts"></a>
 getnumberofrunningparts</h3>
-<p><b>Procedure:</b> getnumberofrunningparts<br  />
+<p><b>Function:</b> getnumberofrunningparts<br  />
 <b>Syntax:</b> <span class="tt"> getnumberofrunningparts() : integer </span> <br  />
 <b>Description:</b> Will count number of running part agents.<br  />
 <b>Return</b> <b>value:</b> number of running parts. <br  />
@@ -2719,7 +2740,7 @@ getnumberofrunningparts</h3>
 <div class="line">End.</div>
 </div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="getnumberofrunningresources"></a>
 getnumberofrunningresources</h3>
-<p><b>Procedure:</b> getnumberofrunningresources<br  />
+<p><b>Function:</b> getnumberofrunningresources<br  />
 <b>Syntax:</b> <span class="tt"> getnumberofrunningresources() : integer </span> <br  />
 <b>Description:</b> Will count number of running resource agents.<br  />
 <b>Return</b> <b>value:</b> number of running resources. <br  />
@@ -2732,10 +2753,10 @@ getnumberofrunningresources</h3>
 <div class="line">End.</div>
 </div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="attach"></a>
 attach</h3>
-<p><b>Procedure:</b> attach<br  />
+<p><b>Function:</b> attach<br  />
 <b>Syntax</b> <b>1</b>: <span class="tt"> attach(string_id1, string_id2) : boolean </span> <br  />
 <b>Description:</b> Will attach two interfaces together based on the IDs.<br  />
-Note: Two interface that can be attached will always be attache by this method regardless of their position. <b>Return</b> <b>value:</b> true on a successful attachment. <br  />
+Note: Two interface that can be attached will always be attached by this method regardless of their position. <b>Return</b> <b>value:</b> true on a successful attachment. <br  />
 <b>Syntax</b> <b>2</b>: <span class="tt"> attach(abstract_interface, string_target) : boolean </span> <br  />
 <b>Description:</b> Will try to attach two interfaces together by invoking the planner to find a solution on how to do the attachment. string_target is a name of a remote interface.<br  />
 <b>Return</b> <b>value:</b> true on a successful attachment. <br  />
@@ -2747,9 +2768,9 @@ Note: Two interface that can be attached will always be attache by this method r
 <div class="line">End.</div>
 </div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="assembly"></a>
 assembly</h3>
-<p><b>Procedure:</b> assembly<br  />
+<p><b>Function:</b> assembly<br  />
 <b>Syntax:</b> <span class="tt"> assembly(abstract_interface, string_name) : integer </span> <br  />
-<b>Description:</b> Will try to assemble <em>string_name</em> through and abstract interface <em>abstract_interface</em> by invoking a planner to find a way to do assembly.<br  />
+<b>Description:</b> Will try to assemble <em>string_name</em> through an abstract interface <em>abstract_interface</em> by invoking a planner to find a way to do assembly.<br  />
 <b>Return</b> <b>value:</b> process return value. <br  />
 <b>Example:</b> <br  />
 </p><div class="fragment"><div class="line">program Example;</div>
@@ -2762,7 +2783,7 @@ assembly</h3>
 <div class="line">End.</div>
 </div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="getmodelstates"></a>
 getmodelstates</h3>
-<p><b>Procedure:</b> getmodelstates<br  />
+<p><b>Function:</b> getmodelstates<br  />
 <b>Syntax</b> <b></b>: <span class="tt"> getmodelstates(&lt;string_name&gt; [, &lt;boolean_mode&gt;]) : string</span> <br  />
 <b>Description:</b> Will get the model state from the ModelState object that is named string_name and return it as a JSON array string (default). If boolean_mode is omitted or set to to true an array is generated, if boolean_mode is set to false an JSON object is generated. <br  />
 <b>Return</b> <b>value:</b> The states as a JSON array/object or an empty string on failure. <br  />
@@ -2777,10 +2798,10 @@ getmodelstates</h3>
 <div class="line">End.</div>
 </div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="getoperations"></a>
 getoperations</h3>
-<p><b>Procedure:</b> getoperations<br  />
-<b>Syntax</b> <b></b>: <span class="tt"> getoperations([&lt;interface&gt;]) : string</span> <br  />
-<b>Description:</b> Will get all possible operations (i.e Skills and process plans) from the runtime environment. If string_goalid is omitted all possible skills are considered. However, if a valid instance id to a goal/interface or a real interface is given only compatible skills are considered.<br  />
-<b>Return</b> <b>value:</b> All operations as a JSON array based on the Operation defenition in the ontology.inc include file. <br  />
+<p><b>Function:</b> getoperations<br  />
+<b>Syntax</b> <b></b>: <span class="tt"> getoperations([&lt;string_interface_id&gt;]) : string</span> <br  />
+<b>Description:</b> Will get all possible operations (i.e Skills and process plans) from the runtime environment. If string_interface_id is omitted all possible skills are considered. However, if a valid instance id to a goal/interface or a real interface is given only compatible skills are considered.<br  />
+<b>Return</b> <b>value:</b> All operations as a JSON array based on the Operation definition in the <a class="el" href="#ontology_inc">ontology.inc</a> include file. <br  />
  <b>Example:</b> <br  />
 </p><div class="fragment"><div class="line">program Example;</div>
 <div class="line"> </div>
@@ -2796,9 +2817,9 @@ getoperations</h3>
 <div class="line">end.</div>
 </div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="executeoperation"></a>
 executeoperation</h3>
-<p><b>Procedure:</b> executeoperation<br  />
+<p><b>Function:</b> executeoperation<br  />
 <b>Syntax</b> <b></b>: <span class="tt"> executeoperation(&lt;string_operation&gt;) : integer</span> <br  />
-<b>Description:</b> Will try to execute the the operation given by the string based on the Operation defenition in the ontology.inc include file. <br  />
+<b>Description:</b> Will try to execute the the operation given by the string based on the Operation definition in the <a class="el" href="#ontology_inc">ontology.inc</a> include file. <br  />
 <b>Return</b> <b>value:</b> ProcessValue as an integer. <br  />
  <b>Example:</b> <br  />
 </p><div class="fragment"><div class="line">program Example;</div>
@@ -2810,13 +2831,13 @@ executeoperation</h3>
 <div class="line">    size:=jsonarraysize(operationsArray);</div>
 <div class="line">    if size &gt;0 then executeoperation(getjarray(operationsArray, 0));    </div>
 <div class="line">end.</div>
-</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md252"></a>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md254"></a>
 Object access</h2>
 <h3 class="doxsection"><a class="anchor" id="getobject"></a>
 getobject</h3>
-<p><b>Procedure:</b> getobject<br  />
+<p><b>Function:</b> getobject<br  />
 <b>Syntax:</b> <span class="tt"> getobject(string_id, struct_var) : boolean </span> <br  />
-<b>Description:</b> Will map the CMAS object identified by string_id and map that to the struct_var. Note, most of the ontology object are defined in the ontology.inc that can included.<br  />
+<b>Description:</b> Will map the CMAS object identified by string_id and map that to the struct_var. Note, most of the ontology object are defined in the <a class="el" href="#ontology_inc">ontology.inc</a> that can included.<br  />
 <b>Return</b> <b>value:</b> true if mapped. <br  />
 <b>Example:</b> <br  />
 </p><div class="fragment"><div class="line">{ An example program }</div>
@@ -2843,15 +2864,15 @@ getobject</h3>
 <div class="line">end.</div>
 </div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="getrelation"></a>
 getrelation</h3>
-<p><b>Procedure:</b> getrelation<br  />
+<p><b>Function:</b> getrelation<br  />
 <b>Syntax:</b> <span class="tt"> getrelation(string_id, array_var, string_relation) : boolean </span> <br  />
-<b>Description:</b> Will map a relation named string_relation in a CMAS object and associate that with the array array_var. The CMAS object is identified by string_id.<br  />
+<b>Description:</b> Will map a relation named string_relation in a CMAS object and associate that with the array array_var. The CMAS object is identified by the modelling ID string_id.<br  />
 <b>Return</b> <b>value:</b> true if mapped. <br  />
 <b>Example:</b> <br  />
 </p><div class="fragment"><div class="line">{ An example program }</div>
 <div class="line">Program Example;</div>
 <div class="line"> </div>
-<div class="line">{ Include ontology to get the defenition of Hazrad } </div>
+<div class="line">{ Include ontology to get the definition of Hazard } </div>
 <div class="line">$include &#39;system:ontology.inc&#39;</div>
 <div class="line"> </div>
 <div class="line">var items: array [ 1 .. 2 ] of Hazard; </div>
@@ -2870,9 +2891,9 @@ getrelation</h3>
 <div class="line">end.</div>
 </div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="getreference"></a>
 getreference</h3>
-<p><b>Procedure:</b> getreference<br  />
+<p><b>Function:</b> getreference<br  />
 <b>Syntax1:</b> <span class="tt"> getreference(string_id, reference_var) : boolean </span> <br  />
-<b>Description:</b> Will get a reference to the CMAS object identified by string_id and map that to the reference_var.<br  />
+<b>Description:</b> Will get a reference to the CMAS object identified by string_id and map that to the reference_var. string_id must be a valid modelling ID of an entity.<br  />
 <b>Return</b> <b>value:</b> true if mapped. <br  />
 <b>Example:</b> <br  />
 </p><div class="fragment"><div class="line">{ An example program }</div>
@@ -2882,15 +2903,16 @@ getreference</h3>
 <div class="line"> </div>
 <div class="line">procedure onRun; </div>
 <div class="line">begin</div>
+<div class="line">    // Get the object that has an ID set to id_robot</div>
 <div class="line">    if not getreference(&#39;id_robot&#39;, anObject) then</div>
-<div class="line">        error &#39;unable to get a referce to object&#39;;</div>
+<div class="line">        error &#39;unable to get a reference to object&#39;;</div>
 <div class="line">    </div>
 <div class="line">    // Write object name to screen          </div>
 <div class="line">    writeln(anObject.name); </div>
 <div class="line">end.</div>
-</div><!-- fragment --><p><b>Procedure:</b> getreference<br  />
+</div><!-- fragment --><p><b>Function:</b> getreference<br  />
 <b>Syntax2:</b> <span class="tt"> getreference(object, reference_var) : boolean </span> <br  />
-<b>Description:</b> Will get a reference to the object and map that to the reference_var.<br  />
+<b>Description:</b> Will get a reference to the object and map that to the reference_var. Object must be a valid existing object, e.g., this or agent.<br  />
 <b>Return</b> <b>value:</b> true if mapped. <br  />
 <b>Example:</b> <br  />
  </p><div class="fragment"><div class="line">{ An example program }</div>
@@ -2901,15 +2923,15 @@ getreference</h3>
 <div class="line">procedure onRun; </div>
 <div class="line">begin</div>
 <div class="line">    // Will get a reference to the object this</div>
-<div class="line">    if not getreference(thiss, anObject) then</div>
-<div class="line">        error &#39;unable to get a referce to object&#39;;</div>
+<div class="line">    if not getreference(this, anObject) then</div>
+<div class="line">        error &#39;unable to get a reference to object&#39;;</div>
 <div class="line">    </div>
 <div class="line">    // Write object name to screen (this.name)          </div>
 <div class="line">    writeln(anObject.name); </div>
 <div class="line">end.</div>
-</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md253"></a>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md255"></a>
 Examples</h1>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md254"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md256"></a>
 Example 1 - Arrays</h2>
 <div class="fragment"><div class="line">{ An example program how to handle arrays }</div>
 <div class="line">Program Example_array;</div>
@@ -2941,7 +2963,7 @@ Example 1 - Arrays</h2>
 <div class="line">  writeln(MyArray);  </div>
 <div class="line">End.</div>
 </div><!-- fragment --><p>   </p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md255"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md257"></a>
 Example 2 - Interfaces and objects</h2>
 <div class="fragment"><div class="line">{ An example program how to handle interfaces and agent objects }</div>
 <div class="line">Program Example_skill;</div>
@@ -2959,7 +2981,7 @@ Example 2 - Interfaces and objects</h2>
 <div class="line">  Interface1.RemoteSkill(); // Call remote skill</div>
 <div class="line">  </div>
 <div class="line">End.</div>
-</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md256"></a>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md258"></a>
 Example 3 - Structures</h2>
 <div class="fragment"><div class="line">{ An example program how to use structures }</div>
 <div class="line">Program Pose_Example;</div>
@@ -2988,9 +3010,9 @@ Example 3 - Structures</h2>
 <div class="line">    Pos2.y:=2.0;</div>
 <div class="line">    Pos2.z:=1.0;</div>
 <div class="line"> </div>
-<div class="line">    WriteLn(&#39;Pos diff=&#39;, Diff(Pos1, Pos2));</div>
+<div class="line">    writeln(&#39;Pos diff=&#39;, Diff(Pos1, Pos2));</div>
 <div class="line">End.</div>
-</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md257"></a>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md259"></a>
 Example 4 - MessageBox User Information</h2>
 <div class="fragment"><div class="line">{ An example program how to show HMI messages }</div>
 <div class="line">Program MessageBox_Example;</div>
@@ -3004,22 +3026,22 @@ Example 4 - MessageBox User Information</h2>
 <div class="line">   </div>
 <div class="line">    if Result=DIALOG_ANSWER_YES then</div>
 <div class="line">    begin</div>
-<div class="line">      WriteLn(&#39;You pressed Yes&#39;);</div>
+<div class="line">      writeln(&#39;You pressed Yes&#39;);</div>
 <div class="line">    end;</div>
 <div class="line">    else if Result=DIALOG_ANSWER_NO then</div>
 <div class="line">    begin</div>
-<div class="line">      WriteLn(&#39;You pressed No&#39;);</div>
+<div class="line">      writeln(&#39;You pressed No&#39;);</div>
 <div class="line">    end;</div>
 <div class="line">    else if Result=DIALOG_ANSWER_CANCEL then</div>
 <div class="line">    begin</div>
-<div class="line">      WriteLn(&#39;You pressed Cancel&#39;);</div>
+<div class="line">      writeln(&#39;You pressed Cancel&#39;);</div>
 <div class="line">    end;</div>
 <div class="line">    else</div>
 <div class="line">    begin</div>
-<div class="line">      WriteLn(&#39;You closed the window&#39;);</div>
+<div class="line">      writeln(&#39;You closed the window&#39;);</div>
 <div class="line">    end;</div>
 <div class="line">End.</div>
-</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md258"></a>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md260"></a>
 Example 5 - InputDialog</h2>
 <div class="fragment"><div class="line">{ An example program how to get user input strings from HMI }</div>
 <div class="line">Program InputDialog_Example;</div>
@@ -3034,16 +3056,16 @@ Example 5 - InputDialog</h2>
 <div class="line"> </div>
 <div class="line">    if not StringIsEmpty(Result) and StringIsInteger(Result) then</div>
 <div class="line">    begin</div>
-<div class="line">       Iterator:=StringToInt(Result);</div>
+<div class="line">       Iterator:=stringtoint(Result);</div>
 <div class="line"> </div>
 <div class="line">       while Iterator&gt;0 do</div>
 <div class="line">       begin</div>
-<div class="line">         WriteLn(&#39;Loop - &#39;, Iterator);</div>
+<div class="line">         writeln(&#39;Loop - &#39;, Iterator);</div>
 <div class="line">         Iterator:=Iterator-1;</div>
 <div class="line">       end;</div>
 <div class="line">    end;</div>
 <div class="line">End.</div>
-</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md259"></a>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md261"></a>
 Example 6 - OptionDialog</h2>
 <div class="fragment"><div class="line">{ An example program how to create a HMI stop button for a calculation. </div>
 <div class="line">  The program will calculate PI by a known series. The series is handled by a for loop</div>
@@ -3076,9 +3098,9 @@ Example 6 - OptionDialog</h2>
 <div class="line">    Begin</div>
 <div class="line">      OptionDialog(1, false);</div>
 <div class="line">    End;</div>
-<div class="line">    WriteLn(&#39;PI is &#39;, PI*4.0, &#39; after &#39;, Counter , &#39; number of iterations.&#39;);</div>
+<div class="line">    writeln(&#39;PI is &#39;, PI*4.0, &#39; after &#39;, Counter , &#39; number of iterations.&#39;);</div>
 <div class="line">End.</div>
-</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md260"></a>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md262"></a>
 Example 7 - JSON Get</h2>
 <div class="fragment"><div class="line">Program Example_JSON;</div>
 <div class="line"> </div>
@@ -3104,7 +3126,7 @@ Example 7 - JSON Get</h2>
 <div class="line"> </div>
 <div class="line">Begin</div>
 <div class="line">    a:=getjelement(JSONString, &#39;string&#39;); </div>
-<div class="line">    WriteLn(&#39;a=&#39;, a);                  // Will print Hello World</div>
+<div class="line">    writeln(&#39;a=&#39;, a);                  // Will print Hello World</div>
 <div class="line">    </div>
 <div class="line">    b:=stringtoreal(getjelement(JSONString, &#39;real&#39;));</div>
 <div class="line">    writeln(&#39;b=&#39;, b);             // Will print 1.23</div>
@@ -3123,7 +3145,7 @@ Example 7 - JSON Get</h2>
 <div class="line">    </div>
 <div class="line">    writeln(&#39;f.a=&#39;, getjelement(f, &#39;a&#39;)); // Will print b</div>
 <div class="line">End.</div>
-</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md261"></a>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md263"></a>
 Example 8 - JSON and Struct mapping</h2>
 <div class="fragment"><div class="line">Program Example_JSON_Struct;</div>
 <div class="line"> </div>
@@ -3149,7 +3171,7 @@ Example 8 - JSON and Struct mapping</h2>
 <div class="line"> </div>
 <div class="line">Begin</div>
 <div class="line">  Data:=jtostruct(JSONString);    // Convert JSON to struct</div>
-<div class="line">  WriteLn(Data);       // Print struct as a JSON</div>
+<div class="line">  writeln(Data);       // Print struct as a JSON</div>
 <div class="line">  </div>
 <div class="line">  Data.c:=3.21;        // Change value in struct</div>
 <div class="line">  Data.d:=4;</div>
@@ -3157,9 +3179,9 @@ Example 8 - JSON and Struct mapping</h2>
 <div class="line">  Data.e[1]:=3;</div>
 <div class="line">  </div>
 <div class="line">  JSONString:=structtoj(Data);    // Convert Struct back to JSON</div>
-<div class="line">  Writeln(JSONString); // Print the canged JSON</div>
+<div class="line">  Writeln(JSONString); // Print the changed JSON</div>
 <div class="line">End.</div>
-</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md262"></a>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md264"></a>
 Example 9 - JSON Set</h2>
 <div class="fragment"><div class="line">Program Example_JSON;</div>
 <div class="line"> </div>
@@ -3188,7 +3210,7 @@ Example 9 - JSON Set</h2>
 <div class="line"> </div>
 <div class="line">Begin</div>
 <div class="line">    { Get value for a from JSON object and add 1 }</div>
-<div class="line">    a:=StringToInt(GetJElement(JSONString, &#39;integer&#39;)) + 1;</div>
+<div class="line">    a:=stringtoint(GetJElement(JSONString, &#39;integer&#39;)) + 1;</div>
 <div class="line">    </div>
 <div class="line">    b[1]:=3;</div>
 <div class="line">    b[2]:=2;</div>
@@ -3204,9 +3226,9 @@ Example 9 - JSON Set</h2>
 <div class="line">    JSONString:=SetJElement(JSONString, &#39;array&#39;, b);</div>
 <div class="line">    </div>
 <div class="line">    { Write JSON object to screen }</div>
-<div class="line">    WriteLn(JSONString);</div>
+<div class="line">    writeln(JSONString);</div>
 <div class="line">End.</div>
-</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md263"></a>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md265"></a>
 Example 10 - Sort</h2>
 <div class="fragment"><div class="line">{ An example program }</div>
 <div class="line">Program Example;</div>
@@ -3284,7 +3306,7 @@ Example 10 - Sort</h2>
 <div class="line">    BubbleSort;</div>
 <div class="line">    Display(&#39;Sorted Data&#39;);</div>
 <div class="line">End.</div>
-</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md264"></a>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md266"></a>
 Example 11 - Foreach</h2>
 <div class="fragment"><div class="line">{ An example program }</div>
 <div class="line">Program Example;</div>

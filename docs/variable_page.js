@@ -1,19 +1,19 @@
 var variable_page =
 [
-    [ "Overview", "variable_page.html#autotoc_md266", null ],
+    [ "Overview", "variable_page.html#autotoc_md268", null ],
     [ "Variable types", "variable_page.html#variable_types", [
-      [ "Example: Variable Value", "variable_page.html#autotoc_md267", null ],
-      [ "Example: Array Variable", "variable_page.html#autotoc_md268", null ],
-      [ "Example: Object Variable", "variable_page.html#autotoc_md269", null ]
+      [ "Example: Variable Value", "variable_page.html#autotoc_md269", null ],
+      [ "Example: Array Variable", "variable_page.html#autotoc_md270", null ],
+      [ "Example: Object Variable", "variable_page.html#autotoc_md271", null ]
     ] ],
-    [ "Functions", "variable_page.html#autotoc_md270", [
+    [ "Functions", "variable_page.html#autotoc_md272", [
       [ "onBeforeRead", "variable_page.html#onbeforeread", null ],
       [ "onAfterRead", "variable_page.html#onafterread", null ],
       [ "onBeforeWrite", "variable_page.html#onbeforewrite", null ],
       [ "onAfterWrite", "variable_page.html#onafterwrite", null ]
     ] ],
     [ "Variable adapters", "adapters_page.html", [
-      [ "Introduction", "adapters_page.html#autotoc_md265", null ],
+      [ "Introduction", "adapters_page.html#autotoc_md267", null ],
       [ "OPC UA", "adapters_page.html#OPC_UA", null ],
       [ "REST", "adapters_page.html#REST", null ],
       [ "FILE", "adapters_page.html#FILE", null ],

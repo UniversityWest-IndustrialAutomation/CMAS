@@ -2,7 +2,7 @@ var searchData=
 [
   ['general_20options_0',['General Options',['../commandline_page.html#autotoc_md9',1,'']]],
   ['general_20troubleshooting_1',['General troubleshooting',['../installation_page.html#autotoc_md111',1,'']]],
-  ['get_2',['Example 7 - JSON Get',['../structuredtext_page.html#autotoc_md260',1,'']]],
+  ['get_2',['Example 7 - JSON Get',['../structuredtext_page.html#autotoc_md262',1,'']]],
   ['getagentsbyid_3',['getagentsbyid',['../structuredtext_page.html#getagentsbyid',1,'']]],
   ['getagentsbyname_4',['getagentsbyname',['../structuredtext_page.html#getagentsbyname',1,'']]],
   ['getjarray_5',['GetJArray',['../structuredtext_page.html#getjarray',1,'']]],
